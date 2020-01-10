@@ -1,0 +1,22 @@
+{
+  "name": "art_school",
+  "version": "1.0.0",
+  "description": "Art school webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoriaCat/Art_school.git"
+  },
+  "author": "Victoria Katysheva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victoriaCat/Art_school/issues"
+  },
+  "homepage": "https://github.com/victoriaCat/Art_school#readme",
+  "dependencies": {
+    "webpack": "^4.41.5"
+  }
+}
