@@ -1,0 +1,43 @@
+@import '~/assets/scss/resources.scss';
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1280px!important;
+    margin: 0 auto!important;
+  }
+}
+
+html, body {
+  min-width: 320px;
+  box-sizing: border-box;
+  height: 100%;
+  a {
+    text-decoration: none;
+  }
+  .modal-open {
+    overflow: auto;
+  }
+}
+
+/* прижимаем футер к низу страницы: header - 80px + footer - 230px = 310px + */
+.main-container {
+  min-height: calc(100vh - 310px)!important;
+  background: #FFFFFF;
+}
+
+html {
+  font-size: $lgMainFontSize;
+
+  @media screen and (max-width: $lgWidth) {
+    font-size: $lgMainFontSize;
+  }
+  @media screen and (max-width: $mdWidth) {
+    font-size: $mdMainFontSize;
+  }
+  @media screen and (max-width: $smWidth) {
+    font-size: $smMainFontSize;
+  }
+  @media screen and (max-width: $xsWidth) {
+    font-size: $xsMainFontSize;
+  }
+}
