@@ -53,6 +53,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         port: 9090,
         headers: { 'Access-Control-Allow-Origin': '*' },
         historyApiFallback: true,
+        allowedHosts: [
+            'localhost',
+            'dev.pushkareva.art',
+        ],
     },
     module: {
         rules,
