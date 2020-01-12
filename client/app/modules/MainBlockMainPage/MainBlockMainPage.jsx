@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import WelcomePage from '~/modules/WelcomeBlockMainPage/containers/WelcomeBlockMainPage.jsx';
-import AboutMe from '~/modules/AboutMe/AboutMe.jsx';
+import AboutMe from '~/modules/AboutMe/containers/AboutMe.jsx';
 import Contacts from '~/modules/Contacts/containers/Contacts.jsx';
 
 export default function MainBlockMainPage() {

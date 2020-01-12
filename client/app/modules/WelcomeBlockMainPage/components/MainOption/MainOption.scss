@@ -1,0 +1,19 @@
+@import '~/assets/scss/resources.scss';
+
+.main-option {
+  width: 40%;
+  text-align: center;
+  h4{
+    font-size: $lgMainFontSize;
+  }
+
+  a {
+    color: $mainFontColor;
+  }
+
+  &-image {
+    img {
+      width: 80%;
+    }
+  }
+}

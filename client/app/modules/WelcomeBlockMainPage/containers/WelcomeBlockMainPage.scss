@@ -1,8 +1,54 @@
-.welcome-block{
-  width: 73%;
+@import '~/assets/scss/resources.scss';
+
+.welcome-block {
+  width: 58%;
   margin: 0 auto;
-  &-container{
+
+  &-container {
     width: 86%;
     margin: 0 auto;
+    text-align: center;
+
+    .flex-container-welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .under-slider-text {
+        width: 82%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 23px;
+        padding-top: 13px;
+        line-height: 30px;
+      }
+
+      .main-sign-up-button {
+        background-color: $mainElementsColor;
+        font-size: 31px;
+        width: 27%;
+        height: 66px;
+        border-radius: 32px;
+        margin-top: 32px;
+      }
+    }
+
+    .welcome-block-options {
+      .flex-container-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        &:last-child {
+          margin: 40px 0;
+        }
+      }
+    }
+
+    h3 {
+      font-size: $xlMainFontSize;
+    }
   }
+
 }

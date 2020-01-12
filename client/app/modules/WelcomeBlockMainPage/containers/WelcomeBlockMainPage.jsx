@@ -36,20 +36,26 @@ class WelcomeBlockMainPage extends Component {
             <div className="welcome-block">
                 <div className="welcome-block-container">
                     <Slider/>
-                    <div className="under-slider-text">
-                        Искусство обладает силой, способной освободить от дурных мыслей,
-                        избавить от беспокойства. Помогает расслабиться и стать лучше.
-                        Более счастливым, более полно чувствующим жизнь.
+                    <div className="flex-container-welcome">
+                        <div className="under-slider-text">
+                            Искусство обладает силой, способной освободить от дурных мыслей,
+                            избавить от беспокойства. Помогает расслабиться и стать лучше.
+                            Более счастливым, более полно чувствующим жизнь.
+                        </div>
+                        <button className="main-sign-up-button">
+                            ЗАПИСАТЬСЯ
+                        </button>
                     </div>
-                    <button className="main-sign-up-button">
-                        ЗАПИСАТЬСЯ
-                    </button>
                     <Advantages/>
                     <div className="welcome-block-options">
-                        <MainOption {...welcomeOptions.optionAdults}/>
-                        <MainOption {...welcomeOptions.optionKids}/>
-                        <MainOption {...welcomeOptions.optionWorkshop}/>
-                        <MainOption {...welcomeOptions.optionStudio}/>
+                        <div className="flex-container-options">
+                            <MainOption {...welcomeOptions.optionAdults}/>
+                            <MainOption {...welcomeOptions.optionKids}/>
+                        </div>
+                        <div className="flex-container-options">
+                            <MainOption {...welcomeOptions.optionWorkshop}/>
+                            <MainOption {...welcomeOptions.optionStudio}/>
+                        </div>
                     </div>
                     <h3>Работы Учеников</h3>
                 </div>
