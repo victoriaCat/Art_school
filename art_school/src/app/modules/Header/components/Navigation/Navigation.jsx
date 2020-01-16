@@ -11,8 +11,8 @@ const Navigation = () => {
                     <ul>
                         <li><Link to="/">ЗАНЯТИЯ</Link></li>
                         <li><Link to="/">РАСПИСАНИЕ</Link></li>
-                        <li><Link to="/home/about_me">ОБО МНЕ</Link></li>
-                        <li><Link to="/home/contacts">КОНТАКТЫ</Link></li>
+                        <li><Link to="/about">ОБО МНЕ</Link></li>
+                        <li><Link to="/contacts">КОНТАКТЫ</Link></li>
                     </ul>
                 </div>
             </div>

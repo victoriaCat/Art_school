@@ -1,13 +1,17 @@
 {
-  "name": "new-react-ssr",
+  "name": "art_school",
   "version": "1.0.0",
-  "description": "",
+  "description": "Art school web page",
   "scripts": {
     "start": "npm-run-all --parallel open:src open:watch",
     "open:src": "webpack -w",
     "open:watch": "nodemon server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoriaCat/Art_school.git"
+  },
+  "author": "Victoria Katysheva",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
