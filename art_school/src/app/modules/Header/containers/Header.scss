@@ -1,0 +1,60 @@
+@import '~/app/assets/scss/resources.scss';
+
+.header-container {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  height: 105px;
+  align-items: center;
+  justify-content: space-around;
+
+  .header-logo {
+    width: 28%;
+    padding-left: 20px;
+    img {
+      width: 65%;
+    }
+  }
+
+  .header-info {
+    width: 30%;
+    font-family: $mainFontBold;
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .header-phone {
+      font-size: $xlMainFontSize;
+      margin: 0;
+    }
+
+    .header-working-hours {
+      font-size: 12px;
+      color: $secondaryFontColor;
+      margin: 0;
+    }
+  }
+
+  .header-icons {
+    width: 10%;
+    padding-left: 10px;
+    img {
+      width: 35%;
+      padding-left: 3px;
+    }
+  }
+
+  .header-link-schedule {
+    width: 20%;
+    height: 40px;
+    border-radius: 35px;
+    border: 2px solid $mainElementsColor;
+    margin-right: 6px;
+
+    a {
+      font-family: $mainFontBold;
+      font-size: 16px;
+      color: $mainFontColor;
+    }
+  }
+}
