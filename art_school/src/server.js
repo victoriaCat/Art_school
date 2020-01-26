@@ -55,7 +55,6 @@ app.get('*', (req, res) => {
         })
         .map(promise => {
             if (promise) {
-                // eslint-disable-next-line no-unused-vars
                 return new Promise((resolve, reject) => {
                     promise.then(resolve).catch(resolve);
                 });

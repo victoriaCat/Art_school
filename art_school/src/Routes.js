@@ -18,7 +18,7 @@ export default [
                 exact: true,
                 routes: [
                     {
-                        component: WelcomeBlockMainPage,
+                        ...WelcomeBlockMainPage,
                         path: '/',
                         exact: true,
                     },

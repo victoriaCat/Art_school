@@ -1,11 +1,13 @@
 import './WelcomeBlockMainPage.scss';
 
 import React, {Component} from 'react';
-import Slider from '~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx';
+import MainSlider from '~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx';
 import CarouselStudents from '~/modules/WelcomeBlockMainPage/components/CarouselStudents/CarouselStudents.jsx';
 import CarouselWorks from '~/modules/WelcomeBlockMainPage/components/CarouselWorks/CarouselWorks.jsx';
 import Advantages from '~/modules/WelcomeBlockMainPage/components/Advantages/Advantages.jsx';
 import MainOption from '~/modules/WelcomeBlockMainPage/components/MainOption/MainOption.jsx';
+import {fetchMainSliderImages} from '~/store/actions';
+import {connect} from 'react-redux';
 
 import optionAdultsImg from '~/assets/images/main-page/main-page-adults.png';
 import optionKidsImg from '~/assets/images/main-page/main-page-kids.png';
@@ -35,7 +37,7 @@ class WelcomeBlockMainPage extends Component {
         return (
             <div className="welcome-block">
                 <div className="welcome-block-container">
-                    <Slider/>
+                    <MainSlider images={this.props.mainSliderImages}/>
                     <div className="flex-container-welcome">
                         <div className="under-slider-text">
                             Искусство обладает силой, способной освободить от дурных мыслей,
@@ -64,6 +66,25 @@ class WelcomeBlockMainPage extends Component {
             </div>
         );
     }
+    componentDidMount() {
+        fetchMainSliderImages();
+    }
 }
 
-export default WelcomeBlockMainPage;
+const loadData = (store, param) => {
+    return store.dispatch(fetchMainSliderImages(param))
+};
+
+const mapStateToProps = state => ({
+    mainSliderImages: state.mainSliderImages
+});
+
+const mapDispatchToProps = {fetchMainSliderImages};
+
+
+export default {
+    component: connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(WelcomeBlockMainPage), loadData
+};
