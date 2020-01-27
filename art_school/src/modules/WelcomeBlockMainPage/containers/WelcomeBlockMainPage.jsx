@@ -6,7 +6,7 @@ import CarouselStudents from '~/modules/WelcomeBlockMainPage/components/Carousel
 import CarouselWorks from '~/modules/WelcomeBlockMainPage/components/CarouselWorks/CarouselWorks.jsx';
 import Advantages from '~/modules/WelcomeBlockMainPage/components/Advantages/Advantages.jsx';
 import MainOption from '~/modules/WelcomeBlockMainPage/components/MainOption/MainOption.jsx';
-import {fetchMainSliderImages} from '~/store/actions';
+import { fetchMainSliderImages } from '~/store/actions';
 import {connect} from 'react-redux';
 
 import optionAdultsImg from '~/assets/images/main-page/main-page-adults.png';
@@ -15,6 +15,9 @@ import optionStudioImg from '~/assets/images/main-page/main-page-studio.png';
 import optionWorkshopImg from '~/assets/images/main-page/main-page-workshop.png';
 
 class WelcomeBlockMainPage extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         const welcomeOptions = {
             optionAdults: {
@@ -67,19 +70,19 @@ class WelcomeBlockMainPage extends Component {
         );
     }
     componentDidMount() {
-        fetchMainSliderImages();
+        this.props.fetchMainSliderImages();
     }
 }
 
-const loadData = (store, param) => {
-    return store.dispatch(fetchMainSliderImages(param))
+const loadData = (store) => {
+    return store.dispatch(fetchMainSliderImages());
 };
 
 const mapStateToProps = state => ({
     mainSliderImages: state.mainSliderImages
 });
 
-const mapDispatchToProps = {fetchMainSliderImages};
+const mapDispatchToProps = { fetchMainSliderImages };
 
 
 export default {

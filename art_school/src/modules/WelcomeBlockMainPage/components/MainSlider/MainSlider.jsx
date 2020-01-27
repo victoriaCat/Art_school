@@ -4,6 +4,9 @@ import React, {Component} from 'react';
 import Slider from 'react-slick';
 
 class MainSlider extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         const settings = {
             autoplay: true,
