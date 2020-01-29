@@ -22,7 +22,7 @@ class MainSlider extends Component {
             <Slider {...settings}>
                 {this.props.images.map(image => (
                     <div key={image.id} className="welcome-block__slide">
-                        <img src={image.url} alt=""/>
+                        <img src={`https://pushkareva.art/fs/gallery/${image.id}/${image.name}?`} alt=""/>
                     </div>))}
             </Slider>
 
