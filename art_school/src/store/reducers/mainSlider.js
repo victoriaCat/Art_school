@@ -1,11 +1,21 @@
 import {FETCH_MAIN_SLIDER_IMAGES} from "../actionTypes";
 
-const initialState = [];
+const initialState = {
+    isLoading: true,
+};
 
-export default (state = initialState, action) => {
-    switch (action.type) {
+/*
+* @TODO:
+* Вожможно нужно добавить еще состояние hasError или что-то типа того, что бы понимать когда не смогли загрузить данные.
+* Сейчас будет висеть в isLoading = true, если не смогли загрузить.
+* */
+export default (state = initialState, {type, isLoading, payload}) => {
+    switch (type) {
         case FETCH_MAIN_SLIDER_IMAGES:
-            return action.payload;
+            return {
+                isLoading,
+                payload,
+            };
 
         default:
             return state;

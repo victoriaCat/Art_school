@@ -1,12 +1,13 @@
-import './MainSlider.scss';
-
 import React, {Component} from 'react';
 import Slider from 'react-slick';
+
+import './MainSlider.scss';
 
 class MainSlider extends Component {
     constructor(props){
         super(props);
     }
+
     render() {
         const settings = {
             autoplay: true,
@@ -16,13 +17,21 @@ class MainSlider extends Component {
             fade: true,
             cssEase: 'linear',
             slidesToScroll: 1,
-            arrows: false
+            arrows: false,
+            lazyLoad: true,
         };
+
         return (
             <Slider {...settings}>
-                {this.props.images.map(image => (
-                    <div key={image.id} className="welcome-block__slide">
-                        <img src={`https://pushkareva.art/fs/gallery/${image.id}/${image.name}?`} alt=""/>
+                {this.props.images.map(({id, url, title}) => (
+                    <div
+                      key={id}
+                      className="welcome-block__slide"
+                    >
+                        <img
+                          src={url}
+                          alt={title}
+                        />
                     </div>))}
             </Slider>
 

@@ -1,9 +1,11 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
+import {createLogger} from 'redux-logger';
 
 import combinedReducers from './reducers/combinedReducers';
 
-const middleware = [thunk];
+const logger = createLogger({collapsed: true});
+const middleware = [thunk, logger];
 
 const composeEnhancers =
     typeof window !== 'undefined'

@@ -1,23 +1,34 @@
-import './WelcomeBlockMainPage.scss';
-
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+
+import './WelcomeBlockMainPage.scss';
 import MainSlider from '~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx';
 import CarouselStudents from '~/modules/WelcomeBlockMainPage/components/CarouselStudents/CarouselStudents.jsx';
 import CarouselWorks from '~/modules/WelcomeBlockMainPage/components/CarouselWorks/CarouselWorks.jsx';
 import Advantages from '~/modules/WelcomeBlockMainPage/components/Advantages/Advantages.jsx';
 import MainOption from '~/modules/WelcomeBlockMainPage/components/MainOption/MainOption.jsx';
 import { fetchMainSliderImages } from '~/store/actions';
-import {connect} from 'react-redux';
-
 import optionAdultsImg from '~/assets/images/main-page/main-page-adults.png';
 import optionKidsImg from '~/assets/images/main-page/main-page-kids.png';
 import optionStudioImg from '~/assets/images/main-page/main-page-studio.png';
 import optionWorkshopImg from '~/assets/images/main-page/main-page-workshop.png';
+import Preloader from "../../Common/Preloader.jsx";
 
 class WelcomeBlockMainPage extends Component {
     constructor(props){
         super(props);
     }
+
+    /*
+    * returns {Preloader || MainSlider}
+    * */
+    getMainSliderElement() {
+        const {mainSliderImages: {isLoading, payload = []}} = this.props;
+
+        return isLoading ? <Preloader /> : <MainSlider images={payload}/>;
+    }
+
     render() {
         const welcomeOptions = {
             optionAdults: {
@@ -37,10 +48,11 @@ class WelcomeBlockMainPage extends Component {
                 img: optionStudioImg
             },
         };
+
         return (
             <div className="welcome-block">
                 <div className="welcome-block-container">
-                    <MainSlider images={this.props.mainSliderImages}/>
+                    {this.getMainSliderElement()}
                     <div className="flex-container-welcome">
                         <div className="under-slider-text">
                             Искусство обладает силой, способной освободить от дурных мыслей,
@@ -84,6 +96,25 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = { fetchMainSliderImages };
 
+/*
+* Если есть пропсы, лучше их всегда описывать, что бы было легче читать код и отлаживать.
+* https://ru.react.js.org/docs/typechecking-with-proptypes.html
+* */
+WelcomeBlockMainPage.propTypes = {
+    fetchMainSliderImages: PropTypes.func.isRequired,
+    mainSliderImages: PropTypes.shape({
+        // Состояние загрузки
+        isLoading: PropTypes.bool.isRequired,
+        // Коллекция
+        payload: PropTypes.array,
+    }).isRequired,
+};
+WelcomeBlockMainPage.defaultProps = {
+    mainSliderImages: PropTypes.shape({
+        isLoading: true,
+        payload: [],
+    }),
+};
 
 export default {
     component: connect(
