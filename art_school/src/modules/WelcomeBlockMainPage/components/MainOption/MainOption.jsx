@@ -10,7 +10,7 @@ const MainOption = (props) => {
                 <Link to="/">{props.header}</Link>
             </h4>
             <div className="main-option-image">
-                <Link to="/"><img src={props.img} alt=""/></Link>
+                <Link to="/"><img src={props.img} alt={props.header}/></Link>
             </div>
         </div>
     );

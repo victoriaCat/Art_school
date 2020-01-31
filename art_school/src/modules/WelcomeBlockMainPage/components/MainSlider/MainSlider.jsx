@@ -2,12 +2,9 @@ import React, {Component} from 'react';
 import Slider from 'react-slick';
 
 import './MainSlider.scss';
+import {FS_IMG_URL} from '~/libs/api';
 
 class MainSlider extends Component {
-    constructor(props){
-        super(props);
-    }
-
     render() {
         const settings = {
             autoplay: true,
@@ -18,19 +15,15 @@ class MainSlider extends Component {
             cssEase: 'linear',
             slidesToScroll: 1,
             arrows: false,
-            lazyLoad: true,
         };
 
         return (
             <Slider {...settings}>
-                {this.props.images.map(({id, url, title}) => (
-                    <div
-                      key={id}
-                      className="welcome-block__slide"
-                    >
+                {this.props.images.map(image => (
+                    <div key={image.id} className="welcome-block__slide">
                         <img
-                          src={url}
-                          alt={title}
+                          src={`${FS_IMG_URL}${image.id}/${image.name}?`}
+                          alt={image.name}
                         />
                     </div>))}
             </Slider>

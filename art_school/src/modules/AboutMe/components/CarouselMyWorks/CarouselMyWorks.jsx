@@ -4,10 +4,6 @@ import React, {Component} from 'react';
 import Slider from 'react-slick';
 import {Link} from "react-router-dom";
 
-import carouselMyWorks1Img from '~/assets/images/about_me/carousel/diploma.jpeg';
-import carouselMyWorks2Img from '~/assets/images/about_me/carousel/lebyazhensky-krutoyar.png';
-import carouselMyWorks3Img from '~/assets/images/about_me/carousel/lebyazhyi-yar.jpeg';
-
 class CarouselMyWorks extends Component {
     render() {
         const settings = {

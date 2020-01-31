@@ -20,4 +20,4 @@ MainPage.defaultProps ={
     route: null
 };
 
-export default MainPage;
+export default {component: MainPage};

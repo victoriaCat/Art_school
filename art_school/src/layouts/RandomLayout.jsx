@@ -13,4 +13,4 @@ RandomLayout.defaultProps ={
     route: null
 };
 
-export default RandomLayout;
+export default {component: RandomLayout};

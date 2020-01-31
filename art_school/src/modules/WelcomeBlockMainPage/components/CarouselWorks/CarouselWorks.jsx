@@ -3,11 +3,7 @@ import './CarouselWorks.scss';
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
-
-import carouselWorks1Img from '~/assets/images/main-page/students/works/11-07-19-04-57-1.jpeg';
-import carouselWorks2Img from '~/assets/images/main-page/students/works/11-07-19-04-57-2.jpeg';
-import carouselWorks3Img from '~/assets/images/main-page/students/works/11-07-19-04-57-3.jpeg';
-import carouselWorks4Img from '~/assets/images/main-page/students/works/11-07-19-04-57-4.jpeg';
+import {FS_IMG_URL} from '~/libs/api';
 
 class CarouselWorks extends Component {
     render() {
@@ -24,18 +20,10 @@ class CarouselWorks extends Component {
         return (
             <Link to="/">
                 <Slider {...settings}>
-                    <div className="carousel-works__photo">
-                        <img src={carouselWorks1Img} alt=""/>
-                    </div>
-                    <div className="carousel-works__photo">
-                        <img src={carouselWorks2Img} alt=""/>
-                    </div>
-                    <div className="carousel-works__photo">
-                        <img src={carouselWorks3Img} alt=""/>
-                    </div>
-                    <div className="carousel-works__photo">
-                        <img src={carouselWorks4Img} alt=""/>
-                    </div>
+                    {this.props.images.map(image => (
+                        <div key={image.id} className="carousel-works__photo">
+                            <img src={`${FS_IMG_URL}${image.id}/${image.name}?`} alt={image.name}/>
+                        </div>))}
                 </Slider>
             </Link>
         );

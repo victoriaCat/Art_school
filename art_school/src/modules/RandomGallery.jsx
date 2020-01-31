@@ -9,4 +9,4 @@ const RandomGallery = () => {
     );
 };
 
-export default RandomGallery;
+export default {component: RandomGallery};

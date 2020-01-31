@@ -4,9 +4,6 @@ import React from 'react';
 
 import CarouselMyWorks from '~/modules/AboutMe/components/CarouselMyWorks/CarouselMyWorks.jsx';
 
-import pushkarevaImg from '~/assets/images/about_me/pushkareva.png';
-import signatureImg from '~/assets/images/about_me/signature.png';
-
 const AboutMe = () => {
     return (
         <>
@@ -82,10 +79,9 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <h3>Работы</h3>
-                <CarouselMyWorks />
             </div>
         </>
     );
 };
 
-export default AboutMe;
+export default {component: AboutMe};

@@ -9,4 +9,4 @@ const PageNotFound = () => {
     );
 };
 
-export default PageNotFound;
+export default {component: PageNotFound};

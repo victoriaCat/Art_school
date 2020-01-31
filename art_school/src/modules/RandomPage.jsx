@@ -9,4 +9,4 @@ const RandomPage = () => {
     );
 };
 
-export default RandomPage;
+export default {component: RandomPage};
