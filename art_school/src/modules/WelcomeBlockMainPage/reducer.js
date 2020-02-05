@@ -34,9 +34,9 @@ export default (state = initialState, {type, isLoading, payload}) => {
 
     if (stateKey) {
         return {...state, [stateKey]: {
-            isLoading,
-            payload
-        }};
+                isLoading,
+                payload
+            }};
 
     } else {
         return state;

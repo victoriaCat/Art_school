@@ -98,9 +98,9 @@ class WelcomeBlockMainPage extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchMainSliderImages();
-        this.props.fetchMainCarouselStudentsImages();
-        this.props.fetchMainCarouselWorksImages();
+        if (!this.props.mainSliderImages) this.props.fetchMainSliderImages();
+        if (!this.props.carouselStudentsImages) this.props.fetchMainCarouselStudentsImages();
+        if (!this.props.carouselWorksImages) this.props.fetchMainCarouselWorksImages();
     }
 }
 
@@ -133,37 +133,8 @@ WelcomeBlockMainPage.propTypes = {
         // Коллекция
         payload: PropTypes.array,
     }).isRequired,
-<<<<<<< HEAD
-    carouselStudentsImages: PropTypes.shape({
-        // Состояние загрузки
-        isLoading: PropTypes.bool.isRequired,
-        // Коллекция
-        payload: PropTypes.array,
-    }).isRequired,
-    carouselWorksImages: PropTypes.shape({
-        // Состояние загрузки
-        isLoading: PropTypes.bool.isRequired,
-        // Коллекция
-        payload: PropTypes.array,
-    }).isRequired,
-};
-WelcomeBlockMainPage.defaultProps = {
-    mainSliderImages: PropTypes.shape({
-        isLoading: true,
-        payload: [],
-    }),
-    carouselStudentsImages: PropTypes.shape({
-        isLoading: true,
-        payload: [],
-    }),
-    carouselWorksImages: PropTypes.shape({
-        isLoading: true,
-        payload: [],
-    }),
-=======
     carouselStudentsImages: PropTypes.object.isRequired,
     carouselWorksImages: PropTypes.object.isRequired,
->>>>>>> 044f4b23a7467a92dfa50f28b9c3e335f97a237c
 };
 
 export default {
