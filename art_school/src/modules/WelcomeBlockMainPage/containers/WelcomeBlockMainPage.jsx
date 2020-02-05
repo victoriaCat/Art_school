@@ -98,9 +98,9 @@ class WelcomeBlockMainPage extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.mainSliderImages) this.props.fetchMainSliderImages();
-        if (!this.props.carouselStudentsImages) this.props.fetchMainCarouselStudentsImages();
-        if (!this.props.carouselWorksImages) this.props.fetchMainCarouselWorksImages();
+        this.props.fetchMainSliderImages();
+        this.props.fetchMainCarouselStudentsImages();
+        this.props.fetchMainCarouselWorksImages();
     }
 }
 
@@ -125,7 +125,21 @@ const mapDispatchToProps = {fetchMainSliderImages, fetchMainCarouselStudentsImag
 * */
 WelcomeBlockMainPage.propTypes = {
     fetchMainSliderImages: PropTypes.func.isRequired,
+    fetchMainCarouselStudentsImages: PropTypes.func.isRequired,
+    fetchMainCarouselWorksImages: PropTypes.func.isRequired,
     mainSliderImages: PropTypes.shape({
+        // Состояние загрузки
+        isLoading: PropTypes.bool.isRequired,
+        // Коллекция
+        payload: PropTypes.array,
+    }).isRequired,
+    carouselStudentsImages: PropTypes.shape({
+        // Состояние загрузки
+        isLoading: PropTypes.bool.isRequired,
+        // Коллекция
+        payload: PropTypes.array,
+    }).isRequired,
+    carouselWorksImages: PropTypes.shape({
         // Состояние загрузки
         isLoading: PropTypes.bool.isRequired,
         // Коллекция
@@ -134,6 +148,14 @@ WelcomeBlockMainPage.propTypes = {
 };
 WelcomeBlockMainPage.defaultProps = {
     mainSliderImages: PropTypes.shape({
+        isLoading: true,
+        payload: [],
+    }),
+    carouselStudentsImages: PropTypes.shape({
+        isLoading: true,
+        payload: [],
+    }),
+    carouselWorksImages: PropTypes.shape({
         isLoading: true,
         payload: [],
     }),

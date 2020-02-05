@@ -15,6 +15,7 @@ class MainSlider extends Component {
             cssEase: 'linear',
             slidesToScroll: 1,
             arrows: false,
+            lazyLoad: true
         };
 
         return (
