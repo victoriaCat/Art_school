@@ -21,7 +21,7 @@ class WelcomeBlockMainPage extends Component {
     * returns {Preloader || MainSlider}
     * */
     getMainSliderElement() {
-        const {mainSliderImages: {isLoading, payload = []}} = this.props.mainSliderImages;
+        const {isLoading, payload = []} = this.props.mainSliderImages;
 
         return isLoading ? <Preloader/> : <MainSlider images={payload}/>;
     }
@@ -30,7 +30,7 @@ class WelcomeBlockMainPage extends Component {
     * returns {Preloader || CarouselStudents}
     * */
     getCarouselStudentsElement() {
-        const {carouselStudentsImages: {isLoading, payload = []}} = this.props.carouselStudentsImages;
+        const {isLoading, payload = []} = this.props.carouselStudentsImages;
 
         return isLoading ? <Preloader/> : <CarouselStudents images={payload}/>;
     }
@@ -39,7 +39,7 @@ class WelcomeBlockMainPage extends Component {
     * returns {Preloader || CarouselWorks}
     * */
     getCarouselWorksElement() {
-        const {carouselStudentsImages: {isLoading, payload = []}} = this.props.carouselWorksImages;
+        const {isLoading, payload = []} = this.props.carouselWorksImages;
 
         return isLoading ? <Preloader/> : <CarouselWorks images={payload}/>;
     }
@@ -113,9 +113,9 @@ const loadData = (store) => {
 };
 
 const mapStateToProps = state => ({
-    mainSliderImages: state.mainSliderImages,
-    carouselStudentsImages: state.carouselStudentsImages,
-    carouselWorksImages: state.carouselWorksImages
+    mainSliderImages: state.mainPageImages.mainSliderImages,
+    carouselStudentsImages: state.mainPageImages.carouselStudentsImages,
+    carouselWorksImages: state.mainPageImages.carouselWorksImages
 });
 
 const mapDispatchToProps = {fetchMainSliderImages, fetchMainCarouselStudentsImages, fetchMainCarouselWorksImages};
@@ -133,6 +133,7 @@ WelcomeBlockMainPage.propTypes = {
         // Коллекция
         payload: PropTypes.array,
     }).isRequired,
+<<<<<<< HEAD
     carouselStudentsImages: PropTypes.shape({
         // Состояние загрузки
         isLoading: PropTypes.bool.isRequired,
@@ -159,6 +160,10 @@ WelcomeBlockMainPage.defaultProps = {
         isLoading: true,
         payload: [],
     }),
+=======
+    carouselStudentsImages: PropTypes.object.isRequired,
+    carouselWorksImages: PropTypes.object.isRequired,
+>>>>>>> 044f4b23a7467a92dfa50f28b9c3e335f97a237c
 };
 
 export default {

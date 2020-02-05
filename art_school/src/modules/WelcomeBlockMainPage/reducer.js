@@ -5,7 +5,18 @@ import {
 } from './actionTypes';
 
 const initialState = {
-    isLoading: true,
+    mainSliderImages: {
+        isLoading: true,
+        payload: []
+    },
+    carouselStudentsImages: {
+        isLoading: true,
+        payload: []
+    },
+    carouselWorksImages: {
+        isLoading: true,
+        payload: []
+    }
 };
 
 /*
@@ -14,24 +25,20 @@ const initialState = {
 * Сейчас будет висеть в isLoading = true, если не смогли загрузить.
 * */
 export default (state = initialState, {type, isLoading, payload}) => {
-    switch (type) {
-        case FETCH_MAIN_SLIDER_IMAGES:
-            return {
-                isLoading,
-                payload,
-            };
-        case FETCH_MAIN_CAROUSEL_IMAGES_STUDENTS:
-            return {
-                isLoading,
-                payload,
-            };
-        case FETCH_MAIN_CAROUSEL_IMAGES_WORKS:
-            return {
-                isLoading,
-                payload,
-            };
+    const stateKey = ({
+        FETCH_MAIN_SLIDER_IMAGES: 'mainSliderImages',
+        FETCH_MAIN_CAROUSEL_IMAGES_STUDENTS: 'carouselStudentsImages',
+        FETCH_MAIN_CAROUSEL_IMAGES_WORKS: 'carouselWorksImages',
 
-        default:
-            return state;
+    })[type];
+
+    if (stateKey) {
+        return {...state, [stateKey]: {
+            isLoading,
+            payload
+        }};
+
+    } else {
+        return state;
     }
 };

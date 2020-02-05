@@ -3,8 +3,13 @@
   "warnings": [],
   "assetsByChunkName": {
     "main": [
+<<<<<<< HEAD
       "styles.d75f1c5bded138852a10.css",
       "bundle.d75f1c5bded138852a10.js"
+=======
+      "styles.533456f13bdd5a6e3732.css",
+      "bundle.533456f13bdd5a6e3732.js"
+>>>>>>> 044f4b23a7467a92dfa50f28b9c3e335f97a237c
     ]
   },
   "assets": [],
