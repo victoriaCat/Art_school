@@ -1,0 +1,33 @@
+@import '~/assets/scss/resources.scss';
+
+.nav {
+  &-container {
+    width: 86%;
+    margin: 0 auto;
+
+    .wrap {
+      height: 50px;
+      display: flex;
+      border: 1px solid #61574b;
+      align-items: center;
+
+      ul {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+        display: inherit;
+        list-style-type: none;
+        justify-content: space-evenly;
+
+        a {
+          font-family: $mainFontBold;
+          font-size: $lgMainFontSize;
+          color: $mainFontColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+}
+

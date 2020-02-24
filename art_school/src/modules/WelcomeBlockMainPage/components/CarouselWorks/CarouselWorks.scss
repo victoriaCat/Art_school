@@ -1,0 +1,32 @@
+@import '~/assets/scss/resources.scss';
+@media screen and (min-width: $xlWidth) {
+  .carousel-works__photo{
+    img{
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: $xlWidth) {
+  .carousel-works__photo{
+    img{
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: $lgWidth) {
+  .carousel-works__photo{
+    img{
+      height: 230px;
+    }
+  }
+}
+
+@media screen and (max-width: $mdWidth) {
+  .carousel-works__photo{
+    img{
+      height: 180px;
+    }
+  }
+}
