@@ -5,11 +5,11 @@ import {Link} from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <nav>
+        <nav className="nav">
             <div className="nav-container">
                 <div className="wrap">
                     <ul>
-                        <li><Link to="/">ЗАНЯТИЯ</Link></li>
+                        <li><a href="#options">ЗАНЯТИЯ</a></li>
                         <li><Link to="/">РАСПИСАНИЕ</Link></li>
                         <li><Link to="/about">ОБО МНЕ</Link></li>
                         <li><Link to="/contacts">КОНТАКТЫ</Link></li>

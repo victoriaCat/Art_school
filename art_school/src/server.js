@@ -1,14 +1,14 @@
 import React from 'react';
 import '@babel/polyfill';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
-import { matchRoutes, renderRoutes } from 'react-router-config';
+import {renderToString} from 'react-dom/server';
+import {StaticRouter} from 'react-router-dom';
+import {matchRoutes, renderRoutes} from 'react-router-config';
 import express from 'express';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import serialize from 'serialize-javascript';
 import Routes from './Routes';
-import { store } from './store';
-import { assetsByChunkName } from '../dist/public/stats.json';
+import {store} from './store';
+import {assetsByChunkName} from '../dist/public/stats.json';
 
 const app = express();
 
@@ -50,7 +50,7 @@ app.get('*', (req, res) => {
     const routes = matchRoutes(Routes, req.path);
 
     const promises = routes
-        .map(({ route }) => {
+        .map(({route}) => {
             return route.loadData ? route.loadData(store, id) : null;
         })
         .map(promise => {

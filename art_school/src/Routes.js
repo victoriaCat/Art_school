@@ -1,6 +1,5 @@
 import MainPage from "./layouts/MainPage/MainPage.jsx";
 import WelcomeBlockMainPage from "./modules/WelcomeBlockMainPage/containers/WelcomeBlockMainPage.jsx";
-//import MainSlider from './modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx';
 import AboutMe from "./modules/AboutMe/containers/AboutMe.jsx";
 import Contacts from "./modules/Contacts/containers/Contacts.jsx";
 import PageNotFound from "./modules/PageNotFound/PageNotFound.jsx";

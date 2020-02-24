@@ -1,12 +1,13 @@
 {
   "name": "art_school",
   "version": "1.0.0",
-  "description": "",
+  "description": "Art school website",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
     "build:client": "webpack -p --config ./webpack.config.client.js",
-    "build:server": "webpack -p --config ./webpack.config.server.js"
+    "build:server": "webpack -p --config ./webpack.config.server.js",
+    "all": "npm-run-all build:client build:server start"
   },
   "author": "Victoria Katysheva",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
     "null-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",

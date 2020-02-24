@@ -1,7 +1,32 @@
-@import '~/libs/carousel/carousel.scss';
+@import '~/assets/scss/resources.scss';
+@media screen and (min-width: $xlWidth) {
+  .carousel-students__photo{
+    img{
+      width: 98%;
+    }
+  }
+}
 
-.carousel-students__photo{
-  img{
-    width: 98%;
+@media screen and (max-width: $xlWidth) {
+  .carousel-students__photo{
+    img{
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: $lgWidth) {
+  .carousel-students__photo{
+    img{
+      height: 330px;
+    }
+  }
+}
+
+@media screen and (max-width: $mdWidth) {
+  .carousel-students__photo{
+    img{
+      height: 280px;
+    }
   }
 }

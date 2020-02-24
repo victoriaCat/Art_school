@@ -12,7 +12,7 @@ import instagramImg from '~/assets/images/instagram-logo.png';
 
 const Header = () => {
     return (
-        <header>
+        <header className="header">
             <div className="header-container">
                 <div className="header-logo">
                     <Link to="/"><img className="logo-img" src={logoImg} alt="Logo"/></Link>
