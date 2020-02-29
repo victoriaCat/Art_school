@@ -1,7 +1,7 @@
 import React from 'react';
 import {renderRoutes} from "react-router-config";
 
-const RandomLayout = ({route}) => {
+const GalleryLayout = ({route}) => {
     return (
         <>
             {renderRoutes(route.routes)}
@@ -9,8 +9,8 @@ const RandomLayout = ({route}) => {
     );
 };
 
-RandomLayout.defaultProps ={
+GalleryLayout.defaultProps ={
     route: null
 };
 
-export default {component: RandomLayout};
+export default {component: GalleryLayout};

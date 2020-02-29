@@ -48,19 +48,23 @@ class WelcomeBlockMainPage extends Component {
         const welcomeOptions = {
             optionAdults: {
                 header: 'Рисуют взрослые',
-                imgName: 'main-page-adults.png'
+                imgName: 'main-page-adults.png',
+                link: '/adults_draw'
             },
             optionKids: {
                 header: 'Рисуют дети',
-                imgName: 'main-page-kids.png'
+                imgName: 'main-page-kids.png',
+                link: '/kids_draw'
             },
             optionWorkshop: {
                 header: 'Мастер-классы',
-                imgName: 'main-page-workshop.png'
+                imgName: 'main-page-workshop.png',
+                link: '/workshops'
             },
             optionStudio: {
                 header: 'Свободная мастерская',
-                imgName: 'main-page-studio.png'
+                imgName: 'main-page-studio.png',
+                link: '/free_studio'
             }
         };
         return (
@@ -78,8 +82,7 @@ class WelcomeBlockMainPage extends Component {
                         </button>
                     </div>
                     <Advantages/>
-                    <a name="options"> </a>
-                    <div className="welcome-block-options">
+                    <div className="welcome-block-options" id="options">
                         <div className="flex-container-options">
                             {this.showMainOptionsImages(this.props.mainOptionsImages, welcomeOptions.optionAdults)}
                             {this.showMainOptionsImages(this.props.mainOptionsImages, welcomeOptions.optionKids)}

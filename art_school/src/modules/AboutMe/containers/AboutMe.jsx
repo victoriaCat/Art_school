@@ -120,9 +120,9 @@ class AboutMe extends Component {
     }
 
     componentDidMount() {
-        if (this.props.aboutMeImages.isLoading)
+        if (!this.props.aboutMeImages || this.props.aboutMeImages.isLoading)
             this.props.fetchImages('about_me', FETCH_ABOUT_ME_IMAGES);
-        if (this.props.carouselMyWorksImages.isLoading)
+        if (!this.props.carouselMyWorksImages || this.props.carouselMyWorksImages.isLoading)
             this.props.fetchImages('about_me_works', FETCH_CAROUSEL_IMAGES_MY_WORKS);
     }
 }

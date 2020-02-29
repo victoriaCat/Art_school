@@ -1,7 +1,8 @@
 import './Navigation.scss';
 
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 
 const Navigation = () => {
     return (
@@ -9,7 +10,7 @@ const Navigation = () => {
             <div className="nav-container">
                 <div className="wrap">
                     <ul>
-                        <li><a href="#options">ЗАНЯТИЯ</a></li>
+                        <li><HashLink to="/#options">ЗАНЯТИЯ</HashLink></li>
                         <li><Link to="/">РАСПИСАНИЕ</Link></li>
                         <li><Link to="/about">ОБО МНЕ</Link></li>
                         <li><Link to="/contacts">КОНТАКТЫ</Link></li>
