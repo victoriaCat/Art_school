@@ -1,4 +1,10 @@
 @import '~/assets/scss/resources.scss';
+.carousel-works__photo{
+  img{
+    border: 5px solid #ffffff;
+  }
+}
+
 @media screen and (min-width: $xlWidth) {
   .carousel-works__photo{
     img{

@@ -1,5 +1,39 @@
+@import '~/assets/scss/resources.scss';
+
 .carousel-my-works__photo{
   img{
-    width: 98%;
+    border: 5px solid #ffffff;
+  }
+}
+
+@media screen and (min-width: $xlWidth) {
+  .carousel-my-works__photo{
+    img{
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: $xlWidth) {
+  .carousel-my-works__photo{
+    img{
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: $lgWidth) {
+  .carousel-my-works__photo{
+    img{
+      height: 230px;
+    }
+  }
+}
+
+@media screen and (max-width: $mdWidth) {
+  .carousel-my-works__photo{
+    img{
+      height: 180px;
+    }
   }
 }

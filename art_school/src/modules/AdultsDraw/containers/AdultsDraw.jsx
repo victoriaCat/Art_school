@@ -6,6 +6,7 @@ import CarouselAdults from '~/modules/AdultsDraw/components/CarouselAdults.jsx';
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_CAROUSEL_ADULTS_DRAW_IMAGES} from '~/modules/AdultsDraw/actionTypes';
 import {connect} from "react-redux";
+import {PRICE, DURATION} from '~/assets/vars';
 
 class AdultsDraw extends Component {
     /*
@@ -38,8 +39,8 @@ class AdultsDraw extends Component {
                 </ul>
                 <p>Не бойтесь быть дебютантом. Главное – непрерывно учиться по жизни.
                     В каждом из нас живёт художник, который постоянно ищет повод, чтобы выразить себя. </p>
-                <p>Продолжительность: 3 часа</p>
-                <p>Стоимость: 1700 руб., включая все материалы и удобную упаковку.</p>
+                <p>Продолжительность: {DURATION} часа</p>
+                <p>Стоимость: {PRICE} руб., включая все материалы и удобную упаковку.</p>
                 <p>Занятия проходят в группе.</p>
                 <p>Площадки проведения мероприятий указаны в карте расписания.</p>
             </div>

@@ -7,6 +7,7 @@ import pointerImg from '~/assets/images/pointer.png';
 import metroImg from '~/assets/images/metro.png';
 import phoneImg from '~/assets/images/phone.png';
 import emailImg from '~/assets/images/email.png';
+import {PHONE_NUMBER, EMAIL} from '~/assets/vars';
 
 class Contacts extends Component {
     render() {
@@ -34,11 +35,11 @@ class Contacts extends Component {
                                 <p>г.Москва, Валовая ул. 32/75с1</p>
                                 <div className="contacts-phone">
                                     <img className="contacts-icon" src={phoneImg} alt="" width="50px"/>
-                                    <p>8 (800) 555-35-35</p>
+                                    <p>{PHONE_NUMBER}</p>
                                 </div>
                                 <div className="contacts-email">
                                     <img className="contacts-icon" src={emailImg} alt="" width="50px"/>
-                                    <p>sampletext@sampletext.ru</p>
+                                    <p>{EMAIL}</p>
                                 </div>
                             </div>
                             <div className="contacts-form">
