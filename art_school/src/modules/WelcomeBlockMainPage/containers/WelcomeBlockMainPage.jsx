@@ -2,12 +2,13 @@ import './WelcomeBlockMainPage.scss';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
 import MainSlider from '~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx';
 import Advantages from '~/modules/WelcomeBlockMainPage/components/Advantages/Advantages.jsx';
 import MainOption from '~/modules/WelcomeBlockMainPage/components/MainOption/MainOption.jsx';
-import CarouselStudents from "~/modules/WelcomeBlockMainPage/components/CarouselStudents/CarouselStudents.jsx";
-import CarouselWorks from "~/modules/WelcomeBlockMainPage/components/CarouselWorks/CarouselWorks.jsx";
+import CarouselStudents from '~/modules/WelcomeBlockMainPage/components/CarouselStudents/CarouselStudents.jsx';
+import CarouselWorks from '~/modules/WelcomeBlockMainPage/components/CarouselWorks/CarouselWorks.jsx';
 import {fetchImages} from '~/libs/commonActions';
 import {
     FETCH_MAIN_SLIDER_IMAGES,
@@ -34,6 +35,9 @@ class WelcomeBlockMainPage extends Component {
         }
     }
 
+    /*
+    * returns {Preloader || MainOption}
+    * */
     showMainOptionsImages(allProps, option){
         let {isLoading, payload = []} = allProps;
         let {} = option;
@@ -78,7 +82,7 @@ class WelcomeBlockMainPage extends Component {
                             Более счастливым, более полно чувствующим жизнь.
                         </div>
                         <button className="main-sign-up-button">
-                            ЗАПИСАТЬСЯ
+                            <Link to="/workshops">ЗАПИСАТЬСЯ</Link>
                         </button>
                     </div>
                     <Advantages/>

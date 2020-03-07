@@ -6,7 +6,7 @@ import CarouselAdults from '~/modules/AdultsDraw/components/CarouselAdults.jsx';
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_CAROUSEL_ADULTS_DRAW_IMAGES} from '~/modules/AdultsDraw/actionTypes';
 import {connect} from "react-redux";
-import {PRICE, DURATION} from '~/assets/vars';
+import {PRICE, DURATION} from '~/assets/infoVars';
 
 class AdultsDraw extends Component {
     /*
@@ -45,6 +45,12 @@ class AdultsDraw extends Component {
                 <p>Площадки проведения мероприятий указаны в карте расписания.</p>
             </div>
         );
+    }
+
+    componentDidMount() {
+        if(this.props.adultsDrawImages.isLoading)
+            this.props.fetchImages('adults_draw', FETCH_CAROUSEL_ADULTS_DRAW_IMAGES);
+
     }
 }
 

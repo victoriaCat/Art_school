@@ -6,7 +6,7 @@ import Preloader from '~/libs/Preloader/Preloader.jsx';
 import CarouselKids from '~/modules/KidsDraw/components/CarouselKids/CarouselKids.jsx';
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_CAROUSEL_KIDS_DRAW_IMAGES} from '~/modules/KidsDraw/actionTypes';
-import {PRICE, DURATION} from '~/assets/vars';
+import {PRICE, DURATION} from '~/assets/infoVars';
 
 class KidsDraw extends Component {
     /*
@@ -43,6 +43,12 @@ class KidsDraw extends Component {
                 <p>Группы делятся по возрастным категориям — I 6-10 лет, II 11-15 лет.</p>
             </div>
         );
+    }
+
+    componentDidMount() {
+        if(this.props.kidsDrawImages.isLoading){
+            this.props.fetchImages('kids_draw', FETCH_CAROUSEL_KIDS_DRAW_IMAGES);
+        }
     }
 }
 

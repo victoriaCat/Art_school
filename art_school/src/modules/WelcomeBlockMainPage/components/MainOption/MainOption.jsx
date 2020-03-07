@@ -1,5 +1,4 @@
 import './MainOption.scss';
-
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {FS_IMG_URL} from '~/libs/api';

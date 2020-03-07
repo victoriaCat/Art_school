@@ -14,22 +14,30 @@ import {FS_IMG_URL} from '~/libs/api';
 
 class AboutMe extends Component {
     /*
+   * returns {Preloader || AboutMe Images}
+   * */
+    showAboutMeImages(allProps, item) {
+        let {isLoading, payload = []} = allProps;
+        return isLoading ? <Preloader/> :
+            <img src={`${FS_IMG_URL}${payload[item].id}/${payload[item].name}?`}
+                 alt={payload[item].name}/>
+    }
+
+    /*
    * returns {Preloader || CarouselMyWorks}
    * */
     showCarouselMyWorksImages(allProps) {
         let {isLoading, payload = []} = allProps;
         if (allProps === this.props.carouselMyWorksImages)
             return isLoading ? <Preloader/> : <CarouselMyWorks images={payload}/>;
-    };
+    }
 
     render() {
         return (
             <div className="about-me">
                 <div className="about-me-container">
                     <div className="my-portrait">
-                        <img
-                            src={`${FS_IMG_URL}${this.props.aboutMeImages.payload[0].id}/${this.props.aboutMeImages.payload[0].name}?`}
-                            alt={this.props.aboutMeImages.payload[0].name}/>
+                        {this.showAboutMeImages(this.props.aboutMeImages, 0)}
                     </div>
                     <div className="about-me-presentation">
                         <p><strong>Sample Text</strong> – кандидат в члены союза художников РФ. Получила
@@ -43,9 +51,7 @@ class AboutMe extends Component {
                             Созидать и совершенствоваться».</p>
                     </div>
                     <div className="about-me-signature">
-                        <img
-                            src={`${FS_IMG_URL}${this.props.aboutMeImages.payload[1].id}/${this.props.aboutMeImages.payload[0].name}?`}
-                            alt={this.props.aboutMeImages.payload[1].name}/>
+                        {this.showAboutMeImages(this.props.aboutMeImages, 1)}
                     </div>
                     <div className="about-me-ask">
 
@@ -120,9 +126,9 @@ class AboutMe extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.aboutMeImages || this.props.aboutMeImages.isLoading)
+        if (this.props.aboutMeImages.isLoading)
             this.props.fetchImages('about_me', FETCH_ABOUT_ME_IMAGES);
-        if (!this.props.carouselMyWorksImages || this.props.carouselMyWorksImages.isLoading)
+        if (this.props.carouselMyWorksImages.isLoading)
             this.props.fetchImages('about_me_works', FETCH_CAROUSEL_IMAGES_MY_WORKS);
     }
 }

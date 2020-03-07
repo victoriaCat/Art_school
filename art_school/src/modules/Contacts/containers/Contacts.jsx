@@ -7,7 +7,7 @@ import pointerImg from '~/assets/images/pointer.png';
 import metroImg from '~/assets/images/metro.png';
 import phoneImg from '~/assets/images/phone.png';
 import emailImg from '~/assets/images/email.png';
-import {PHONE_NUMBER, EMAIL} from '~/assets/vars';
+import {PHONE_NUMBER, EMAIL} from '~/assets/infoVars';
 
 class Contacts extends Component {
     render() {
@@ -46,7 +46,7 @@ class Contacts extends Component {
                                 <p>Если у Вас есть вопросы или предложения, <span
                                     className="write-to-us">напишите нам:</span></p>
                                 <FeedbackForm/>
-                                <p>Нажимая «Отправить» Вы соглашаетесь с <Link to="/">Политикой
+                                <p>Нажимая «Отправить» Вы соглашаетесь с <Link to="/policy" target="_blank">Политикой
                                     конфиденциальности</Link></p>
                             </div>
                         </div>

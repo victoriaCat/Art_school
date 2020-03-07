@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom';
 
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
-import {PHONE_NUMBER, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/vars';
-
+import {PHONE_NUMBER, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
 
 const Footer = () => {
     return (
@@ -25,14 +24,14 @@ const Footer = () => {
                 </div>
                 <div className="footer-icons">
                     <a href={FACEBOOK_LINK} target="_blank"><img className="footer-icons__facebook"
-                                                                             src={facebookImg}
-                                                                             alt="Facebook"/></a>
+                                                                 src={facebookImg}
+                                                                 alt="Facebook"/></a>
                     <a href={INSTAGRAM_LINK} target="_blank"><img className="footer-icons__instagram"
-                                                                              src={instagramImg}
-                                                                              alt="Instagram"/></a>
+                                                                  src={instagramImg}
+                                                                  alt="Instagram"/></a>
                 </div>
                 <div className="footer-link-to-policy">
-                    <Link to="/">Политика конфиденциальности</Link>
+                    <Link to="/policy" target="_blank">Политика конфиденциальности</Link>
                 </div>
             </div>
         </footer>
