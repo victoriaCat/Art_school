@@ -1,5 +1,4 @@
 import './Carousel.scss';
-
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
@@ -14,21 +13,19 @@ class Carousel extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            variableWidth: true,
+            variableWidth: true
         };
 
         if (this.props.propsSettings) {
             Object.assign(settings, this.props.propsSettings);
         }
         return (
-            <Link to="/gallery">
-                <Slider {...settings}>
-                    {this.props.images.map(image => (
-                        <div key={image.id} className={this.props.className}>
-                            <img src={`${FS_IMG_URL}${image.id}/${image.name}?`} alt={image.name}/>
-                        </div>))}
-                </Slider>
-            </Link>
+            <Slider {...settings}>
+                {this.props.images.map(image => (
+                    <div key={image.id} className={this.props.className}>
+                        <img src={`${FS_IMG_URL}${image.id}/${image.name}?`} alt={image.name}/>
+                    </div>))}
+            </Slider>
         );
     }
 }

@@ -40,7 +40,7 @@ class AboutMe extends Component {
                         {this.showAboutMeImages(this.props.aboutMeImages, 0)}
                     </div>
                     <div className="about-me-presentation">
-                        <p><strong>Sample Text</strong> – кандидат в члены союза художников РФ. Получила
+                        <p><strong>Екатерина Пушкарёва</strong> – кандидат в члены союза художников РФ. Получила
                             художественно-педагогическое
                             образование в Академии архитектуры и искусств, Московском педагогическом университете.
                             Постоянный участник выставок и пленэров.</p>

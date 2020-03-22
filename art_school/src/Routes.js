@@ -1,7 +1,7 @@
 import App from "./App.jsx";
 import MainPage from "./layouts/MainPage/MainPage.jsx";
 import OptionsLayout from "./layouts/OptionsLayout/OptionsLayout.jsx";
-import Workshop from "./layouts/Workshop/Workshop.jsx";
+import WorkshopPage from "./layouts/Workshop/Workshop.jsx";
 import WorkshopsCatalog from "./layouts/WorkshopsCatalog/WorkshopsCatalog.jsx";
 import PageNotFound from "./modules/PageNotFound/PageNotFound.jsx";
 import WelcomeBlockMainPage from "./modules/WelcomeBlockMainPage/containers/WelcomeBlockMainPage.jsx";
@@ -12,13 +12,16 @@ import KidsDraw from "./modules/KidsDraw/containers/KidsDraw.jsx";
 import FreeStudio from "./modules/FreeStudio/containers/FreeStudio.jsx";
 import Gallery from "./modules/Gallery/containers/Gallery.jsx";
 import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy.jsx";
+import WorkshopsAll from "./modules/WorkshopsCatalog/containers/WorkshopsAll/WorkshopsAll.jsx";
+import WorkshopsAdults, {loadDataAdults} from "./modules/WorkshopsCatalog/containers/WorkshopsAdults/WorkshopsAdults.jsx";
+import WorkshopsKids, {loadDataKids} from "./modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx";
+import Workshop from "./modules/Workshop/containers/Workshop/Workshop.jsx";
 
-const workshopsPaths = ['/workshops/adults/impressionisty', '/workshops/adults/solnechnyi_zakat',
-    '/workshops/adults/viva_la_vida', '/workshops/adults/sezann_otkroisya',
-    '/workshops/adults/cvety_s_natury', '/workshops/adults/koty', '/workshops/adults/polnyi_jazz',
-    '/workshops/adults/bugry', '/workshops/kids/murlyka', '/workshops/kids/podsolnuhi',
-    '/workshops/kids/rozhdestvo', '/workshops/kids/portret_zimy', '/workshops/kids/ananas',
-    '/workshops/kids/voshod', '/workshops/kids/yabloki_sezanna', '/workshops/kids/sovushka'];
+import {WORKSHOPS_ADULTS, WORKSHOPS_KIDS} from "~/assets/productVars";
+
+const workshopsAdultsPaths = WORKSHOPS_ADULTS.map(workshop => (`/workshops/adults/${workshop.id}/${workshop.link}`));
+const workshopsKidsPaths = WORKSHOPS_KIDS.map(workshop => (`/workshops/kids/${workshop.id}/${workshop.link}`));
+const workshopsPaths = workshopsAdultsPaths.concat(workshopsKidsPaths);
 
 export default [
     {
@@ -44,13 +47,33 @@ export default [
                     },
                     {
                         ...WorkshopsCatalog,
-                        path: ['/workshops', '/workshops/adults', '/workshops/kids']
+                        path: ['/workshops', '/workshops/adults', '/workshops/kids'],
+                        exact: true,
+                        routes: [
+                            {
+                                component: WorkshopsAll,
+                                path: '/workshops',
+                                exact: true
+                            },
+                            {
+                                component: WorkshopsAdults,
+                                loadData: loadDataAdults,
+                                path: '/workshops/adults'
+                            },
+                            {
+                                component: WorkshopsKids,
+                                loadData: loadDataKids,
+                                path: '/workshops/kids'
+                            }
+
+                        ]
                     }
                 ]
             },
             {
                 ...OptionsLayout,
                 path: ['/adults_draw', '/kids_draw', '/free_studio', '/gallery', '/policy'].concat(workshopsPaths),
+                exact: true,
                 routes: [
                     {
                         ...AdultsDraw,
@@ -69,8 +92,15 @@ export default [
                         path: '/gallery'
                     },
                     {
-                        ...Workshop,
-                        path: workshopsPaths
+                        ...WorkshopPage,
+                        path: workshopsPaths,
+                        exact: true,
+                        routes: [
+                            {
+                                ...Workshop,
+                                path: workshopsPaths
+                            }
+                        ]
                     },
                     {
                         ...PrivacyPolicy,

@@ -16,15 +16,11 @@ class FeedbackForm extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        const name = this.state.name;
-        const email = this.state.email;
-        const phone = this.state.phone;
-        const message = this.state.message;
         const data = {
-            name,
-            email,
-            phone,
-            message
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            message: this.state.message
         };
         axios.post("https://jsonplaceholder.typicode.com/users", data)
             .then(response =>{

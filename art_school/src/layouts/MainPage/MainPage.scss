@@ -1,0 +1,30 @@
+@import '~/assets/scss/vars.scss';
+
+.main-page-layout{
+  width: 58%;
+  margin: 0 auto;
+}
+
+@media (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
+  .main-page-layout{
+    width: 65%;
+  }
+}
+
+@media (min-width: #{$lgWidth + 1px}) and (max-width: $xlWidth){
+  .main-page-layout{
+    width: 78%;
+  }
+}
+
+@media (min-width: #{$mdWidth + 1px}) and (max-width: $lgWidth){
+  .main-page-layout{
+    width: 85%;
+  }
+}
+
+@media (max-width: $mdWidth){
+  .main-page-layout{
+    width: 100%;
+  }
+}

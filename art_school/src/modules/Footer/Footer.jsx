@@ -2,6 +2,7 @@ import './Footer.scss';
 
 import React from 'react';
 import {Link} from 'react-router-dom';
+import ScrollToTop from 'react-router-scroll-top';
 
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
@@ -19,7 +20,7 @@ const Footer = () => {
                         <p>Часы работы с 9.00 - 21.00, без выходных</p>
                     </div>
                     <div className="footer-link-to-main">
-                        <h2><Link to="/">Арт-школа Sample Text, 2019</Link></h2>
+                        <h2><Link to="/">Арт-школа Пушкарёвой, 2019</Link></h2>
                     </div>
                 </div>
                 <div className="footer-icons">
@@ -31,7 +32,10 @@ const Footer = () => {
                                                                   alt="Instagram"/></a>
                 </div>
                 <div className="footer-link-to-policy">
-                    <Link to="/policy" target="_blank">Политика конфиденциальности</Link>
+                    <Link to="/policy" target="_blank">
+                        <ScrollToTop/>
+                        Политика конфиденциальности
+                    </Link>
                 </div>
             </div>
         </footer>

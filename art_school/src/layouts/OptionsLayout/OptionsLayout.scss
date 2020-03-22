@@ -1,0 +1,30 @@
+@import '~/assets/scss/vars.scss';
+
+.options-layout{
+  width: 58%;
+  margin: 0 auto;
+}
+
+@media (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
+  .options-layout{
+    width: 65%;
+  }
+}
+
+@media (min-width: #{$lgWidth + 1px}) and (max-width: $xlWidth){
+  .options-layout{
+    width: 78%;
+  }
+}
+
+@media (min-width: #{$mdWidth + 1px}) and (max-width: $lgWidth){
+  .options-layout{
+    width: 85%;
+  }
+}
+
+@media (max-width: $mdWidth){
+  .options-layout{
+    width: 100%;
+  }
+}

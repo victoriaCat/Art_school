@@ -1,13 +1,11 @@
 @import '~/assets/scss/resources.scss';
 
 .about-me {
-  width: 58%;
-  margin: 0 auto;
-
   &-container {
     width: 86%;
     margin: 0 auto;
     text-align: justify;
+    font-size: 18px;
     .my-portrait{
       img{
         width: 100%;

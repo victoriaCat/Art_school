@@ -1,9 +1,7 @@
 @import '~/assets/scss/resources.scss';
 
 .footer {
-  width: 63%;
   height: 360px;
-  margin: 0 auto;
   background-color: $secondaryBackgroundColor;
 
   &-container {
@@ -39,9 +37,6 @@
       margin: 0;
       padding-top: 35px;
     }
-    a{
-      color: $mainFontColor;
-    }
   }
 
   &-icons {
@@ -62,3 +57,40 @@
   }
 }
 
+@media (max-width: $smWidth){
+  .footer {
+    height: 215px;
+    &-container {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: normal;
+    }
+    &-main-info{
+      text-align: left;
+      p{
+        font-size: $lgMainFontSize;
+        &:first-child{
+          font-size: $xlMainFontSize;
+        }
+      }
+    }
+    &-link-to-main{
+      h2{
+        padding: 0;
+        font-size: $lgMainFontSize;
+      }
+    }
+
+    &-icons {
+      text-align: left;
+      padding-left: 4px;
+      margin: 7px 0;
+      img {
+        width: 20%;
+        &:last-child{
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+}

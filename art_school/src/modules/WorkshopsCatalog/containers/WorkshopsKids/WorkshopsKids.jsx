@@ -1,85 +1,64 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Preloader from '~/libs/Preloader/Preloader.jsx';
 import {FS_IMG_URL} from '~/libs/api';
 import {WORKSHOPS_KIDS} from "~/assets/productVars";
+import {fetchImages} from '~/libs/commonActions';
+import {FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES} from './actionTypes';
+import {connect} from "react-redux";
+import WorkshopItems from "~/modules/WorkshopsCatalog/components/WorkshopItems/WorkshopItems.jsx";
 
 class WorkshopsKids extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    formatDate(dateStr) {
-        const dateArr = dateStr.split('.', 3);
-        const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа',
-            'сентября', 'октября', 'ноября', 'декабря'];
-        let formatedDD = dateArr[0];
-        let formatedMM = months[+dateArr[1] - 1];
-        return formatedDD + ' ' + formatedMM;
-    }
-
-    checkIfBygone(workshops) {
-        workshops.map(workshop => {
-            let date = new Date();
-            let currentDD = date.getDate();
-            let currentMM = date.getMonth() + 1;
-            let currentYYarr = ('' + date.getFullYear()).split('', 4);
-            let currentYY = parseInt(currentYYarr[2] + currentYYarr[3]);
-            const workshopDateArr = workshop.date.split('.', 3);
-            const workshopDD = +workshopDateArr[0];
-            const workshopMM = +workshopDateArr[1];
-            const workshopYY = +workshopDateArr[2];
-            if ((currentYY > workshopYY) || ((currentMM > workshopMM) && (currentYY >= workshopYY)) ||
-                ((currentDD > workshopDD) && (currentMM >= workshopMM) && (currentYY >= workshopYY))) {
-                workshop.bygone = true;
-            }
-        });
-        return workshops;
-    }
-
-    showIfBygone(workshop) {
-        if (workshop.bygone)
-            return <p>Мастеркласс завершен, ожидайте анонс</p>
-    }
-
-    sortByDate(workshops) {
-        let filteredComing = workshops.filter(workshop => workshop.bygone === false);
-        let filteredBygone = workshops.filter(workshop => workshop.bygone === true);
-        filteredComing.sort((a, b) => {
-            let workshopADateArr = a.date.split('.', 3);
-            let workshopA_DD = +workshopADateArr[0];
-            let workshopA_MM = +workshopADateArr[1] - 1;
-            let workshopA_YY = parseInt('20' + workshopADateArr[2]);
-            let workshopBDateArr = b.date.split('.', 3);
-            let workshopB_DD = +workshopBDateArr[0];
-            let workshopB_MM = +workshopBDateArr[1] - 1;
-            let workshopB_YY = parseInt('20' + workshopBDateArr[2]);
-            let dateA = new Date(workshopA_YY, workshopA_MM, workshopA_DD),
-                dateB = new Date(workshopB_YY, workshopB_MM, workshopB_DD);
-            return dateA - dateB;
-        });
-        return filteredComing.concat(filteredBygone);
+    /*
+      * returns {Preloader || WorkshopItems}
+      * */
+    showWorkshopItems(allProps) {
+        let {isLoading, payload = []} = allProps;
+        if (allProps === this.props.workshopsKidsImages)
+            return isLoading ? <Preloader/> :
+                <WorkshopItems images={payload} workshops={WORKSHOPS_KIDS} link={'/workshops/kids'}/>
     }
 
     render() {
         return (
             <div className="workshops-wrapper">
                 <h2>МАСТЕР-КЛАССЫ <br/>ДЕТИ</h2>
-                {this.sortByDate(this.checkIfBygone(WORKSHOPS_KIDS)).map(workshop => (
-                    <div key={workshop.id} className="workshops-unit">
-                        <h3>{workshop.header}</h3>
-                        <Link to={`/workshops/kids/${workshop.link}`}><img
-                            src={`${FS_IMG_URL}${this.props.images.find(image => image.name === workshop.imgName).id}/${workshop.imgName}?`}
-                            alt={workshop.imgName}/></Link>
-                        <p>{this.formatDate(workshop.date)} | {workshop.time}</p>
-                        <p>{workshop.place}</p>
-                        {this.showIfBygone(workshop)}
-                    </div>))}
+                {this.showWorkshopItems(this.props.workshopsKidsImages)}
             </div>
         );
     }
+
+    componentDidMount() {
+        if (this.props.workshopsKidsImages.isLoading) {
+            this.props.fetchImages('workshops_kids', FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES);
+        }
+    }
 }
 
-export default WorkshopsKids;
+export const loadDataKids = (store) => {
+    return Promise.all([
+        store.dispatch(fetchImages('workshops_kids', FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES))
+    ]);
+};
+
+const mapStateToProps = state => ({
+    workshopsKidsImages: state.workshopsKids.workshopsKidsImages
+});
+
+const mapDispatchToProps = {fetchImages};
+
+WorkshopsKids.propTypes = {
+    fetchImages: PropTypes.func.isRequired,
+    workshopsKidsImages: PropTypes.shape({
+        isLoading: PropTypes.bool.isRequired,
+        payload: PropTypes.array,
+    }).isRequired
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(WorkshopsKids);
 
 
 

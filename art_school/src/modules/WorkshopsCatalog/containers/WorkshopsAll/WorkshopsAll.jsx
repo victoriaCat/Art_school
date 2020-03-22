@@ -4,17 +4,16 @@ import WorkshopsAdults from '~/modules/WorkshopsCatalog/containers/WorkshopsAdul
 import WorkshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx';
 
 class WorkshopsAll extends Component {
-    constructor(props){
-        super(props)
-    }
+
     render() {
         return (
             <div className="workshops-container">
-                <WorkshopsAdults images={this.props.imagesAdults}/>
-                <WorkshopsKids images={this.props.imagesKids}/>
+                <WorkshopsAdults/>
+                <WorkshopsKids/>
             </div>
         );
     }
+
 }
 
 export default WorkshopsAll;

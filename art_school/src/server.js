@@ -30,8 +30,34 @@ const renderer = (req, store, context) => {
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <link rel="shortcut icon" href="/src/assets/images/favicon.ico" type="image/x-icon">
                     <link rel="stylesheet" href="/${assetsByChunkName.main[0]}">
                     <title>Art School</title>
+                    <!-- Global site tag (gtag.js) - Google Analytics -->
+                    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133928645-1"></script>
+                    <script type="text/javascript">
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+
+                          gtag('config', 'UA-133928645-1');
+                    </script>-->
+                    <!-- Yandex.Metrika counter -->
+                    <!--<script type="text/javascript" >
+                        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                         m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+                        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                        ym(52247416, "init", {
+                        id:52247416,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                      });
+                    </script>-->
+                    <!-- /Yandex.Metrika counter -->
+                    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
                   </head>
                   <body>
                      <div id="root">${content}</div>
@@ -44,8 +70,9 @@ const renderer = (req, store, context) => {
 };
 
 app.get('*', (req, res) => {
-    const params = req.params[0].split('/');
-    const id = params[2];
+    // const params = req.params[0].split('/');
+    // const id = params[2];
+    const id = req.originalUrl;
 
     const routes = matchRoutes(Routes, req.path);
 

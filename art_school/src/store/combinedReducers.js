@@ -5,8 +5,9 @@ import adultsDrawImages from '~/modules/AdultsDraw/reducer';
 import kidsDrawImages from '~/modules/KidsDraw/reducer';
 import freeStudioImage from '~/modules/FreeStudio/reducer';
 import gallery from '~/modules/Gallery/reducer';
-import workshopsCatalog from '~/layouts/WorkshopsCatalog/reducer';
-import workshop from '~/layouts/Workshop/reducer';
+import workshopsAdults from '~/modules/WorkshopsCatalog/containers/WorkshopsAdults/reducer';
+import workshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/reducer';
+import workshopPage from '~/modules/Workshop/containers/Workshop/reducer';
 
 export default combineReducers({
     mainPageImages,
@@ -15,6 +16,7 @@ export default combineReducers({
     kidsDrawImages,
     freeStudioImage,
     gallery,
-    workshopsCatalog,
-    workshop
+    workshopsAdults,
+    workshopsKids,
+    workshopPage
 });

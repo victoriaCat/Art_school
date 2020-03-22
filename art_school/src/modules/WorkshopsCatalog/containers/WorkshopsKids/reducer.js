@@ -1,9 +1,5 @@
 const initialState = {
-    workshopsCatalogAdultsImages: {
-        isLoading: true,
-        payload: []
-    },
-    workshopsCatalogKidsImages: {
+    workshopsKidsImages: {
         isLoading: true,
         payload: []
     }
@@ -11,8 +7,7 @@ const initialState = {
 
 export default (state = initialState, {type, isLoading, payload}) => {
     const stateKey = ({
-        FETCH_WORKSHOPS_CATALOG_ADULTS_IMAGES: 'workshopsCatalogAdultsImages',
-        FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES: 'workshopsCatalogKidsImages'
+        FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES: 'workshopsKidsImages'
     })[type];
 
     if (stateKey) {

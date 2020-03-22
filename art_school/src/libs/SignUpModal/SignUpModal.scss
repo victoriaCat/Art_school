@@ -1,0 +1,33 @@
+.sign-up-modal {
+  width: 500px;
+  background: white;
+  border: 1px solid #ccc;
+  transition: 1.2s ease-out;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+
+  visibility: visible;
+}
+.sign-up-modal h2 {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0;
+}
+.sign-up-modal .sign-up-modal-content {
+  padding: 1rem;
+}
+.sign-up-modal .sign-up-modal-close {
+  border-top: 1px solid #ccc;
+  background: #eee;
+  padding: 0.5rem 1rem;
+}
+.sign-up-modal .sign-up-modal-close button {
+  border: 0;
+  background: #cccccc;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}

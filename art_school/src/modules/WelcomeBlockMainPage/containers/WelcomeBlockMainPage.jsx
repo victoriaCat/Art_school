@@ -38,14 +38,13 @@ class WelcomeBlockMainPage extends Component {
     /*
     * returns {Preloader || MainOption}
     * */
-    showMainOptionsImages(allProps, option){
+    showMainOptionsImages(allProps, option) {
         let {isLoading, payload = []} = allProps;
         let {} = option;
-        if(allProps === this.props.mainOptionsImages){
+        if (allProps === this.props.mainOptionsImages) {
             let index = allProps.payload.findIndex(image => image.name === option.imgName);
             return isLoading ? <Preloader/> : <MainOption image={payload[index]} option={option}/>;
-        }
-        else return <Preloader/>;
+        } else return <Preloader/>;
     }
 
     render() {
@@ -98,9 +97,11 @@ class WelcomeBlockMainPage extends Component {
                     </div>
                 </div>
                 <div className="welcome-block-carousel-wrapper">
-                    <h3>Работы Учеников</h3>
-                    {this.showMainPageImages(this.props.carouselStudentsImages)}
-                    {this.showMainPageImages(this.props.carouselWorksImages)}
+                    <Link to="/gallery">
+                        <h3>Работы Учеников</h3>
+                        {this.showMainPageImages(this.props.carouselStudentsImages)}
+                        {this.showMainPageImages(this.props.carouselWorksImages)}
+                    </Link>
                 </div>
             </div>
         );
@@ -144,7 +145,7 @@ WelcomeBlockMainPage.propTypes = {
     }).isRequired,
     carouselStudentsImages: PropTypes.object.isRequired,
     carouselWorksImages: PropTypes.object.isRequired,
-    mainOptionsImages : PropTypes.object.isRequired,
+    mainOptionsImages: PropTypes.object.isRequired,
 };
 
 export default {

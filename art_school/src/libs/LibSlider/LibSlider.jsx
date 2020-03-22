@@ -14,7 +14,7 @@ class LibSlider extends Component {
             cssEase: 'linear',
             slidesToScroll: 1,
             arrows: false,
-            lazyLoad: true
+            pauseOnHover: false
         };
 
         if (this.props.propsSettings) {

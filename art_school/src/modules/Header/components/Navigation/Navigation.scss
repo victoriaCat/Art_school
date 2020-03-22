@@ -1,6 +1,8 @@
 @import '~/assets/scss/resources.scss';
 
 .nav {
+  overflow: visible;
+
   &-container {
     width: 86%;
     margin: 0 auto;
@@ -11,23 +13,114 @@
       border: 1px solid #61574b;
       align-items: center;
 
-      ul {
+      .nav-list {
         width: 70%;
+        height: inherit;
         margin: 0 auto;
         padding: 0;
         display: inherit;
         list-style-type: none;
         justify-content: space-evenly;
 
-        a {
-          font-family: $mainFontBold;
+        &-item {
+          height: inherit;
           font-size: $lgMainFontSize;
-          color: $mainFontColor;
-          text-decoration: none;
+          line-height: 50px;
+
+          .schedule-links {
+            display: none;
+            width: 12%;
+          }
+
+          .schedule-arrow {
+            margin-bottom: 4px;
+            width: 11px;
+          }
         }
+
+        :nth-child(2):hover {
+          .schedule-links {
+            display: block;
+            box-shadow: 33px 34px 90px -20px rgba(0,0,0,0.7);
+            position: absolute;
+            height: 100px;
+            background-color: $mainElementsColor;
+            z-index: 500;
+
+            img {
+              height: 80px;
+              margin: 5px;
+              float: left;
+            }
+
+            ul {
+              display: inline-block;
+              list-style-type: none;
+              padding: 15px 10px 30px 15px;
+              li {
+                font-size: $mdMainFontSize;
+                line-height: 35px;
+              }
+            }
+          }
+        }
+
       }
     }
   }
-
 }
 
+@media (max-width: $xxlWidth) {
+  .nav {
+    &-container {
+      .wrap {
+        .nav-list {
+          width: 75%;
+          justify-content: space-between;
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: $xlWidth) {
+  .nav {
+    &-container {
+      .wrap {
+        .nav-list {
+          width: 85%;
+          font-size: #{$lgMainFontSize - 2px};
+
+          &-item {
+            .schedule-links {
+              width: 15%;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: $mdWidth) {
+  .nav-container {
+      .wrap {
+        .nav-list {
+          &-item {
+            .schedule-links {
+              width: 18%;
+            }
+          }
+        }
+      }
+  }
+}
+
+@media (max-width: $smWidth) {
+  .nav{
+    display: none;
+  }
+}
