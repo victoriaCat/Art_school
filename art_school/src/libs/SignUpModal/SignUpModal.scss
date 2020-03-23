@@ -78,3 +78,10 @@
     left: 3%;
   }
 }
+
+@media screen and (min-width: #{$smWidth + 1px}){
+  .sign-up-modal {
+    left: 30%;
+    width: 350px;
+  }
+}
