@@ -7,7 +7,7 @@ class WorkshopItems extends Component {
 
     render() {
         return (
-            <>
+            <div className="workshops-catalog">
                 {sortByDate(checkIfBygone(this.props.workshops)).map(workshop => (
                     <div key={workshop.id} className="workshops-unit">
                         <h3>{workshop.header}</h3>
@@ -20,7 +20,7 @@ class WorkshopItems extends Component {
                         <p>{workshop.place}</p>
                         {showIfBygone(workshop)}
                     </div>))}
-            </>
+            </div>
         );
     }
 }

@@ -7,7 +7,8 @@ import CarouselKids from '~/modules/KidsDraw/components/CarouselKids/CarouselKid
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_CAROUSEL_KIDS_DRAW_IMAGES} from '~/modules/KidsDraw/actionTypes';
 import {PRICE, DURATION} from '~/assets/infoVars';
-
+import WorkshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx';
+import {Link} from "react-router-dom";
 class KidsDraw extends Component {
     /*
     * returns {Preloader || CarouselKids}
@@ -37,10 +38,16 @@ class KidsDraw extends Component {
                 <p>Благодаря индивидуальному подходу и разделению по возрастным категориям в группах, ребёнок комфортно
                     вольётся в процесс обучения. </p>
                 <p>Продолжительность: {DURATION} часа</p>
-                <p>Стоимость: {PRICE} руб., включая все материалы и удобную упаковку.</p>
-                <p>Занятия проходят в группе.</p>
-                <p>Площадки проведения мероприятий указаны в карте расписания.</p>
+                <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку.</p>
+                <p><span className="group">Занятия проходят в группе.</span></p>
+                <p><span className="schedule">Площадки проведения мероприятий указаны в карте расписания.</span></p>
                 <p>Группы делятся по возрастным категориям — I 6-10 лет, II 11-15 лет.</p>
+                <button className="sign-up-button">
+                    <Link to="/workshops/kids">ЗАПИСАТЬСЯ</Link>
+                </button>
+                <div className="kids-draw-mobile">
+                    <WorkshopsKids/>
+                </div>
             </div>
         );
     }

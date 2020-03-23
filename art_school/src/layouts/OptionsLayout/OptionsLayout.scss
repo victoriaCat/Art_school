@@ -3,6 +3,9 @@
 .options-layout{
   width: 58%;
   margin: 0 auto;
+  h2{
+    text-align: center;
+  }
 }
 
 @media (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
@@ -26,5 +29,6 @@
 @media (max-width: $mdWidth){
   .options-layout{
     width: 100%;
+    font-size: $smMainFontSize;
   }
 }

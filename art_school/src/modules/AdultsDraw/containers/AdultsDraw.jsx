@@ -7,6 +7,8 @@ import {fetchImages} from '~/libs/commonActions';
 import {FETCH_CAROUSEL_ADULTS_DRAW_IMAGES} from '~/modules/AdultsDraw/actionTypes';
 import {connect} from "react-redux";
 import {PRICE, DURATION} from '~/assets/infoVars';
+import {Link} from "react-router-dom";
+import WorkshopsAdults from "~/modules/WorkshopsCatalog/containers/WorkshopsAdults/WorkshopsAdults.jsx";
 
 class AdultsDraw extends Component {
     /*
@@ -25,7 +27,7 @@ class AdultsDraw extends Component {
             <div className="adults-draw">
                 <h2>Рисуют взрослые</h2>
                 {this.showAdultsDrawCarousel(this.props.adultsDrawImages)}
-                <p>В Школу рисования Екатерины Пушкарёвой приходят люди всех возрастов. Здесь каждому помогают раскрыть
+                <p>В <span className="school">Школу рисования Екатерины Пушкарёвой</span> приходят люди всех возрастов. Здесь каждому помогают раскрыть
                     свой творческий потенциал и начать создавать нечто удивительное.</p>
                 <h3>ДЛЯ КОГО МАСТЕРСКАЯ?</h3>
                 <ul>
@@ -40,9 +42,15 @@ class AdultsDraw extends Component {
                 <p>Не бойтесь быть дебютантом. Главное – непрерывно учиться по жизни.
                     В каждом из нас живёт художник, который постоянно ищет повод, чтобы выразить себя. </p>
                 <p>Продолжительность: {DURATION} часа</p>
-                <p>Стоимость: {PRICE} руб., включая все материалы и удобную упаковку.</p>
-                <p>Занятия проходят в группе.</p>
-                <p>Площадки проведения мероприятий указаны в карте расписания.</p>
+                <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку.</p>
+                <p><span className="group">Занятия проходят в группе.</span></p>
+                <p><span className="schedule">Площадки проведения мероприятий указаны в карте расписания.</span></p>
+                <button className="sign-up-button">
+                    <Link to="/workshops/adults">ЗАПИСАТЬСЯ</Link>
+                </button>
+                <div className="adults-draw-mobile">
+                    <WorkshopsAdults/>
+                </div>
             </div>
         );
     }

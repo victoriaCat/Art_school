@@ -1,0 +1,128 @@
+@import '~/assets/scss/resources.scss';
+
+.contacts-mobile-slider {
+  display: none;
+}
+
+.contacts-wrap {
+  .contacts-group-container {
+    width: 86%;
+    margin: 0 auto;
+
+    .contacts-group {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .clearfix {
+        width: 12px;
+      }
+
+      .contacts-main, .contacts-form {
+        display: inherit;
+        flex-direction: column;
+        width: 49%;
+        text-align: center;
+      }
+
+      .contacts-main {
+        h4 {
+          margin-bottom: 0;
+        }
+
+        .contacts-kurskaya, .contacts-dobryninskaya {
+          img {
+            width: 30px;
+            margin-bottom: -2px;
+          }
+
+          p {
+            color: $secondaryFontColor;
+          }
+        }
+
+        .contacts-icon {
+          img {
+            width: 35px;
+          }
+        }
+
+        .contacts-email {
+          img {
+            width: 55px;
+          }
+
+          p {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .contacts-form {
+        .if-questions {
+          margin-bottom: 0;
+        }
+
+        .write-to-us {
+          color: $linksOnHoverColor;
+          //margin: 0 0 0 -213px;
+          font-weight: bold;
+        }
+
+        .policy-agreement {
+          margin-top: 0;
+
+          a {
+            color: $linksOnHoverColor;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: $xxlWidth) {
+  .contacts-wrap {
+    .contacts-group-container {
+      .contacts-group {
+        .contacts-form {
+          .if-questions {
+            font-size: $smMainFontSize;
+          }
+
+          .write-to-us {
+            font-size: $smMainFontSize;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xlWidth) {
+  .contacts-wrap {
+    .contacts-group-container {
+      .contacts-group {
+        font-size: $smMainFontSize;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: $smWidth) {
+  .contacts-mobile-slider {
+    display: block;
+  }
+  .contacts-wrap {
+    .contacts-group-container {
+      .contacts-group {
+        .contacts-main, .contacts-form {
+          width: 99%;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,7 @@
 @import '~/assets/scss/resources.scss';
+.mobile-advantages{
+  display: none;
+}
 
 .main-advantages {
   height: 130px;
@@ -41,7 +44,7 @@
   }
 }
 
-@media (max-width: $xxlWidth) {
+@media screen and (max-width: $xxlWidth) {
   .main-advantages {
     height: 162px;
 
@@ -71,7 +74,7 @@
   }
 }
 
-@media (max-width: $lgWidth) {
+@media screen and (max-width: $lgWidth) {
   .main-advantages {
     .flex-container-text {
       .main-advantages__item {
@@ -87,15 +90,58 @@
   }
 }
 
-//@media (max-width: $mdWidth) {
-//  .main-advantages {
-//    .flex-container-text {
-//      .main-advantages__item {
-//        h3 {
-//          font-size: #{$lgMainFontSize - 2px};
-//        }
-//      }
-//    }
-//  }
-//
-//}
+@media screen and (max-width: $smWidth){
+  .main-advantages{
+    display: none;
+  }
+
+  .mobile-advantages{
+    display: block;
+    width: 100%;
+    &__item{
+      .mobile-advantages-number{
+        z-index: 5;
+        font-size: 85px;
+        color: #d3d0d1;
+        margin-top: 10px;
+      }
+
+      h3{
+        z-index: 10;
+        font-size: $lgMainFontSize;
+        margin-top: -102px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .mobile-advantages-text{
+        height: 85px;
+        z-index: 3;
+        background-color: $secondaryBackgroundColor;
+        margin-top: -25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .text-wrap{
+          z-index: 7;
+          font-size: $smMainFontSize;
+        }
+      }
+      .mobile-advantages-image{
+        width: inherit;
+        img{
+          width: 100%;
+        }
+      }
+      .mobile-advantages-number, h3{
+        text-align: left;
+      }
+    }
+    &__item:nth-child(2){
+      .mobile-advantages-number, h3{
+        text-align: right;
+      }
+    }
+  }
+
+}

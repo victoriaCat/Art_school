@@ -22,7 +22,8 @@ class WorkshopsKids extends Component {
     render() {
         return (
             <div className="workshops-wrapper">
-                <h2>МАСТЕР-КЛАССЫ <br/>ДЕТИ</h2>
+                <h2>МАСТЕР-КЛАССЫ <br/><span className="rainbow-d">Д<span className="rainbow-e">Е<span
+                    className="rainbow-t">Т<span className="rainbow-i">И</span></span></span></span></h2>
                 {this.showWorkshopItems(this.props.workshopsKidsImages)}
             </div>
         );

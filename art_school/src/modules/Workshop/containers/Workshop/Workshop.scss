@@ -1,0 +1,61 @@
+@import '~/assets/scss/resources.scss';
+
+.workshop-container {
+  .header-color {
+    color: $secondaryFontColor;
+  }
+
+  .workshop-sign-up-button {
+    color: $buttonsOnHoverColor;
+    display: block;
+    margin: 26px auto;
+    background-color: $secondaryElementsColor;
+    font-size: 31px;
+    width: 27%;
+    height: 66px;
+    border-radius: 32px;
+  }
+
+  .workshop-details {
+    ul {
+      padding: 0 14px;
+    }
+
+    .nevermind, .price, .awaits {
+      color: $linksOnHoverColor;
+    }
+
+    .footnote {
+      color: $secondaryFontColor;
+    }
+  }
+}
+
+@media screen and (max-width: $xxlWidth) {
+  .workshop-container {
+    .workshop-sign-up-button {
+      font-size: 26px;
+      width: 30%;
+      height: 56px;
+    }
+  }
+}
+
+@media screen and (max-width: $smWidth) {
+  .workshop-container {
+    .workshop-sign-up-button {
+      font-size: $mdMainFontSize;
+      width: 40%;
+      height: 40px;
+      margin-top: 23px;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: #{$xsWidth + 2px}) {
+  .workshop-sign-up-button {
+    width: 32%;
+  }
+}

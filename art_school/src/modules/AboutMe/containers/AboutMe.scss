@@ -34,3 +34,29 @@
   }
 
 }
+
+@media screen and (max-width: $smWidth){
+  .about-me {
+    &-container {
+      width: 96%;
+      font-size: $smMainFontSize;
+
+      .about-me-signature{
+        margin-top: 50px;
+        img{
+          width: 40%;
+        }
+      }
+      .about-me-ask{
+        &__header{
+          margin-top: 60px;
+        }
+      }
+    }
+    //.my-works-images{
+    //  img{
+    //
+    //  }
+    //}
+  }
+}

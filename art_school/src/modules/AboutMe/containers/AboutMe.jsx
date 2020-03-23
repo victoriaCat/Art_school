@@ -1,5 +1,4 @@
 import './AboutMe.scss';
-
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -120,7 +119,9 @@ class AboutMe extends Component {
                     </div>
                 </div>
                 <h3>Работы</h3>
-                {this.showCarouselMyWorksImages(this.props.carouselMyWorksImages)}
+                <div className="my-works-images">
+                    {this.showCarouselMyWorksImages(this.props.carouselMyWorksImages)}
+                </div>
             </div>
         );
     }

@@ -3,20 +3,24 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {formatDate} from '~/modules/WorkshopsCatalog/helpers';
 import {PRICE} from '~/assets/infoVars';
-import {CURRENT_PROMO} from '~/assets/productVars'
+import {Link} from "react-router-dom";
+import crossImg from '~/assets/images/cross.png';
 
 class SignUpModal extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            name: '',
-            email: '',
-            phone: '',
-            promo: ''
-        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    initialState = {
+        name: '',
+        email: '',
+        phone: '',
+        promo: ''
+    };
+
+    state = this.initialState;
 
     handleSubmit(e) {
         e.preventDefault();
@@ -27,13 +31,14 @@ class SignUpModal extends Component {
             phone: this.state.phone,
             promo: this.state.promo
         };
-        axios.post("https://jsonplaceholder.typicode.com/users", data)
+        axios.post("https://pushkareva.art/api/apply", data)
             .then(response => {
                 console.log(response);
             })
             .catch(error => {
                 console.log(error)
-            })
+            });
+        this.setState(() => this.initialState);
     }
 
     handleChange(e) {
@@ -55,7 +60,7 @@ class SignUpModal extends Component {
         return (
             <div className="sign-up-modal">
                 <div className="sign-up-modal-close">
-                    <button onClick={this.onClose}> Закрыть</button>
+                    <button onClick={this.onClose}><img src={crossImg} alt="X"/></button>
                 </div>
                 <h2>ЗАПИСЬ НА ЗАНЯТИЕ</h2>
                 <div className="sign-up-modal-content">
@@ -81,6 +86,9 @@ class SignUpModal extends Component {
                         <p>
                             <button type="submit">ОТПРАВИТЬ</button>
                         </p>
+                        <p className="policy-agreement">Нажимая «Отправить» Вы соглашаетесь <br/> c<Link
+                            to="/policy" target="_blank"> Политикой
+                            конфиденциальности</Link></p>
                     </form>
                 </div>
             </div>

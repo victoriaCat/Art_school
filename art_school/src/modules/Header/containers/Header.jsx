@@ -1,10 +1,7 @@
 import './Header.scss';
-
 import React from 'react';
 import {Link} from 'react-router-dom';
-
 import Navigation from '~/modules/Header/components/Navigation/Navigation.jsx';
-
 import logoImg from '~/assets/images/logo.svg';
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
@@ -18,7 +15,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-container">
-                <button className="header-mobile-nav-button">
+                <div className="header-mobile-nav-button">
                     <img src={navImg} alt="Navigation"/>
                     <div className="header-mobile-nav">
                         <ul>
@@ -44,7 +41,7 @@ const Header = () => {
                                                                           alt="Instagram"/></a>
                         </div>
                     </div>
-                </button>
+                </div>
                 <div className="header-logo">
                     <Link to="/"><img className="logo-img" src={logoImg} alt="Logo"/></Link>
                 </div>

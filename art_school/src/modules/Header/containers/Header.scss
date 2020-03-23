@@ -68,7 +68,7 @@
 
 }
 
-@media (max-width: $xxlWidth) {
+@media screen and (max-width: $xxlWidth) {
   .header {
     &-logo {
       padding-left: 0;
@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: $smWidth) {
+@media screen and (max-width: $smWidth) {
   .header {
     &-container {
       width: 97%;
@@ -114,11 +114,13 @@
       width: 25%;
     }
     &-mobile-nav-button {
+
       .header-mobile-nav {
         display:none;
       }
       img {
-        width: 40%;
+        width: 50%;
+        height: 50%;
       }
     }
 
@@ -126,7 +128,7 @@
       text-align: right;
 
       img {
-        width: 34%;
+        width: 44%;
       }
     }
 
@@ -136,14 +138,15 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 300px;
+        height: fit-content;
+        width: 72%;
         background-color: $mainElementsColor;
         box-shadow: 33px 34px 90px -20px rgba(0, 0, 0, 0.7);
         z-index: 500;
 
         .mobile-arrow {
-          margin-bottom: 4px;
-          width: 11px;
+          margin-bottom: 2px;
+          width: 10px;
         }
 
         .mobile-stick {
@@ -155,14 +158,17 @@
 
         ul {
           list-style-type: none;
+          padding: 0 10px;
+          text-align: left;
+          line-height: 30px;
         }
 
         &-icons {
           width: 38%;
           padding-left: 10px;
-
+          margin-bottom: 10px;
           img {
-            width: 50%;
+            width: 40%;
             padding-left: 3px;
           }
         }

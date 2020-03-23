@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: $xxlWidth){
+@media screen and (max-width: $xxlWidth){
   .welcome-block {
     &-container {
       .flex-container-welcome {
@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: $smWidth){
+@media screen and (max-width: $smWidth){
 
   .welcome-block {
     &-container {
@@ -102,5 +102,11 @@
       display: none;
     }
 
+  }
+}
+
+@media screen and (max-width: #{$xsWidth + 2px}){
+  .main-sign-up-button {
+    width: 32%;
   }
 }

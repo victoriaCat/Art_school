@@ -1,3 +1,4 @@
+import './FreeStudio.scss';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {fetchImages} from '~/libs/commonActions';
@@ -5,6 +6,7 @@ import {FETCH_FREE_STUDIO_IMAGE} from '~/modules/FreeStudio/actionTypes';
 import {FS_IMG_URL} from '~/libs/api';
 import {connect} from "react-redux";
 import Preloader from '~/libs/Preloader/Preloader.jsx';
+import Footer from '~/modules/Footer/Footer.jsx';
 import {PRICE, DURATION} from '~/assets/infoVars';
 
 class FreeStudio extends Component {
@@ -48,6 +50,7 @@ class FreeStudio extends Component {
 
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

@@ -1,3 +1,4 @@
+import './Workshop.scss';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -39,7 +40,7 @@ class Workshop extends Component {
     showSignUpButton(workshop) {
         if (!workshop.bygone) {
             return <button className="workshop-sign-up-button" onClick={e => {this.showSignUpModal();}}>
-                Записаться
+                ЗАПИСАТЬСЯ
             </button>
         } else return null;
     }
@@ -48,17 +49,19 @@ class Workshop extends Component {
         let workshop = findWorkshop(checkIfBygone(WORKSHOPS), determineID(this.props.location.pathname));
         return (
             <div className="workshop-container">
-                <h2>МАСТЕР-КЛАСС <br/> {workshop.header}</h2>
+                <h2>МАСТЕР-КЛАСС <br/> <span className="header-color">{workshop.header}</span></h2>
                 <div className="workshop-description">
-                    {this.showWorkshopImages(this.props.workshopPageImages)}
+                    <div className="workshop-images">
+                        {this.showWorkshopImages(this.props.workshopPageImages)}
+                    </div>
                     <div className="workshop-details">
                         <p>{formatDate(workshop.date)} | {workshop.time}</p>
                         {showIfBygone(workshop)}
-                        <p>Уровень подготовки не важен!</p>
+                        <p><span className="nevermind">Уровень подготовки не важен!</span></p>
                         <p>{workshop.description}</p>
-                        <p><span>Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку. </p>
+                        <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку. </p>
 
-                        <h3>ЧТО ЖДЁТ НА МАСТЕРКЛАССЕ:</h3>
+                        <h3><span className="awaits">ЧТО ЖДЁТ НА МАСТЕРКЛАССЕ:</span></h3>
                         <ul>
                             <li>Авторский метод обучения и собственноручно написанная картина всего за 1 занятие</li>
                             <li>Творчество в комфортной обстановке светлой мастерской</li>
@@ -68,7 +71,7 @@ class Workshop extends Component {
                             <li>Общение с художником и свежезаваренный чай</li>
                         </ul>
                         <p className="workshop-footnote">
-                            {workshop.footnote}
+                            <span className="footnote"><i>{workshop.footnote}</i></span>
                         </p>
                     </div>
                 </div>

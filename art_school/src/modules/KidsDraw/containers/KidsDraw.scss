@@ -1,0 +1,63 @@
+@import '~/assets/scss/resources.scss';
+
+.kids-draw {
+  &-mobile {
+    display: none;
+  }
+
+  h3, .price, .group, .schedule {
+    color: $linksOnHoverColor;
+  }
+
+  ul {
+    padding: 0 18px;
+  }
+
+  .sign-up-button {
+    display: block;
+    text-align: center;
+    background-color: $mainElementsColor;
+    font-size: 31px;
+    width: 27%;
+    height: 66px;
+    border-radius: 32px;
+    margin: 32px auto;
+  }
+
+}
+
+@media screen and (max-width: $xxlWidth) {
+  .kids-draw {
+    img{
+      height: 350px;
+    }
+    .sign-up-button {
+      font-size: 26px;
+      width: 30%;
+      height: 56px;
+      margin: 26px auto;
+    }
+  }
+}
+
+@media screen and (max-width: $smWidth) {
+  .kids-draw {
+    img{
+      height: 250px;
+    }
+    &-mobile{
+      display: block;
+    }
+    .sign-up-button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: #{$xsWidth + 2px}) {
+  .kids-draw {
+    .sign-up-button {
+      width: 32%;
+    }
+  }
+}
