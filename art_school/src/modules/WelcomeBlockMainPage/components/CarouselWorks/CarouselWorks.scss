@@ -5,13 +5,13 @@
   }
 }
 
-//@media screen and (min-width: $xxlWidth) {
-//  .carousel-works__photo{
-//    img{
-//      width: 98%;
-//    }
-//  }
-//}
+@media screen and (min-width: $xxlWidth) {
+  .carousel-works__photo{
+    img{
+      height: 465px;
+    }
+  }
+}
 
 @media screen and (max-width: $xxlWidth) {
   .carousel-works__photo{
@@ -36,3 +36,5 @@
     }
   }
 }
+
+
