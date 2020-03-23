@@ -1,0 +1,14 @@
+.gallery-section{
+  h3{
+    text-align: center;
+  }
+  .gallery-items-wrap{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    flex-wrap: wrap;
+  }
+  .gallery-item{
+    margin: 20px;
+  }
+}

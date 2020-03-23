@@ -64,3 +64,13 @@
     }
   }
 }
+
+@media screen and (min-width: $xxlWidth) {
+  .workshop-images {
+    img {
+      width: 100%;
+      margin: 0 auto;
+      height: 670px;
+    }
+  }
+}

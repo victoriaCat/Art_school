@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+@media screen and(min-width: #{$xxlWidth + 1px}){
+  .main-page-layout{
+    width: 860px;
+  }
+}
+
 @media screen and (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
   .main-page-layout{
     width: 65%;
