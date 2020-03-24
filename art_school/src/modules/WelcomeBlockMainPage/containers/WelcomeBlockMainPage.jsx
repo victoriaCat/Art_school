@@ -80,9 +80,9 @@ class WelcomeBlockMainPage extends Component {
                             избавить от беспокойства. Помогает расслабиться и стать лучше.
                             Более счастливым, более полно чувствующим жизнь.
                         </div>
-                        <button className="main-sign-up-button">
+                        <div className="main-sign-up-button">
                             <Link to="/workshops">ЗАПИСАТЬСЯ</Link>
-                        </button>
+                        </div>
                     </div>
                     <Advantages/>
                     <div className="welcome-block-options" id="options">
