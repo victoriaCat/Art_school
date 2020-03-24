@@ -10,7 +10,7 @@
     .wrap {
       height: 50px;
       display: flex;
-      border: 1px solid #61574b;
+      box-shadow: 0 0 1px 0 #514f4c;
       align-items: center;
 
       .nav-list {
@@ -20,7 +20,7 @@
         padding: 0;
         display: inherit;
         list-style-type: none;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         &-item {
           height: inherit;
@@ -43,12 +43,12 @@
             display: block;
             box-shadow: 33px 34px 90px -20px rgba(0,0,0,0.7);
             position: absolute;
-            height: 100px;
+            height: 85px;
             background-color: $mainElementsColor;
             z-index: 500;
 
             img {
-              height: 80px;
+              height: 60px;
               margin: 5px;
               float: left;
             }
@@ -56,7 +56,7 @@
             ul {
               display: inline-block;
               list-style-type: none;
-              padding: 15px 10px 30px 15px;
+              padding: 0 10px 30px 15px;
               li {
                 font-size: $mdMainFontSize;
                 line-height: 35px;
@@ -76,7 +76,6 @@
       .wrap {
         .nav-list {
           width: 75%;
-          justify-content: space-between;
         }
 
       }

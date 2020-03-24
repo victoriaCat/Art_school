@@ -3,19 +3,26 @@
 .main-option {
   width: 40%;
   text-align: center;
-  h4{
-    font-size: $lgMainFontSize;
-  }
 
-  a {
-    color: $mainFontColor;
+  h4 {
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: $xlMainFontSize;
   }
 
   &-image {
     img {
       width: 80%;
       border-radius: 280px;
-      box-shadow: 33px 34px 72px -20px rgba(0,0,0,0.75);
+      box-shadow: 0px 41px 71px -54px rgba(0, 0, 0, 0.77);
+    }
+  }
+}
+
+@media screen and (max-width: $xlWidth) {
+  .main-option {
+    h4 {
+      font-size: 18px;
     }
   }
 }

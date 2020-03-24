@@ -15,16 +15,15 @@
   }
 
   &-logo {
-    width: 28%;
-    padding-left: 20px;
+    width: 20%;
 
     img {
-      width: 65%;
+      width: 100%;
     }
   }
 
   &-info {
-    width: 30%;
+    width: 35%;
     font-family: $mainFontBold;
     display: inherit;
     flex-direction: column;
@@ -43,54 +42,77 @@
   }
 
   &-icons {
-    width: 10%;
-    padding-left: 10px;
-
+    width: 12%;
+    text-align: center;
     img {
-      width: 35%;
-      padding-left: 3px;
+      width: 30%;
+      height: 30%;
+      margin-right: 4px;
     }
   }
 
   &-link-schedule {
-    width: 20%;
+    text-align: center;
+    line-height: 32px;
+    width: 23%;
     height: 40px;
     border-radius: 35px;
     border: 2px solid $mainElementsColor;
     margin-right: 6px;
-
     a {
       font-family: $mainFontBold;
-      font-size: 16px;
+      font-size: 15px;
       color: $mainFontColor;
     }
   }
-
 }
 
-@media screen and (max-width: $xxlWidth) {
-  .header {
-    &-logo {
-      padding-left: 0;
-
-      img {
-        width: 82%;
-      }
+@media screen and (min-width: $xxlWidth){
+  .header{
+    &-working-hours {
+      font-size: 14px;
     }
 
     &-link-schedule {
-      width: 28%;
-    }
-
-    &-info {
-      align-items: flex-start;
-    }
-
-    &-icons {
-      padding-left: 0;
+      a {
+        font-size: 16px;
+      }
     }
   }
 }
+
+@media screen and(max-width: $xlWidth){
+  .header{
+    &-phone {
+      font-size: 18px;
+      margin: 0;
+    }
+    &-working-hours {
+      font-size: 11px;
+    }
+    &-link-schedule {
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+//@media screen and (min-width: $xxxlWidth){
+//  .header{
+//    &-working-hours {
+//      font-size: 18px;
+//    }
+//
+//    &-link-schedule {
+//      a {
+//        font-size: 20px;
+//      }
+//    }
+//  }
+//}
+
+/* MOBILE */
 
 @media screen and (max-width: $smWidth) {
   .header {
@@ -113,11 +135,12 @@
       display: inherit;
       width: 25%;
     }
-    &-mobile-nav-button {
 
+    &-mobile-nav-button {
       .header-mobile-nav {
-        display:none;
+        display: none;
       }
+
       img {
         width: 50%;
         height: 50%;
@@ -132,7 +155,7 @@
       }
     }
 
-    &-mobile-nav-button:hover{
+    &-mobile-nav-button:hover {
       .header-mobile-nav {
         display: block;
         position: absolute;
@@ -167,6 +190,7 @@
           width: 38%;
           padding-left: 10px;
           margin-bottom: 10px;
+
           img {
             width: 40%;
             padding-left: 3px;
@@ -174,6 +198,25 @@
         }
       }
     }
-
   }
 }
+
+//@media screen and (max-width: $xxlWidth) {
+//  .header {
+//    &-logo {
+//      padding-left: 0;
+//
+//      img {
+//        width: 82%;
+//      }
+//    }
+//
+//    &-link-schedule {
+//      width: 28%;
+//    }
+//
+//    &-icons {
+//      padding-left: 0;
+//    }
+//  }
+//}

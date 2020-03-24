@@ -5,10 +5,10 @@
   }
 }
 
-@media screen and (min-width: $xxlWidth) {
+@media screen and (max-width: $xxxlWidth) {
   .carousel-works__photo{
     img{
-      height: 430px;
+      height: 330px;
     }
   }
 }

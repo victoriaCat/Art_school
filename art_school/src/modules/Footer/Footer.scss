@@ -19,11 +19,16 @@
       margin: 0;
       padding-bottom: 7px;
       &:first-child{
-        font-size: 28px;
+        font-size: 27px;
+        font-weight: bold;
         padding-top: 11px;
       }
+      &:nth-child(3){
+        font-size: 27px;
+        word-spacing: 10px
+      }
       &:last-child{
-        font-size: 14px;
+        font-size: 16px;
         color: $secondaryFontColor;
       }
     }
@@ -35,6 +40,7 @@
   &-link-to-main{
     h2{
       margin: 0;
+      font-size: 27px;
       padding-top: 35px;
     }
   }

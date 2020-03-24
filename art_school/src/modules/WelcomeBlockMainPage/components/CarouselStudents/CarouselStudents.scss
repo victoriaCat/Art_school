@@ -4,14 +4,14 @@
     border: 5px solid #ffffff;
   }
 }
+@media screen and (max-width: $xxxlWidth) {
+  .carousel-students__photo{
+    img{
+      height: 430px;
+    }
+  }
+}
 
-//@media screen and (min-width: $xxlWidth) {
-//  .carousel-students__photo{
-//    img{
-//      width: 98%;
-//    }
-//  }
-//}
 
 @media screen and (max-width: $xxlWidth) {
   .carousel-students__photo{

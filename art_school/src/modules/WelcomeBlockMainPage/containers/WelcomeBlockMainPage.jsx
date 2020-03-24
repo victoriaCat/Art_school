@@ -98,7 +98,7 @@ class WelcomeBlockMainPage extends Component {
                 </div>
                 <div className="welcome-block-carousel-wrapper">
                     <Link to="/gallery">
-                        <h3>Работы Учеников</h3>
+                        <h3>Работы учеников</h3>
                         {this.showMainPageImages(this.props.carouselStudentsImages)}
                         {this.showMainPageImages(this.props.carouselWorksImages)}
                     </Link>

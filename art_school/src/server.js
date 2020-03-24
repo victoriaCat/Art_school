@@ -32,7 +32,7 @@ const renderer = (req, store, context) => {
                     <meta http-equiv="X-UA-Compatible" content="ie=edge">
                     <link rel="shortcut icon" href="/src/assets/images/favicon.ico" type="image/x-icon">
                     <link rel="stylesheet" href="/${assetsByChunkName.main[0]}">
-                    <title>Art School</title>
+                    <title>Арт-школа Пушкарёвой</title>
                     <!-- Global site tag (gtag.js) - Google Analytics -->
                     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133928645-1"></script>
                     <script type="text/javascript">

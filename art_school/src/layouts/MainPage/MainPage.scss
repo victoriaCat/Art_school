@@ -1,33 +1,33 @@
 @import '~/assets/scss/vars.scss';
 
 .main-page-layout{
-  width: 58%;
+  width: 78%;
   margin: 0 auto;
 }
 
-@media screen and(min-width: #{$xxlWidth + 1px}){
+@media screen and(min-width: $xxxlWidth){
   .main-page-layout{
-    width: 886px;
+    width: 58%;
   }
 }
 
-@media screen and (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
-  .main-page-layout{
-    width: 65%;
-  }
-}
-
-@media screen and (min-width: #{$lgWidth + 1px}) and (max-width: $xlWidth){
-  .main-page-layout{
-    width: 78%;
-  }
-}
-
-@media screen and (min-width: #{$mdWidth + 1px}) and (max-width: $lgWidth){
-  .main-page-layout{
-    width: 85%;
-  }
-}
+//@media screen and (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
+//  .main-page-layout{
+//    width: 70%;
+//  }
+//}
+//
+//@media screen and (min-width: #{$lgWidth + 1px}) and (max-width: $xlWidth){
+//  .main-page-layout{
+//    width: 80%;
+//  }
+//}
+//
+//@media screen and (min-width: #{$mdWidth + 1px}) and (max-width: $lgWidth){
+//  .main-page-layout{
+//    width: 85%;
+//  }
+//}
 
 @media screen and (max-width: $mdWidth){
   .main-page-layout{

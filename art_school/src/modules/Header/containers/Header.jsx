@@ -57,9 +57,9 @@ const Header = () => {
                                                                   src={instagramImg}
                                                                   alt="Instagram"/></a>
                 </div>
-                <button className="header-link-schedule">
+                <div className="header-link-schedule">
                     <Link to="/workshops">Расписание занятий</Link>
-                </button>
+                </div>
                 <div className="header-mobile-call-button"><a href="tel:+74994440961"><img src={phoneImg}
                                                                                            alt="Call Us"/></a></div>
             </div>
