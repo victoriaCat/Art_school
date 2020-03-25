@@ -6,13 +6,13 @@
   }
 }
 
-//@media screen and (min-width: $xlWidth) {
-//  .carousel-my-works__photo{
-//    img{
-//      width: 98%;
-//    }
-//  }
-//}
+@media screen and (min-width: #{$xxlWidth + 1px}) {
+  .carousel-my-works__photo{
+    img{
+      height: 430px;
+    }
+  }
+}
 
 @media screen and (max-width: $xxlWidth) {
   .carousel-my-works__photo{

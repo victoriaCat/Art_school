@@ -65,7 +65,7 @@
 
 @media (max-width: $smWidth){
   .footer {
-    height: 215px;
+    height: fit-content;
     &-container {
       flex-direction: column;
       align-items: flex-start;

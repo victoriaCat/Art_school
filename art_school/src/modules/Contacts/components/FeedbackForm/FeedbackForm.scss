@@ -1,41 +1,79 @@
 @import '~/assets/scss/vars.scss';
 
-.feedback-form{
-  input, textarea{
+.feedback-form {
+  input, textarea {
     width: 93%;
     background-color: white;
     border-width: 2px;
     border-color: rgb(212, 208, 209);
     border-style: solid;
   }
-  input[placeholder], textarea[placeholder]{
+
+  input[placeholder], textarea[placeholder] {
     text-align: center;
     font-size: $mdMainFontSize;
   }
-  input{
+
+  input {
     height: 40px;
   }
-  .input-submit-button{
+
+  .input-submit-button {
     cursor: pointer;
-    width: 45%;
+    width: 39%;
     background-color: $secondaryElementsColor;
     border-radius: 30px;
     border-color: $secondaryElementsColor;
   }
-  .input-submit-button[value]{
+
+  .input-submit-button[value] {
     color: $buttonsOnHoverColor;
     font-size: $lgMainFontSize;
   }
-
-
 }
 
-@media screen and (max-width: $xsWidth){
-  .feedback-form .input-submit-button {
-    height: 35px;
+@media screen and (min-width: $xxlWidth){
+  .feedback-form {
+    .input-submit-button {
+      width: 148px;
+    }
   }
-  .feedback-form .input-submit-button[value] {
-    font-size: 16px;
+}
+
+@media screen and (max-width: $lgWidth) {
+  .feedback-form {
+    .input-submit-button[value] {
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: $smWidth) {
+  .feedback-form {
+    .input-submit-button {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: $sWidth) {
+  .feedback-form {
+    .input-submit-button {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: $xsWidth) {
+  .feedback-form {
+    .input-submit-button {
+      height: 35px;
+    }
+  }
+  .feedback-form {
+    .input-submit-button[value] {
+      font-size: 16px;
+    }
   }
 }
 

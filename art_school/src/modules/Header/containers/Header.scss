@@ -9,7 +9,7 @@
     width: 86%;
     display: flex;
     margin: 0 auto;
-    height: 105px;
+    height: fit-content;
     align-items: center;
     justify-content: space-around;
   }
@@ -55,7 +55,7 @@
   &-link-schedule {
     text-align: center;
     line-height: 32px;
-    width: 23%;
+    width: 21%;
     height: 40px;
     border-radius: 35px;
     border: 2px solid $mainElementsColor;
@@ -86,7 +86,7 @@
 @media screen and(min-width: $xxxlWidth) {
   .header {
     &-container {
-      height: 150px;
+      height: fit-content;
     }
 
     &-logo {
@@ -105,7 +105,7 @@
     }
 
     &-link-schedule {
-      width: 240px;
+      width: 220px;
     }
 
   }
@@ -149,6 +149,7 @@
 @media screen and (max-width: $smWidth) {
   .header {
     &-container {
+      height: fit-content;
       width: 97%;
       justify-content: space-between;
     }

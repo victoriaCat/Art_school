@@ -109,7 +109,16 @@
       }
     }
   }
+}
 
+@media screen and (max-width: $lgWidth) {
+  .contacts-wrap {
+    .contacts-group-container {
+      .contacts-group {
+        justify-content: center;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $smWidth) {
@@ -120,7 +129,7 @@
     .contacts-group-container {
       .contacts-group {
         .contacts-main, .contacts-form {
-          width: 99%;
+          width: 98%;
         }
       }
     }
