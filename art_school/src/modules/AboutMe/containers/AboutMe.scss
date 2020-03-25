@@ -5,58 +5,71 @@
     width: 86%;
     margin: 0 auto;
     text-align: justify;
-    font-size: 18px;
-    .my-portrait{
-      img{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+
+    .my-portrait {
+      img {
         width: 100%;
       }
     }
   }
 
-  &-signature{
-    img{
+  &-signature {
+    img {
       display: block;
       margin-top: -60px;
       margin-left: auto;
-      width: 30%;
+      width: 23%;
     }
   }
 
-  &-ask{
+  &-ask {
     margin-top: -45px;
-    &__header{
-      color: $secondaryElementsColor;
+
+    &__header {
+      color: #b84c40;
+    }
+
+    h4 {
+      font-family: "Lato bold", sans-serif;
+      font-weight: 600;
     }
   }
 
-  > h3{
+  > h3 {
     text-align: center;
   }
 
 }
 
-@media screen and (max-width: $smWidth){
+
+@media screen and (max-width: $xlWidth) {
+  .about-me {
+    &-container {
+      font-size: 18px;
+    }
+  }
+}
+
+/*MOBILE*/
+@media screen and (max-width: $smWidth) {
   .about-me {
     &-container {
       width: 96%;
-      font-size: $smMainFontSize;
+      font-size: 15px;
 
-      .about-me-signature{
+      .about-me-signature {
         margin-top: 50px;
-        img{
-          width: 40%;
-        }
+
       }
-      .about-me-ask{
-        &__header{
+
+      .about-me-ask {
+        &__header {
           margin-top: 60px;
         }
       }
     }
-    //.my-works-images{
-    //  img{
-    //
-    //  }
-    //}
   }
 }

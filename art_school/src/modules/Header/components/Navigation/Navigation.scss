@@ -41,9 +41,9 @@
         :nth-child(2):hover {
           .schedule-links {
             display: block;
-            box-shadow: 33px 34px 90px -20px rgba(0,0,0,0.7);
+            box-shadow: 33px 34px 90px -20px rgba(0,0,0,0.2);
             position: absolute;
-            height: 85px;
+            height: 75px;
             background-color: $mainElementsColor;
             z-index: 500;
 

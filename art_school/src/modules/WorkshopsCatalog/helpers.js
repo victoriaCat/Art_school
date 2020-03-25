@@ -30,7 +30,7 @@ export function checkIfBygone(workshops) {
 
 export function showIfBygone(workshop) {
     if (workshop.bygone)
-        return <p>Мастеркласс завершен, ожидайте анонс</p>
+        return <p>Мастер-класс завершен, ожидайте анонс</p>
 }
 
 export function sortByDate(workshops) {

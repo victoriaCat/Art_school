@@ -5,10 +5,12 @@ import {Link} from 'react-router-dom';
 const Copyright = () => {
     return (
         <div className="copyright">
-            <p>
-                <span>&copy; Designed by <Link to='/about'>Ekaterina Pushkareva</Link>. </span>
-                <span> Frontend by <a href="https://github.com/victoriaCat" target="_blank">Victoria Katysheva</a>.</span>
-            </p>
+            <div className="designed">
+                DESIGNED BY <Link to='/about'>EKATERINA PUSHKAREVA</Link>
+            </div>
+            <div className="frontend">
+                FRONTEND BY <a href="https://github.com/victoriaCat" target="_blank">VICTORIA KATYSHEVA</a>
+            </div>
         </div>
     );
 };

@@ -1,6 +1,9 @@
 @import '~/assets/scss/vars.scss';
 
 .free-studio {
+  &-mobile-header{
+    display: none;
+  }
   h3{
     color: $linksOnHoverColor;
   }
@@ -21,9 +24,10 @@
   }
 }
 
+/*MOBILE*/
 @media screen and (max-width: $smWidth) {
   .free-studio {
-    .footer {
+    &-mobile-header, .footer {
       display: block;
     }
   }

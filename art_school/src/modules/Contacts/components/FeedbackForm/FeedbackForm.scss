@@ -1,41 +1,84 @@
 @import '~/assets/scss/vars.scss';
 
-.feedback-form {
-  input, textarea {
-    width: 93%;
-    background-color: white;
-    border-width: 2px;
-    border-color: rgb(212, 208, 209);
-    border-style: solid;
+.contacts-form {
+  display: inherit;
+  flex-direction: column;
+  width: 49%;
+  text-align: center;
+  align-items: center;
+  &-wrap {
+    width: 80%;
+
+    .if-questions {
+      text-align: left;
+      margin-bottom: 0;
+
+      .write-to-us {
+        color: $linksOnHoverColor;
+        font-weight: bold;
+      }
+    }
+
+    .feedback-form {
+      input, textarea {
+        width: 100%;
+        background-color: white;
+        border-width: 2px;
+        border-color: rgb(212, 208, 209);
+        border-style: solid;
+      }
+
+      input[placeholder], textarea[placeholder] {
+        text-align: center;
+        font-size: $mdMainFontSize;
+      }
+
+      input {
+        height: 40px;
+      }
+
+      .input-submit-button {
+        cursor: pointer;
+        width: 39%;
+        background-color: $secondaryElementsColor;
+        border-radius: 30px;
+        border-color: $secondaryElementsColor;
+      }
+
+      .input-submit-button[value] {
+        color: $buttonsOnHoverColor;
+        font-size: $lgMainFontSize;
+      }
+    }
   }
 
-  input[placeholder], textarea[placeholder] {
-    text-align: center;
-    font-size: $mdMainFontSize;
-  }
+  .policy-agreement {
+    margin-top: 0;
 
-  input {
-    height: 40px;
-  }
-
-  .input-submit-button {
-    cursor: pointer;
-    width: 39%;
-    background-color: $secondaryElementsColor;
-    border-radius: 30px;
-    border-color: $secondaryElementsColor;
-  }
-
-  .input-submit-button[value] {
-    color: $buttonsOnHoverColor;
-    font-size: $lgMainFontSize;
+    a {
+      color: $linksOnHoverColor;
+    }
   }
 }
 
-@media screen and (min-width: $xxlWidth){
+@media screen and (min-width: $xxlWidth) {
   .feedback-form {
     .input-submit-button {
       width: 148px;
+    }
+  }
+}
+
+@media screen and (max-width: $xxlWidth) {
+  .contacts-form {
+    &-wrap {
+      .if-questions {
+        font-size: $mdMainFontSize;
+
+        .write-to-us {
+          font-size: $mdMainFontSize;
+        }
+      }
     }
   }
 }

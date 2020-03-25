@@ -130,19 +130,19 @@
   }
 }
 
-//@media screen and (min-width: $xxxlWidth){
-//  .header{
-//    &-working-hours {
-//      font-size: 18px;
-//    }
-//
-//    &-link-schedule {
-//      a {
-//        font-size: 20px;
-//      }
-//    }
-//  }
-//}
+@media screen and(max-width: $lgWidth) {
+  .header {
+    &-info {
+      p:last-child{
+        margin: 4px 0 0 58px;
+      }
+    }
+
+    &-link-schedule {
+      width: 25%;
+    }
+  }
+}
 
 /* MOBILE */
 
@@ -233,23 +233,3 @@
     }
   }
 }
-
-//@media screen and (max-width: $xxlWidth) {
-//  .header {
-//    &-logo {
-//      padding-left: 0;
-//
-//      img {
-//        width: 82%;
-//      }
-//    }
-//
-//    &-link-schedule {
-//      width: 28%;
-//    }
-//
-//    &-icons {
-//      padding-left: 0;
-//    }
-//  }
-//}

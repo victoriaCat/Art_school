@@ -1,9 +1,8 @@
 import './Footer.scss';
-
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top';
-
+import Copyright from "~/libs/Copyright/Copyright.jsx";
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
 import {PHONE_NUMBER, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
@@ -38,6 +37,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
+            <Copyright/>
         </footer>
     );
 };

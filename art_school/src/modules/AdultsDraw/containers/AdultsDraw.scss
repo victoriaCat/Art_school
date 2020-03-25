@@ -1,7 +1,7 @@
 @import '~/assets/scss/resources.scss';
 
 .adults-draw {
-  &-mobile {
+  &-mobile-workshops, &-mobile-header {
     display: none;
   }
 
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: $xxlWidth) {
   .adults-draw {
-    img{
+    .carousel-adults__photo{
       height: 350px;
     }
     .sign-up-button {
@@ -39,12 +39,14 @@
   }
 }
 
+/*MOBILE*/
+
 @media screen and (max-width: $smWidth) {
-  .adults-draw {
-    img{
+  .adults-draw{
+    .carousel-adults__photo{
       height: 250px;
     }
-    &-mobile{
+    &-mobile-workshops, &-mobile-header{
       display: block;
     }
     .sign-up-button {
@@ -57,7 +59,7 @@
 }
 
 @media screen and (max-width: #{$xsWidth + 2px}) {
-  .adults-draw {
+  .adults-draw{
     .sign-up-button {
       width: 32%;
     }

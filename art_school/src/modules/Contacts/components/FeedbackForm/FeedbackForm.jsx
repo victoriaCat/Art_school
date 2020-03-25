@@ -1,6 +1,7 @@
 import './FeedbackForm.scss';
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from "react-router-dom";
 
 class FeedbackForm extends Component {
     constructor(props) {
@@ -46,22 +47,32 @@ class FeedbackForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="feedback-form">
-                <p><input type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яёЁ]{1,60}"
-                          title="Введите имя кириллицей или латиницей, имя должно содержать не менее 1 и не более 60 символов"
-                          value={this.state.name} onChange={this.handleChange} required/></p>
-                <p><input type="email" name="email" placeholder="Ваш электронный адрес"
-                          pattern="([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?"
-                          title="Введите адрес электронной почты, например: mymail@email.ru или email@mymail.com"
-                          value={this.state.email} onChange={this.handleChange} required/></p>
-                <p><input type="text" name="phone" placeholder="Ваш номер телефона" pattern="[\+?\d]{11,12}"
-                          title="Введите номер телефона в формате 8xxxxxxxxxx или +7xxxxxxxxxx без пробелов"
-                          value={this.state.phone} onChange={this.handleChange} required/></p>
-                <p><textarea name="message" cols="40" rows="7" placeholder="Текст Вашего сообщения"
-                             value={this.state.message} onChange={this.handleChange}>
+            <div className="contacts-form">
+                <div className="contacts-form-wrap">
+                    <p className="if-questions">Если у Вас есть вопросы или предложения,
+                        <span className="write-to-us"> напишите нам:</span>
+                    </p>
+                    <form onSubmit={this.handleSubmit} className="feedback-form">
+                        <p><input type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яёЁ]{1,60}"
+                                  title="Введите имя кириллицей или латиницей, имя должно содержать не менее 1 и не более 60 символов"
+                                  value={this.state.name} onChange={this.handleChange} required/></p>
+                        <p><input type="email" name="email" placeholder="Ваш электронный адрес"
+                                  pattern="([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?"
+                                  title="Введите адрес электронной почты, например: mymail@email.ru или email@mymail.com"
+                                  value={this.state.email} onChange={this.handleChange} required/></p>
+                        <p><input type="text" name="phone" placeholder="Ваш номер телефона" pattern="[\+?\d]{11,12}"
+                                  title="Введите номер телефона в формате 8xxxxxxxxxx или +7xxxxxxxxxx без пробелов"
+                                  value={this.state.phone} onChange={this.handleChange} required/></p>
+                        <p><textarea name="message" cols="40" rows="7" placeholder="Текст Вашего сообщения"
+                                     value={this.state.message} onChange={this.handleChange}>
                 </textarea></p>
-                <p><input className="input-submit-button" type="submit" value="ОТПРАВИТЬ"/></p>
-            </form>
+                        <p><input className="input-submit-button" type="submit" value="ОТПРАВИТЬ"/></p>
+                    </form>
+                </div>
+                <p className="policy-agreement">Нажимая «Отправить» Вы соглашаетесь <br/> c<Link
+                    to="/policy" target="_blank"> Политикой
+                    конфиденциальности</Link></p>
+            </div>
         );
     }
 }

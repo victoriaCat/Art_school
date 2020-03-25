@@ -19,7 +19,7 @@
         width: 12px;
       }
 
-      .contacts-main, .contacts-form {
+      .contacts-main {
         display: inherit;
         flex-direction: column;
         width: 49%;
@@ -27,30 +27,43 @@
       }
 
       .contacts-main {
-        h4 {
-          margin-bottom: 0;
+        justify-content: space-evenly;
+
+        .contacts-school {
+          h4{
+            margin: 0;
+          }
+
+          p{
+            margin: 5px 0 0 0;
+          }
+
+          .contacts-icon {
+            img {
+              width: 6%;
+            }
+          }
         }
 
         .contacts-kurskaya, .contacts-dobryninskaya {
           img {
-            width: 30px;
+            width: 5%;
             margin-bottom: -2px;
+          }
+
+          .metro {
+            color: #954f32;
           }
 
           p {
             color: $secondaryFontColor;
-          }
-        }
-
-        .contacts-icon {
-          img {
-            width: 35px;
+            margin: 5px 0;
           }
         }
 
         .contacts-email {
           img {
-            width: 55px;
+            width: 13%;
           }
 
           p {
@@ -59,47 +72,29 @@
         }
       }
 
-      .contacts-form {
-        .if-questions {
-          margin-bottom: 0;
-        }
-
-        .write-to-us {
-          color: $linksOnHoverColor;
-          //margin: 0 0 0 -213px;
-          font-weight: bold;
-        }
-
-        .policy-agreement {
-          margin-top: 0;
-
-          a {
-            color: $linksOnHoverColor;
-          }
-        }
-      }
-
     }
   }
 }
 
-@media screen and (max-width: $xxlWidth) {
-  .contacts-wrap {
-    .contacts-group-container {
-      .contacts-group {
-        .contacts-form {
-          .if-questions {
-            font-size: $smMainFontSize;
-          }
-
-          .write-to-us {
-            font-size: $smMainFontSize;
-          }
-        }
-      }
-    }
-  }
-}
+//@media screen and (max-width: $xxlWidth) {
+//  .contacts-wrap {
+//    .contacts-group-container {
+//      .contacts-group {
+//        .contacts-form {
+//          .&-wrap{
+//            .if-questions {
+//              font-size: $smMainFontSize;
+//            }
+//
+//            .write-to-us {
+//              font-size: $smMainFontSize;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
 
 @media screen and (max-width: $xlWidth) {
   .contacts-wrap {

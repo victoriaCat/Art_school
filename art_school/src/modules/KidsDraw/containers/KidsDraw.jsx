@@ -9,6 +9,7 @@ import {FETCH_CAROUSEL_KIDS_DRAW_IMAGES} from '~/modules/KidsDraw/actionTypes';
 import {PRICE, DURATION} from '~/assets/infoVars';
 import WorkshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx';
 import {Link} from "react-router-dom";
+import Header from "~/modules/Header/containers/Header.jsx";
 class KidsDraw extends Component {
     /*
     * returns {Preloader || CarouselKids}
@@ -24,6 +25,9 @@ class KidsDraw extends Component {
     render() {
         return (
             <div className="kids-draw">
+                <div className="kids-draw-mobile-header">
+                    <Header/>
+                </div>
                 <h2>Рисуют дети</h2>
                 {this.showKidsDrawCarousel(this.props.kidsDrawImages)}
                 <p>Зачастую дети видят картину красивой, но не понимают какие средства художественной выразительности
@@ -45,7 +49,7 @@ class KidsDraw extends Component {
                 <button className="sign-up-button">
                     <Link to="/workshops/kids">ЗАПИСАТЬСЯ</Link>
                 </button>
-                <div className="kids-draw-mobile">
+                <div className="kids-draw-mobile-workshops">
                     <WorkshopsKids/>
                 </div>
             </div>

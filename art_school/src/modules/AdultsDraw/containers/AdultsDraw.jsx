@@ -9,6 +9,7 @@ import {connect} from "react-redux";
 import {PRICE, DURATION} from '~/assets/infoVars';
 import {Link} from "react-router-dom";
 import WorkshopsAdults from "~/modules/WorkshopsCatalog/containers/WorkshopsAdults/WorkshopsAdults.jsx";
+import Header from "~/modules/Header/containers/Header.jsx";
 
 class AdultsDraw extends Component {
     /*
@@ -25,6 +26,9 @@ class AdultsDraw extends Component {
     render() {
         return (
             <div className="adults-draw">
+                <div className="adults-draw-mobile-header">
+                    <Header/>
+                </div>
                 <h2>Рисуют взрослые</h2>
                 {this.showAdultsDrawCarousel(this.props.adultsDrawImages)}
                 <p>В <span className="school">Школу рисования Екатерины Пушкарёвой</span> приходят люди всех возрастов. Здесь каждому помогают раскрыть
@@ -48,7 +52,7 @@ class AdultsDraw extends Component {
                 <button className="sign-up-button">
                     <Link to="/workshops/adults">ЗАПИСАТЬСЯ</Link>
                 </button>
-                <div className="adults-draw-mobile">
+                <div className="adults-draw-mobile-workshops">
                     <WorkshopsAdults/>
                 </div>
             </div>

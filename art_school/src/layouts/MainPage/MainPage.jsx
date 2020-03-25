@@ -3,7 +3,6 @@ import Header from '~/modules/Header/containers/Header.jsx';
 import Footer from '~/modules/Footer/Footer.jsx';
 import React from 'react';
 import { renderRoutes } from "react-router-config";
-import Copyright from "~/libs/Copyright/Copyright.jsx";
 
 const MainPage = ({route}) => {
     return (
@@ -13,7 +12,6 @@ const MainPage = ({route}) => {
                 {renderRoutes(route.routes)}
             </div>
             <Footer/>
-            <Copyright/>
         </div>
     );
 };

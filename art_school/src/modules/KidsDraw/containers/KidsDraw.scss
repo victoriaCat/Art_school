@@ -1,7 +1,7 @@
 @import '~/assets/scss/resources.scss';
 
 .kids-draw {
-  &-mobile {
+  &-mobile-workshops, &-mobile-header{
     display: none;
   }
 
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: $xxlWidth) {
   .kids-draw {
-    img{
+    .carousel-kids__photo{
       height: 350px;
     }
     .sign-up-button {
@@ -40,12 +40,14 @@
   }
 }
 
+
+/*MOBILE*/
 @media screen and (max-width: $smWidth) {
   .kids-draw {
-    img{
+    .carousel-kids__photo{
       height: 250px;
     }
-    &-mobile{
+    &-mobile-workshops, &-mobile-header{
       display: block;
     }
     .sign-up-button {

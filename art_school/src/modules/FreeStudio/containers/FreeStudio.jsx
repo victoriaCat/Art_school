@@ -8,6 +8,7 @@ import {connect} from "react-redux";
 import Preloader from '~/libs/Preloader/Preloader.jsx';
 import Footer from '~/modules/Footer/Footer.jsx';
 import {PRICE, DURATION} from '~/assets/infoVars';
+import Header from "~/modules/Header/containers/Header.jsx";
 
 class FreeStudio extends Component {
     /*
@@ -22,6 +23,9 @@ class FreeStudio extends Component {
     render() {
         return (
             <div className="free-studio">
+                <div className="free-studio-mobile-header">
+                    <Header/>
+                </div>
                 <div className="free-studio-container">
                     <h2>Свободная мастерская</h2>
                     <div className="free-studio-picture">
@@ -47,7 +51,6 @@ class FreeStudio extends Component {
                         <p>Продолжительность: {DURATION} часа</p>
                         <p>Стоимость: {PRICE} руб</p>
                         <p>Минимальный возраст — 12 лет.</p>
-
                     </div>
                 </div>
                 <Footer/>

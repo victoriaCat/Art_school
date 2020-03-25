@@ -26,25 +26,24 @@ class Contacts extends Component {
                         <div className="contacts-group-container">
                             <div className="contacts-group">
                                 <div className="contacts-main">
-                                    <h4>АРТ-ШКОЛА ПУШКАРЁВОЙ</h4>
-                                    <p>Площадки проведения мастерклассов:</p>
-                                    <div className="contacts-icon">
-                                        <img src={pointerImg} alt=""/>
+                                    <div className="contacts-school">
+                                        <div className="contacts-icon">
+                                            <img src={pointerImg} alt=""/>
+                                        </div>
+                                        <h4>АРТ-ШКОЛА ПУШКАРЁВОЙ</h4>
+                                        <p>Площадки проведения мастерклассов:</p>
                                     </div>
                                     <div className="contacts-kurskaya">
                                         <img src={metroImg} alt=""/>
                                         <span className="metro"> Курская</span>
                                         <p>Дом для творческих людей ОТ УМА</p>
-                                        <p>г.Москва, Костомаровский пер. дом. 3, стр. 3</p>
-                                    </div>
-                                    <div className="contacts-icon">
-                                        <img src={pointerImg} alt=""/>
+                                        <p>г. Москва, Костомаровский пер. дом. 3, стр. 3</p>
                                     </div>
                                     <div className="contacts-dobryninskaya">
                                         <img src={metroImg} alt=""/>
                                         <span className="metro"> Добрынинская</span>
                                         <p>Антикафе-коворкинг Белый Лист</p>
-                                        <p>г.Москва, Валовая ул. 32/75с1</p>
+                                        <p>г. Москва, Валовая ул. 32/75с1</p>
                                     </div>
                                     {/*<div className="contacts-phone">*/}
                                     {/*<img className="contacts-icon" src={phoneImg} alt="" width="50px"/>*/}
@@ -55,15 +54,7 @@ class Contacts extends Component {
                                         <p>{EMAIL}</p>
                                     </div>
                                 </div>
-                                <div className="clearfix"></div>
-                                <div className="contacts-form">
-                                    <p className="if-questions">Если у Вас есть вопросы или предложения,</p>
-                                    <span className="write-to-us">напишите нам:</span>
-                                    <FeedbackForm/>
-                                    <p className="policy-agreement">Нажимая «Отправить» Вы соглашаетесь <br/> c<Link
-                                        to="/policy" target="_blank"> Политикой
-                                        конфиденциальности</Link></p>
-                                </div>
+                                <FeedbackForm/>
                             </div>
                         </div>
                         <YMaps>
