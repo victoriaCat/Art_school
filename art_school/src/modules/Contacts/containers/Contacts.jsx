@@ -1,17 +1,16 @@
 import './Contacts.scss';
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
-import {Link} from "react-router-dom";
 import FeedbackForm from '~/modules/Contacts/components/FeedbackForm/FeedbackForm.jsx';
 import {YMaps, Map, ZoomControl, Placemark} from "react-yandex-maps";
 import pointerImg from '~/assets/images/pointer.png';
 import metroImg from '~/assets/images/metro.png';
-import phoneImg from '~/assets/images/phone.png';
 import emailImg from '~/assets/images/email.png';
 import {PHONE_NUMBER, EMAIL} from '~/assets/infoVars';
 import MainSlider from "~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx";
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_MAIN_SLIDER_IMAGES} from '~/modules/WelcomeBlockMainPage/actionTypes';
+import {decodeString} from '~/libs/commonHelpers';
 
 class Contacts extends Component {
     render() {
@@ -51,7 +50,7 @@ class Contacts extends Component {
                                     {/*</div>*/}
                                     <div className="contacts-email">
                                         <img src={emailImg} alt=""/>
-                                        <p>{EMAIL}</p>
+                                        <p>{decodeString(EMAIL)}</p>
                                     </div>
                                 </div>
                                 <FeedbackForm/>

@@ -6,6 +6,7 @@ import Copyright from "~/libs/Copyright/Copyright.jsx";
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
 import {PHONE_NUMBER, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
+import {decodeString} from '~/libs/commonHelpers';
 
 const Footer = () => {
     return (
@@ -14,8 +15,8 @@ const Footer = () => {
                 <div className="footer-info">
                     <div className="footer-main-info">
                         <p>Контакты</p>
-                        <p>{EMAIL}</p>
-                        <p>{PHONE_NUMBER}</p>
+                        <p>{decodeString(EMAIL)}</p>
+                        <p>{decodeString(PHONE_NUMBER)}</p>
                         <p>Часы работы с 9.00 - 21.00, без выходных</p>
                     </div>
                     <div className="footer-link-to-main">
