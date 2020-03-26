@@ -6,7 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { StatsWriterPlugin } = require('webpack-stats-plugin');
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const baseConfig = require('./webpack.config.base');
 
@@ -22,7 +21,16 @@ module.exports = merge(baseConfig, {
         rules: [
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            url: false
+                        }
+                    },
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
@@ -57,8 +65,7 @@ module.exports = merge(baseConfig, {
         }),
         new MiniCssExtractPlugin({
             filename: 'styles.[chunkhash].css'
-        }),
-        //new BundleAnalyzerPlugin()
+        })
     ],
     devtool: 'inline-source-map'
 });

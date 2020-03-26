@@ -19,7 +19,7 @@ const Footer = () => {
                         <p>Часы работы с 9.00 - 21.00, без выходных</p>
                     </div>
                     <div className="footer-link-to-main">
-                        <h2><Link to="/">Арт-школа Пушкарёвой, 2019</Link></h2>
+                        <h2><Link to="/">Арт-школа Пушкарёвой, 2019 — {new Date().getFullYear()}</Link></h2>
                     </div>
                 </div>
                 <div className="footer-icons">

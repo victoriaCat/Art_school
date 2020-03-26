@@ -57,7 +57,7 @@ const renderer = (req, store, context) => {
                       });
                     </script>-->
                     <!-- /Yandex.Metrika counter -->
-                    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+                    <!--<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">-->
                   </head>
                   <body>
                      <div id="root">${content}</div>
@@ -67,7 +67,7 @@ const renderer = (req, store, context) => {
                      <script src="/${assetsByChunkName.main[1]}"></script>
                   </body>
             </html>`
-};
+    };
 
 app.get('*', (req, res) => {
     // const params = req.params[0].split('/');

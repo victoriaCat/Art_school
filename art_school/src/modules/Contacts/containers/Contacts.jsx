@@ -31,7 +31,7 @@ class Contacts extends Component {
                                             <img src={pointerImg} alt=""/>
                                         </div>
                                         <h4>АРТ-ШКОЛА ПУШКАРЁВОЙ</h4>
-                                        <p>Площадки проведения мастерклассов:</p>
+                                        <p>Площадки проведения мастер-классов:</p>
                                     </div>
                                     <div className="contacts-kurskaya">
                                         <img src={metroImg} alt=""/>

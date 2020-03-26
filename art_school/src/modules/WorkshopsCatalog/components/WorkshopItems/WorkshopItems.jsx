@@ -4,6 +4,12 @@ import {formatDate, checkIfBygone, showIfBygone, sortByDate} from '~/modules/Wor
 import {FS_IMG_URL} from '~/libs/api';
 
 class WorkshopItems extends Component {
+    /*
+    * returns image from payload <=> arrElem
+    * */
+    findWorkshopImage(payload, arrElem) {
+        return payload.find(image => image.id == arrElem.imgId);
+    }
 
     render() {
         return (
@@ -13,7 +19,7 @@ class WorkshopItems extends Component {
                         <h3>{workshop.header}</h3>
                         <Link to={`${this.props.link}/${workshop.id}/${workshop.link}`} target='_blank'>
                             <img
-                                src={`${FS_IMG_URL}${this.props.images.find(image => image.id == workshop.imgId).id}/${workshop.imgName}?`}
+                                src={`${FS_IMG_URL}${this.findWorkshopImage(this.props.images, workshop).id}/${this.findWorkshopImage(this.props.images, workshop).name}?`}
                                 alt={workshop.header}/>
                         </Link>
                         <p>{formatDate(workshop.date)} | {workshop.time}</p>

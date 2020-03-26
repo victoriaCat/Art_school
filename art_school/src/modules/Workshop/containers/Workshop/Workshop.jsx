@@ -61,7 +61,7 @@ class Workshop extends Component {
                         <p>{workshop.description}</p>
                         <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку. </p>
 
-                        <h3><span className="awaits">ЧТО ЖДЁТ НА МАСТЕРКЛАССЕ:</span></h3>
+                        <h3><span className="awaits">ЧТО ЖДЁТ НА МАСТЕР-КЛАССЕ:</span></h3>
                         <ul>
                             <li>Авторский метод обучения и собственноручно написанная картина всего за 1 занятие</li>
                             <li>Творчество в комфортной обстановке светлой мастерской</li>
