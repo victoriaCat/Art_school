@@ -6,6 +6,7 @@
   width: 49%;
   text-align: center;
   align-items: center;
+
   &-wrap {
     width: 80%;
 
@@ -62,9 +63,11 @@
 }
 
 @media screen and (min-width: $xxlWidth) {
-  .feedback-form {
-    .input-submit-button {
-      width: 148px;
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button {
+        width: 148px;
+      }
     }
   }
 }
@@ -84,38 +87,50 @@
 }
 
 @media screen and (max-width: $lgWidth) {
-  .feedback-form {
-    .input-submit-button[value] {
-      font-size: 17px;
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button[value] {
+        font-size: 17px;
+      }
     }
   }
 }
 
 @media screen and (max-width: $smWidth) {
-  .feedback-form {
-    .input-submit-button {
-      width: 25%;
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button {
+        width: 25%;
+      }
     }
   }
 }
 
 @media screen and (max-width: $sWidth) {
-  .feedback-form {
-    .input-submit-button {
-      width: 35%;
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button {
+        width: 47%;
+      }
     }
   }
 }
 
 @media screen and (max-width: $xsWidth) {
-  .feedback-form {
-    .input-submit-button {
-      height: 35px;
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button {
+        height: 35px;
+        width: 52%;
+      }
     }
   }
-  .feedback-form {
-    .input-submit-button[value] {
-      font-size: 16px;
+
+  .contacts-form-wrap {
+    .feedback-form {
+      .input-submit-button[value] {
+        font-size: 16px;
+      }
     }
   }
 }

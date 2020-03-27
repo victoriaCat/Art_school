@@ -107,10 +107,18 @@
     display: block;
   }
   .contacts-wrap {
+    .map-container{
+      width: 100%;
+      margin: 0;
+    }
     .contacts-group-container {
       .contacts-group {
+        height: fit-content;
         .contacts-main, .contacts-form {
-          width: 98%;
+          width: 100%;
+        }
+        .contacts-main{
+          height: 350px;
         }
       }
     }
