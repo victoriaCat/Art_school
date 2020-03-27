@@ -7,11 +7,12 @@
 
   .workshop-sign-up-button {
     color: $buttonsOnHoverColor;
+    cursor: pointer;
     display: block;
     margin: 26px auto;
     background-color: $secondaryElementsColor;
     font-size: 31px;
-    width: 27%;
+    width: 25%;
     height: 66px;
     border-radius: 32px;
   }
@@ -31,12 +32,29 @@
   }
 }
 
+@media screen and (min-width: $xxlWidth) {
+  .workshop-container {
+    .workshop-sign-up-button {
+      width: 255px;
+    }
+  }
+}
+
 @media screen and (max-width: $xxlWidth) {
   .workshop-container {
     .workshop-sign-up-button {
-      font-size: 26px;
-      width: 30%;
+      font-size: 24px;
+      width: 24%;
       height: 56px;
+    }
+  }
+}
+
+@media screen and (max-width: $lgWidth) {
+  .workshop-container {
+    .workshop-sign-up-button {
+      font-size: 18px;
+      height: 45px;
     }
   }
 }
@@ -49,8 +67,6 @@
       height: 40px;
       margin-top: 23px;
     }
-
-
   }
 }
 

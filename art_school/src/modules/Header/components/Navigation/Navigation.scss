@@ -29,7 +29,7 @@
 
           .schedule-links {
             display: none;
-            width: 12%;
+            width: 13%;
           }
 
           .schedule-arrow {
@@ -41,26 +41,31 @@
         :nth-child(2):hover {
           .schedule-links {
             display: block;
-            box-shadow: 33px 34px 90px -20px rgba(0,0,0,0.2);
+            margin-left: -15px;
+            border-top: none;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
             position: absolute;
-            height: 75px;
-            background-color: $mainElementsColor;
+            height: 70px;
+            background-color: $mainBackgroundColor;
             z-index: 500;
 
-            img {
-              height: 60px;
-              margin: 5px;
-              float: left;
-            }
-
             ul {
-              display: inline-block;
               list-style-type: none;
-              padding: 0 10px 30px 15px;
+              padding: 0;
               li {
-                font-size: $mdMainFontSize;
-                line-height: 35px;
+                a{
+                  display: block;
+                  font-size: $mdMainFontSize;
+                  line-height: 35px;
+                  padding-left: 15px;
+                }
+                a:hover{
+                  background-color: $mainElementsColor;
+                }
               }
+
             }
           }
         }
