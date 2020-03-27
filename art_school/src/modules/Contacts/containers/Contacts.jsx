@@ -6,13 +6,20 @@ import {YMaps, Map, ZoomControl, Placemark} from "react-yandex-maps";
 import pointerImg from '~/assets/images/pointer.png';
 import metroImg from '~/assets/images/metro.png';
 import emailImg from '~/assets/images/email.png';
-import {PHONE_NUMBER, EMAIL} from '~/assets/infoVars';
+import {EMAIL} from '~/assets/infoVars';
 import MainSlider from "~/modules/WelcomeBlockMainPage/components/MainSlider/MainSlider.jsx";
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_MAIN_SLIDER_IMAGES} from '~/modules/WelcomeBlockMainPage/actionTypes';
 import {decodeString} from '~/libs/commonHelpers';
 
 class Contacts extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: EMAIL
+        }
+    }
+
     render() {
         const yandexMapState = {center: [55.75011637742818, 37.624307386079835], zoom: 12, controls: []};
         return (
@@ -49,8 +56,8 @@ class Contacts extends Component {
                                     {/*<p>{PHONE_NUMBER}</p>*/}
                                     {/*</div>*/}
                                     <div className="contacts-email">
-                                        <img src={emailImg} alt=""/>
-                                        <p>{decodeString(EMAIL)}</p>
+                                        <img src={emailImg} alt="email"/>
+                                        <p><a href={"mailto:" + this.state.email}>{decodeString(EMAIL)}</a></p>
                                     </div>
                                 </div>
                                 <FeedbackForm/>
@@ -82,6 +89,9 @@ class Contacts extends Component {
     }
 
     componentDidMount() {
+        this.setState({
+            email: decodeString(EMAIL)
+        });
         if (this.props.mainSliderImages.isLoading)
             this.props.fetchImages('main_slider', FETCH_MAIN_SLIDER_IMAGES);
     }

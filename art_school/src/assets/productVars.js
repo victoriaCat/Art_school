@@ -1,3 +1,17 @@
+// import axios from 'axios';
+//
+// async function getPosts() {
+//     let payload = [];
+//     try {
+//         const response = await axios.get("https://pushkareva.art/api/master_class");
+//         payload = response.data.data;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+//
+// console.log(getPosts());
+
 export const WORKSHOPS_ADULTS = [
     {
         id: 1,

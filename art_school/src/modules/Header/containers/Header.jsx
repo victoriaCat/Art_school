@@ -9,11 +9,21 @@ import phoneImg from '~/assets/images/phone.png';
 import navImg from '~/assets/images/mob-nav.png';
 import arrowImg from '~/assets/images/arrow.png';
 import stickImg from '~/assets/images/flower-stick.png';
-import {PHONE_NUMBER, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
+import {PHONE_NUMBER, TEL_ATTRIBUTE, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
 import {decodeString} from '~/libs/commonHelpers';
 
-
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            telephone: TEL_ATTRIBUTE
+        }
+    }
+
+    componentDidMount() {
+        this.setState({telephone: decodeString(TEL_ATTRIBUTE)})
+    }
+
     render() {
         return (
             <header className="header">
@@ -50,7 +60,9 @@ class Header extends Component {
                         <Link to="/"><img className="logo-img" src={logoImg} alt="Logo"/></Link>
                     </div>
                     <div className="header-info">
-                        <p className="header-phone">{decodeString(PHONE_NUMBER)}</p>
+                        <p className="header-phone">
+                            <a href={'tel:' + this.state.telephone}>{decodeString(PHONE_NUMBER)}</a>
+                        </p>
                         <p className="header-working-hours">Часы работы с 9.00 до 21.00, без выходных</p>
                     </div>
                     <div className="header-icons">
@@ -64,7 +76,7 @@ class Header extends Component {
                     <div className="header-link-schedule">
                         <Link to="/workshops">Расписание занятий</Link>
                     </div>
-                    <div className="header-mobile-call-button"><a href="tel:+74994440961"><img src={phoneImg}
+                    <div className="header-mobile-call-button"><a href={'tel:' + this.state.telephone}><img src={phoneImg}
                                                                                                alt="Call Us"/></a></div>
                 </div>
                 <Navigation/>

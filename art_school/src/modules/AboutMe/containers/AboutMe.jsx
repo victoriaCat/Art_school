@@ -5,10 +5,9 @@ import {connect} from 'react-redux';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
 import CarouselMyWorks from '~/modules/AboutMe/components/CarouselMyWorks/CarouselMyWorks.jsx';
 import {fetchImages} from '~/libs/commonActions';
-import {
-    FETCH_ABOUT_ME_IMAGES,
-    FETCH_CAROUSEL_IMAGES_MY_WORKS
-} from '~/modules/AboutMe/actionTypes';
+import {FETCH_ABOUT_ME_IMAGES, FETCH_CAROUSEL_IMAGES_MY_WORKS} from '~/modules/AboutMe/actionTypes';
+import {decodeString} from '~/libs/commonHelpers';
+import {NAME} from '~/assets/infoVars';
 import {FS_IMG_URL} from '~/libs/api';
 
 class AboutMe extends Component {
@@ -39,7 +38,7 @@ class AboutMe extends Component {
                         {this.showAboutMeImages(this.props.aboutMeImages, 0)}
                     </div>
                     <div className="about-me-presentation">
-                        <p><strong>Екатерина Пушкарёва</strong> – кандидат в члены союза художников РФ. Получила
+                        <p><strong>{decodeString(NAME)}</strong> – кандидат в члены союза художников РФ. Получила
                             художественно-педагогическое
                             образование в Академии архитектуры и искусств, Московском педагогическом университете.
                             Постоянный участник выставок и пленэров.</p>
