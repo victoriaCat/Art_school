@@ -63,25 +63,27 @@ class Contacts extends Component {
                                 <FeedbackForm/>
                             </div>
                         </div>
-                        <YMaps>
-                            <Map state={yandexMapState} width="100%" height="320px">
-                                <ZoomControl options={{float: 'right'}}/>
-                                <Placemark geometry={[55.75238275487334, 37.66616910189715]}
-                                           properties={{
-                                               balloonContentHeader: 'Творческая студия От Ума',
-                                               balloonContentBody: 'м. Курская, Костомаровский пер. д. 3, стр. 3'
-                                           }}
-                                           options={{preset: 'islands#brownSouvenirsIcon'}}
-                                           modules={['geoObject.addon.balloon']}/>
-                                <Placemark geometry={[55.73024518242224, 37.625879832669334]}
-                                           properties={{
-                                               balloonContentHeader: 'Коворкинг Белый Лист',
-                                               balloonContentBody: 'м. Добрынинская, Валовая улица, 32/75с1'
-                                           }}
-                                           options={{preset: 'islands#brownBookIcon'}}
-                                           modules={['geoObject.addon.balloon']}/>
-                            </Map>
-                        </YMaps>
+                        <div className="map-container">
+                            <YMaps>
+                                <Map state={yandexMapState} width="100%" height="320px">
+                                    <ZoomControl options={{float: 'right'}}/>
+                                    <Placemark geometry={[55.75238275487334, 37.66616910189715]}
+                                               properties={{
+                                                   balloonContentHeader: 'Творческая студия От Ума',
+                                                   balloonContentBody: 'м. Курская, Костомаровский пер. д. 3, стр. 3'
+                                               }}
+                                               options={{preset: 'islands#brownSouvenirsIcon'}}
+                                               modules={['geoObject.addon.balloon']}/>
+                                    <Placemark geometry={[55.73024518242224, 37.625879832669334]}
+                                               properties={{
+                                                   balloonContentHeader: 'Коворкинг Белый Лист',
+                                                   balloonContentBody: 'м. Добрынинская, Валовая улица, 32/75с1'
+                                               }}
+                                               options={{preset: 'islands#brownBookIcon'}}
+                                               modules={['geoObject.addon.balloon']}/>
+                                </Map>
+                            </YMaps>
+                        </div>
                     </div>
                 </div>
             </>
