@@ -67,38 +67,50 @@
 
 @media (max-width: $smWidth){
   .footer {
+    width: 100%;
     height: fit-content;
     &-container {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: normal;
     }
     &-main-info{
-      text-align: left;
+      text-align: center;
       p{
         font-size: #{$lgMainFontSize - 2px};
         &:first-child{
           font-size: $lgMainFontSize;
+        }
+        &:nth-child(3) {
+          font-size: 20px;
+          word-spacing: 6px;
+        }
+        &:last-child{
+          font-size: 15px;
         }
       }
     }
     &-link-to-main{
       h2{
         padding: 0;
-        font-size: $lgMainFontSize;
+        font-size: 19px;
       }
     }
 
     &-icons {
-      text-align: left;
+      text-align: center;
       padding-left: 4px;
       margin: 7px 0;
       img {
-        width: 20%;
+        width: 19%;
         &:last-child{
           padding-left: 4px;
         }
       }
+    }
+    .copyright{
+      align-items: center;
+      font-size: 13px;
     }
   }
 }
