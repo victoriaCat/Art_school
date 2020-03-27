@@ -196,7 +196,7 @@
         left: 0;
         height: fit-content;
         width: 72%;
-        background-color: $mainElementsColor;
+        background-color: $mainBackgroundColor;
         box-shadow: 33px 34px 90px -20px rgba(0, 0, 0, 0.7);
         z-index: 500;
 
@@ -214,9 +214,16 @@
 
         ul {
           list-style-type: none;
-          padding: 0 10px;
+          padding: 0;
           text-align: left;
           line-height: 30px;
+          a{
+            display: block;
+            padding-left: 20px;
+            &:hover{
+              background-color: $mainElementsColor;
+            }
+          }
         }
 
         &-icons {

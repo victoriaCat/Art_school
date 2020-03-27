@@ -8,7 +8,6 @@ import instagramImg from '~/assets/images/instagram-logo.png';
 import phoneImg from '~/assets/images/phone.png';
 import navImg from '~/assets/images/mob-nav.png';
 import arrowImg from '~/assets/images/arrow.png';
-import stickImg from '~/assets/images/flower-stick.png';
 import {PHONE_NUMBER, TEL_ATTRIBUTE, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
 import {decodeString} from '~/libs/commonHelpers';
 
@@ -33,10 +32,8 @@ class Header extends Component {
                         <div className="header-mobile-nav">
                             <ul>
                                 <li><Link to="/about">ОБО МНЕ</Link></li>
-                                <li className="mobile-nav-workshops">МАСТЕР-КЛАССЫ <img className="mobile-arrow"
-                                                                                        src={arrowImg} alt=""/>
+                                <li className="mobile-nav-workshops"><a>МАСТЕР-КЛАССЫ <img className="mobile-arrow" src={arrowImg} alt=""/></a>
                                     <div className="mobile-nav-workshops-links">
-                                        <img className="mobile-stick" src={stickImg} alt=""/>
                                         <ul>
                                             <li><Link to="/adults_draw">рисуют взрослые</Link></li>
                                             <li><Link to="/kids_draw">рисуют дети</Link></li>
