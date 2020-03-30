@@ -60,12 +60,13 @@ class SignUpModal extends Component {
         return (
             <div className="sign-up-modal">
                 <div className="sign-up-modal-close">
-                    <button onClick={this.onClose}><img src={crossImg} alt="X"/></button>
+                    <div className="sign-up-modal-close-button" onClick={this.onClose}><img src={crossImg} alt="X"/></div>
                 </div>
                 <h2>ЗАПИСЬ НА ЗАНЯТИЕ</h2>
                 <div className="sign-up-modal-content">
-                    <p>Мастеркласс: {this.props.workshop.header}</p>
-                    <p>{formatDate(this.props.workshop.date)} | {this.props.workshop.time}, {this.props.workshop.place}</p>
+                    <p>Мастер-класс: {this.props.workshop.header}</p>
+                    <p>{formatDate(this.props.workshop.date)} | {this.props.workshop.time}</p>
+                    <p>{this.props.workshop.place}</p>
                     <form onSubmit={this.handleSubmit}>
                         <p><input type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яёЁ]{1,60}"
                                   title="Введите имя кириллицей или латиницей, имя должно содержать не менее 1 и не более 60 символов"
@@ -84,9 +85,9 @@ class SignUpModal extends Component {
                                   value={this.state.promo} onChange={this.handleChange}/>
                         </p>
                         <p>
-                            <button type="submit">ОТПРАВИТЬ</button>
+                            <input type="submit" className="sign-up-button" value="OТПРАВИТЬ"/>
                         </p>
-                        <p className="policy-agreement">Нажимая «Отправить» Вы соглашаетесь <br/> c<Link
+                        <p className="policy-agreement">Нажимая «Отправить» Вы соглашаетесь <br/> c <Link
                             to="/policy" target="_blank"> Политикой
                             конфиденциальности</Link></p>
                     </form>
