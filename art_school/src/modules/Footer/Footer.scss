@@ -17,17 +17,17 @@
 
   &-main-info {
     p{
-      font-size: 24px;
+      font-size: 22px;
       margin: 0;
       padding-bottom: 7px;
       &:first-child{
-        font-size: 27px;
+        font-size: 24px;
         font-weight: bold;
         padding-top: 11px;
       }
       &:nth-child(3){
-        font-size: 27px;
-        word-spacing: 7px
+        font-size: 24px;
+        word-spacing: 8px
       }
       &:last-child{
         font-size: 16px;
@@ -42,7 +42,7 @@
   &-link-to-main{
     h2{
       margin: 0;
-      font-size: 27px;
+      font-size: 24px;
       padding-top: 35px;
     }
   }
