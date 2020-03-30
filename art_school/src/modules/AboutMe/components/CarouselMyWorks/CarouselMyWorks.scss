@@ -9,7 +9,7 @@
 @media screen and (min-width: #{$xxlWidth + 1px}) {
   .carousel-my-works__photo{
     img{
-      height: 430px;
+      height: 420px;
     }
   }
 }
@@ -17,7 +17,7 @@
 @media screen and (max-width: $xxlWidth) {
   .carousel-my-works__photo{
     img{
-      height: 330px;
+      height: 320px;
     }
   }
 }
@@ -25,7 +25,7 @@
 @media screen and (max-width: $xlWidth) {
   .carousel-my-works__photo{
     img{
-      height: 260px;
+      height: 250px;
     }
   }
 }
@@ -33,7 +33,7 @@
 @media screen and (max-width: $mdWidth) {
   .carousel-my-works__photo{
     img{
-      height: 220px;
+      height: 210px;
     }
   }
 }

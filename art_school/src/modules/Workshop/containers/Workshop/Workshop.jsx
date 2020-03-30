@@ -49,7 +49,7 @@ class Workshop extends Component {
         let workshop = findWorkshop(checkIfBygone(WORKSHOPS), determineID(this.props.location.pathname));
         return (
             <div className="workshop-container">
-                <h2>МАСТЕР-КЛАСС <br/> <span className="header-color">{workshop.header}</span></h2>
+                <h2 className="header-color">МАСТЕР-КЛАСС <br/> <span className={workshop.link}>{workshop.header}</span></h2>
                 <div className="workshop-description">
                     <div className="workshop-images">
                         {this.showWorkshopImages(this.props.workshopPageImages)}

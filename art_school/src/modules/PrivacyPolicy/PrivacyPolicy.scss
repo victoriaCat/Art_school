@@ -1,9 +1,11 @@
+@import '~/assets/scss/resources.scss';
+
 .privacy-policy{
   width: 86%;
   margin: 0 auto;
-  font: 15px Times New Roman;
+  font-size: 15px;
   line-height:22px;
-  background: #F7F7F7;
+  background-color: $secondaryBackgroundColor;
   border:1px solid #ddd;
   padding: 7px;
 }
