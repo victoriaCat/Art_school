@@ -17,7 +17,7 @@ class WorkshopItems extends Component {
                 {sortByDate(checkIfBygone(this.props.workshops)).map(workshop => (
                     <div key={workshop.id} className="workshops-unit">
                         <h3>{workshop.header}</h3>
-                        <Link to={`${this.props.link}/${workshop.id}/${workshop.link}`}>
+                        <Link to={`${this.props.link}/${workshop.id}/${workshop.link}`} target="_top">
                             <img
                                 src={`${FS_IMG_URL}${this.findWorkshopImage(this.props.images, workshop).id}/${this.findWorkshopImage(this.props.images, workshop).name}?`}
                                 alt={workshop.header}/>
