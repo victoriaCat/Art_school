@@ -39,9 +39,9 @@ class Workshop extends Component {
 
     showSignUpButton(workshop) {
         if (!workshop.bygone) {
-            return <button className="workshop-sign-up-button" onClick={e => {this.showSignUpModal();}}>
+            return <div className="workshop-sign-up-button" onClick={e => {this.showSignUpModal();}}>
                 ЗАПИСАТЬСЯ
-            </button>
+            </div>
         } else return null;
     }
 

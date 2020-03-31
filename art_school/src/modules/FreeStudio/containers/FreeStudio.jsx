@@ -23,6 +23,7 @@ class FreeStudio extends Component {
     render() {
         return (
             <div className="free-studio">
+                <Header/>
                 <div className="free-studio-mobile-header">
                     <Header/>
                 </div>

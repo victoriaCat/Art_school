@@ -63,6 +63,7 @@
 
   .workshop-sign-up-button {
     color: $buttonsOnHoverColor;
+    text-align: center;
     cursor: pointer;
     display: block;
     margin: 0 auto 26px auto;
@@ -70,6 +71,7 @@
     font-size: 31px;
     width: 25%;
     height: 66px;
+    line-height: 66px;
     border-radius: 32px;
     border-style: none;
   }
@@ -103,6 +105,7 @@
       font-size: 24px;
       width: 24%;
       height: 56px;
+      line-height: 56px;
     }
   }
 }
@@ -112,6 +115,7 @@
     .workshop-sign-up-button {
       font-size: 18px;
       height: 45px;
+      line-height: 45px;
     }
   }
 }
@@ -122,6 +126,7 @@
       font-size: $mdMainFontSize;
       width: 40%;
       height: 40px;
+      line-height: 40px;
       margin-top: 23px;
     }
   }

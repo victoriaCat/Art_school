@@ -25,6 +25,7 @@ class KidsDraw extends Component {
     render() {
         return (
             <div className="kids-draw">
+                <Header/>
                 <div className="kids-draw-mobile-header">
                     <Header/>
                 </div>
