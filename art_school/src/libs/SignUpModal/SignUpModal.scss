@@ -33,6 +33,14 @@
     padding: 1rem;
     > p{
       margin: 6px 0;
+      img{
+        width: 5%;
+        margin-left: 7px;
+        margin-bottom: -1px;
+      }
+      .metro{
+        color: #954f32;
+      }
     }
     form input{
       width: 98%;

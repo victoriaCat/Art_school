@@ -5,6 +5,7 @@ import {formatDate} from '~/modules/WorkshopsCatalog/helpers';
 import {PRICE} from '~/assets/infoVars';
 import {Link} from "react-router-dom";
 import crossImg from '~/assets/images/cross.png';
+import metroImg from '~/assets/images/metro.png';
 
 class SignUpModal extends Component {
     constructor(props) {
@@ -60,13 +61,16 @@ class SignUpModal extends Component {
         return (
             <div className="sign-up-modal">
                 <div className="sign-up-modal-close">
-                    <div className="sign-up-modal-close-button" onClick={this.onClose}><img src={crossImg} alt="X"/></div>
+                    <div className="sign-up-modal-close-button" onClick={this.onClose}><img src={crossImg} alt="X"/>
+                    </div>
                 </div>
                 <h2>ЗАПИСЬ НА ЗАНЯТИЕ</h2>
                 <div className="sign-up-modal-content">
                     <p>Мастер-класс: {this.props.workshop.header}</p>
                     <p>{formatDate(this.props.workshop.date)} | {this.props.workshop.time}</p>
-                    <p>{this.props.workshop.place}</p>
+                    <p>{this.props.workshop.place.split(' ')[0]}
+                    <img src={metroImg} alt="M"/> <span className="metro">{this.props.workshop.place.split(' ')[1]}</span>
+                    </p>
                     <form onSubmit={this.handleSubmit}>
                         <p><input type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яёЁ]{1,60}"
                                   title="Введите имя кириллицей или латиницей, имя должно содержать не менее 1 и не более 60 символов"

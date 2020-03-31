@@ -1,6 +1,9 @@
 @import '~/assets/scss/resources.scss';
 
 .workshop-container {
+  .workshop-description{
+    margin-bottom: 30px;
+  }
   .header-color {
     color: $mainFontColor;
 
@@ -54,11 +57,15 @@
     }
   }
 
+  .workshop-images{
+    text-align: center;
+  }
+
   .workshop-sign-up-button {
     color: $buttonsOnHoverColor;
     cursor: pointer;
     display: block;
-    margin: 26px auto;
+    margin: 0 auto 26px auto;
     background-color: $secondaryElementsColor;
     font-size: 31px;
     width: 25%;
