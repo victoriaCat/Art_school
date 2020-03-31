@@ -31,7 +31,7 @@ class AdultsDraw extends Component {
                     <Header/>
                 </div>
                 <h2>Рисуют взрослые</h2>
-                {this.showAdultsDrawCarousel(this.props.adultsDrawImages)}
+                <Link to="/gallery"> {this.showAdultsDrawCarousel(this.props.adultsDrawImages)} </Link>
                 <p>В <span className="school">Школу рисования Екатерины Пушкарёвой</span> приходят люди всех возрастов. Здесь каждому помогают раскрыть
                     свой творческий потенциал и начать создавать нечто удивительное.</p>
                 <h3>ДЛЯ КОГО МАСТЕРСКАЯ?</h3>
@@ -50,9 +50,9 @@ class AdultsDraw extends Component {
                 <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку.</p>
                 <p><span className="group">Занятия проходят в группе.</span></p>
                 <p><span className="schedule">Площадки проведения мероприятий указаны в карте расписания.</span></p>
-                <button className="sign-up-button">
+                <div className="sign-up-button">
                     <Link to="/workshops/adults">ЗАПИСАТЬСЯ</Link>
-                </button>
+                </div>
                 <div className="adults-draw-mobile-workshops">
                     <WorkshopsAdults/>
                 </div>

@@ -1,9 +1,10 @@
 @import '~/assets/scss/resources.scss';
 
 .free-studio {
-  &-mobile-header{
+  &-mobile-header, .footer{
     display: none;
   }
+
   h3{
     color: $linksOnHoverColor;
   }
@@ -11,15 +12,38 @@
   ul{
     padding: 0 12px;
   }
-  .footer {
-    display: none;
-  }
 
   &-container {
     .free-studio-picture {
       img {
         width: 100%;
       }
+    }
+  }
+  .sign-up-button {
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    background-color: $secondaryElementsColor;
+    font-size: 31px;
+    width: 24%;
+    height: 66px;
+    line-height: 66px;
+    border-radius: 32px;
+    margin: 32px auto;
+    a{
+      color: $buttonsOnHoverColor;
+    }
+  }
+}
+
+@media screen and (max-width: $xxlWidth) {
+  .free-studio {
+    .sign-up-button {
+      font-size: 26px;
+      height: 56px;
+      line-height: 56px;
+      margin: 26px auto;
     }
   }
 }

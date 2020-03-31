@@ -30,7 +30,7 @@ class KidsDraw extends Component {
                     <Header/>
                 </div>
                 <h2>Рисуют дети</h2>
-                {this.showKidsDrawCarousel(this.props.kidsDrawImages)}
+                <Link to="/gallery"> {this.showKidsDrawCarousel(this.props.kidsDrawImages)} </Link>
                 <p>Зачастую дети видят картину красивой, но не понимают какие средства художественной выразительности
                     делают её таковой. </p>
                 <h3>ЧТО ПОЛУЧИТ РЕБЁНОК НА ЗАНЯТИЯХ:</h3>
@@ -47,9 +47,9 @@ class KidsDraw extends Component {
                 <p><span className="group">Занятия проходят в группе.</span></p>
                 <p><span className="schedule">Площадки проведения мероприятий указаны в карте расписания.</span></p>
                 <p>Группы делятся по возрастным категориям — I 6-10 лет, II 11-15 лет.</p>
-                <button className="sign-up-button">
+                <div className="sign-up-button">
                     <Link to="/workshops/kids">ЗАПИСАТЬСЯ</Link>
-                </button>
+                </div>
                 <div className="kids-draw-mobile-workshops">
                     <WorkshopsKids/>
                 </div>

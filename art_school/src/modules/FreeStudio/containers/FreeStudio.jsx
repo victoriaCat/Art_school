@@ -6,6 +6,7 @@ import {FETCH_FREE_STUDIO_IMAGE} from '~/modules/FreeStudio/actionTypes';
 import {FS_IMG_URL} from '~/libs/api';
 import {connect} from "react-redux";
 import Preloader from '~/libs/Preloader/Preloader.jsx';
+import {Link} from "react-router-dom";
 import Footer from '~/modules/Footer/Footer.jsx';
 import {PRICE, DURATION} from '~/assets/infoVars';
 import Header from "~/modules/Header/containers/Header.jsx";
@@ -53,6 +54,9 @@ class FreeStudio extends Component {
                         <p>Стоимость: {PRICE} руб</p>
                         <p>Минимальный возраст — 12 лет.</p>
                     </div>
+                </div>
+                <div className="sign-up-button">
+                    <Link to="/workshops"> ЗАПИСАТЬСЯ </Link>
                 </div>
                 <Footer/>
             </div>

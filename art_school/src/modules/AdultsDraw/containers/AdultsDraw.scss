@@ -14,11 +14,14 @@
   }
 
   .sign-up-button {
+    cursor: pointer;
+    text-align: center;
     display: block;
     background-color: $mainElementsColor;
     font-size: 31px;
-    width: 27%;
+    width: 24%;
     height: 66px;
+    line-height: 66px;
     border-radius: 32px;
     margin: 32px auto;
   }
@@ -27,13 +30,10 @@
 
 @media screen and (max-width: $xxlWidth) {
   .adults-draw {
-    .carousel-adults__photo{
-      height: 350px;
-    }
     .sign-up-button {
       font-size: 26px;
-      width: 30%;
       height: 56px;
+      line-height: 56px;
       margin: 26px auto;
     }
   }
@@ -58,10 +58,10 @@
   }
 }
 
-@media screen and (max-width: #{$xsWidth + 2px}) {
-  .adults-draw{
-    .sign-up-button {
-      width: 32%;
-    }
-  }
-}
+//@media screen and (max-width: #{$xsWidth + 2px}) {
+//  .adults-draw{
+//    .sign-up-button {
+//      width: 32%;
+//    }
+//  }
+//}
