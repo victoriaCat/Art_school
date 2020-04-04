@@ -1,4 +1,4 @@
-import App from "./App.jsx";
+import App from "./root/App.jsx";
 import MainPage from "./layouts/MainPage/MainPage.jsx";
 import OptionsLayout from "./layouts/OptionsLayout/OptionsLayout.jsx";
 import WorkshopPage from "./layouts/Workshop/Workshop.jsx";
@@ -16,12 +16,6 @@ import WorkshopsAll from "./modules/WorkshopsCatalog/containers/WorkshopsAll/Wor
 import WorkshopsAdults, {loadDataAdults} from "./modules/WorkshopsCatalog/containers/WorkshopsAdults/WorkshopsAdults.jsx";
 import WorkshopsKids, {loadDataKids} from "./modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx";
 import Workshop from "./modules/Workshop/containers/Workshop/Workshop.jsx";
-
-import {WORKSHOPS_ADULTS, WORKSHOPS_KIDS} from "~/assets/productVars";
-
-const workshopsAdultsPaths = WORKSHOPS_ADULTS.map(workshop => (`/workshops/adults/${workshop.id}/${workshop.link}`));
-const workshopsKidsPaths = WORKSHOPS_KIDS.map(workshop => (`/workshops/kids/${workshop.id}/${workshop.link}`));
-const workshopsPaths = workshopsAdultsPaths.concat(workshopsKidsPaths);
 
 export default [
     {
@@ -72,7 +66,8 @@ export default [
             },
             {
                 ...OptionsLayout,
-                path: ['/adults_draw', '/kids_draw', '/free_studio', '/gallery', '/policy'].concat(workshopsPaths),
+                path: ['/adults_draw', '/kids_draw', '/free_studio', '/gallery', '/policy',
+                    '/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink'],
                 exact: true,
                 routes: [
                     {
@@ -93,12 +88,11 @@ export default [
                     },
                     {
                         ...WorkshopPage,
-                        path: workshopsPaths,
-                        exact: true,
+                        path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink'],
                         routes: [
                             {
                                 ...Workshop,
-                                path: workshopsPaths
+                                path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink']
                             }
                         ]
                     },

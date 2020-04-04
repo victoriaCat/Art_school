@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import workshopsData from '~/root/reducer';
 import mainPageImages from '~/modules/WelcomeBlockMainPage/reducer';
 import aboutMePageImages from '~/modules/AboutMe/reducer';
 import adultsDrawImages from '~/modules/AdultsDraw/reducer';
@@ -10,6 +11,7 @@ import workshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/r
 import workshopPage from '~/modules/Workshop/containers/Workshop/reducer';
 
 export default combineReducers({
+    workshopsData,
     mainPageImages,
     aboutMePageImages,
     adultsDrawImages,

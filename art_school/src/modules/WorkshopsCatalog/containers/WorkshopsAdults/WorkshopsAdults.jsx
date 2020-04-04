@@ -2,11 +2,14 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
 import {FS_IMG_URL} from '~/libs/api';
-import {WORKSHOPS_ADULTS} from "~/assets/productVars";
+//import {WORKSHOPS_ADULTS} from "~/assets/productVars";
 import {FETCH_WORKSHOPS_CATALOG_ADULTS_IMAGES} from './actionTypes';
 import {connect} from "react-redux";
 import {fetchImages} from '~/libs/commonActions';
 import WorkshopItems from "~/modules/WorkshopsCatalog/components/WorkshopItems/WorkshopItems.jsx";
+import {store} from '~/store';
+
+const WORKSHOPS_ADULTS = store.getState().workshopsData.workshopsAdultsData.payload;
 
 class WorkshopsAdults extends Component {
     /*

@@ -83,6 +83,7 @@ class Workshop extends Component {
     }
 
     componentDidMount() {
+        if (this.props.workshopPageImages.isLoading)
         this.props.fetchImages(determineAlbum(this.props.location.pathname), FETCH_WORKSHOP_PAGE_IMAGES);
     }
 

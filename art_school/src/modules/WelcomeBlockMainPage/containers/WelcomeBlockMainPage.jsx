@@ -145,7 +145,7 @@ WelcomeBlockMainPage.propTypes = {
     }).isRequired,
     carouselStudentsImages: PropTypes.object.isRequired,
     carouselWorksImages: PropTypes.object.isRequired,
-    mainOptionsImages: PropTypes.object.isRequired,
+    mainOptionsImages: PropTypes.object.isRequired
 };
 
 export default {

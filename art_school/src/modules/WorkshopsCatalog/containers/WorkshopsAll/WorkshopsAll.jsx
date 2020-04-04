@@ -4,7 +4,6 @@ import WorkshopsAdults from '~/modules/WorkshopsCatalog/containers/WorkshopsAdul
 import WorkshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx';
 
 class WorkshopsAll extends Component {
-
     render() {
         return (
             <div className="workshops-container">
