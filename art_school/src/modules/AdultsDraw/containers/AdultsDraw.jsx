@@ -27,9 +27,6 @@ class AdultsDraw extends Component {
         return (
             <div className="adults-draw">
                 <Header/>
-                <div className="adults-draw-mobile-header">
-                    <Header/>
-                </div>
                 <h2>Рисуют взрослые</h2>
                 <Link to="/gallery"> {this.showAdultsDrawCarousel(this.props.adultsDrawImages)} </Link>
                 <p>В <span className="school">Школу рисования Екатерины Пушкарёвой</span> приходят люди всех возрастов. Здесь каждому помогают раскрыть

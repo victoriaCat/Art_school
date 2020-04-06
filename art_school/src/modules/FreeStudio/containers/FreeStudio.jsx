@@ -25,9 +25,6 @@ class FreeStudio extends Component {
         return (
             <div className="free-studio">
                 <Header/>
-                <div className="free-studio-mobile-header">
-                    <Header/>
-                </div>
                 <div className="free-studio-container">
                     <h2>Свободная мастерская</h2>
                     <div className="free-studio-picture">

@@ -1,7 +1,7 @@
 @import '~/assets/scss/resources.scss';
 
 .adults-draw {
-  &-mobile-workshops, &-mobile-header {
+  &-mobile-workshops{
     display: none;
   }
 
@@ -46,7 +46,7 @@
     .carousel-adults__photo{
       height: 250px;
     }
-    &-mobile-workshops, &-mobile-header{
+    &-mobile-workshops{
       display: block;
     }
     .sign-up-button {
