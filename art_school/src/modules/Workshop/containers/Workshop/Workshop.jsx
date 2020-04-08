@@ -12,6 +12,9 @@ import {WORKSHOPS} from "~/assets/productVars";
 import {PRICE} from '~/assets/infoVars';
 import {FETCH_WORKSHOP_PAGE_IMAGES} from "~/modules/Workshop/containers/Workshop/actionTypes";
 import {FS_IMG_URL} from '~/libs/api';
+import {store} from '~/store';
+
+//const WORKSHOPS = store.getState().workshopsData.workshopsAllData.payload;
 
 class Workshop extends Component {
     constructor(props) {

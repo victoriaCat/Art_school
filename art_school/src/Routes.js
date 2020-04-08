@@ -89,6 +89,7 @@ export default [
                     {
                         ...WorkshopPage,
                         path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink'],
+                        exact: true,
                         routes: [
                             {
                                 ...Workshop,
