@@ -74,18 +74,47 @@
   }
 }
 
-
+/*MOBILE*/
 @media screen and (max-width: $smWidth){
   .sign-up-modal {
-    width: 300px;
-    margin-left: -150px;
+    width: 340px;
+    margin-left: -170px;
     &-close{
       padding: 5px 0 5px 225px;
     }
     &-content{
       form .sign-up-button{
-        border-radius: 17px;
-        height: 40px;
+        border-radius: 23px;
+        height: 38px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sWidth){
+  .sign-up-modal {
+    top: 37%;
+    &-close{
+      padding: 5px 0 5px 0;
+      &-button {
+        width: 40px;
+        margin: 10px 0 0 277px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xsWidth){
+  .sign-up-modal {
+    top: 62%;
+    width: 308px;
+    margin-left: -154px;
+    &-close-button{
+      margin: 10px 0 0 246px;
+    }
+    &-content {
+      form input[placeholder] {
+        font-size: $smMainFontSize;
       }
     }
   }

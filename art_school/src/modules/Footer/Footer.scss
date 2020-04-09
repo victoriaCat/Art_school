@@ -65,7 +65,8 @@
   }
 }
 
-@media (max-width: $smWidth){
+/*MOBILE*/
+@media screen and (max-width: $smWidth){
   .footer {
     width: 100%;
     height: fit-content;
@@ -111,6 +112,50 @@
     .copyright{
       align-items: center;
       font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: $sWidth){
+  .footer {
+    &-main-info{
+      p{
+        font-size: $mdMainFontSize;
+        &:first-child{
+          font-size: #{$lgMainFontSize - 2px};
+        }
+        &:nth-child(3) {
+          font-size: #{$lgMainFontSize - 2px};
+          word-spacing: 5px;
+        }
+        &:last-child{
+          font-size: $xsMainFontSize;
+        }
+      }
+    }
+
+    &-link-to-main{
+      h2{
+        font-size: 15px;
+      }
+    }
+
+    &-link-to-policy{
+      font-size: $xsMainFontSize;
+    }
+
+    .copyright{
+      font-size: $xsMainFontSize;
+    }
+  }
+}
+
+@media screen and (max-width: $xsWidth){
+  .footer {
+    &-link-to-main{
+      h2{
+        font-size: $smMainFontSize;
+      }
     }
   }
 }

@@ -9,3 +9,12 @@
   border:1px solid #ddd;
   padding: 7px;
 }
+
+/*MOBILE*/
+@media screen and (max-width: $smWidth){
+  .privacy-policy{
+    font-size: $xsMainFontSize;
+    line-height: 19px;
+  }
+}
+

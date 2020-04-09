@@ -145,7 +145,6 @@
 }
 
 /* MOBILE */
-
 @media screen and (max-width: $smWidth) {
   .header {
     &-container {
@@ -158,6 +157,9 @@
       display: inherit;
       width: 50%;
       text-align: center;
+      img{
+        width: 85%;
+      }
     }
 
     &-info, &-icons, &-link-schedule {
@@ -175,8 +177,8 @@
       }
 
       img {
-        width: 50%;
-        height: 50%;
+        width: 40%;
+        height: 40%;
       }
     }
 
@@ -184,7 +186,7 @@
       text-align: right;
 
       img {
-        width: 44%;
+        width: 37%;
       }
     }
 
