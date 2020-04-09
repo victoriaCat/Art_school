@@ -62,6 +62,8 @@
 /*MOBILE*/
 @media screen and (max-width: $smWidth) {
   .free-studio {
+    width: 97%;
+    margin: 0 auto 20px auto;
     .sign-up-button {
       display: none;
     }

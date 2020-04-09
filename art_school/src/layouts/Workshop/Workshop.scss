@@ -8,12 +8,6 @@
       margin: 0 auto;
     }
   }
-  .workshop-description{
-    .workshop-details{
-      //width: 98%;
-      //margin: 0 auto;
-    }
-  }
 }
 
 @media screen and (max-width: $xxlWidth) {
@@ -50,6 +44,16 @@
 
 
 @media screen and (max-width: $smWidth) {
+  .workshop-container{
+    width: 97%;
+    margin: 0 auto 26px auto;
+  }
+  .workshop-description{
+    .workshop-details{
+      width: 97%;
+      margin: 0 auto;
+    }
+  }
   .workshop-images {
     img {
       height: 450px;
@@ -57,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $sWidth) {
   .workshop-images {
     img {
       height: 200px;

@@ -52,6 +52,8 @@
 /*MOBILE*/
 @media screen and (max-width: $smWidth) {
   .kids-draw {
+    width: 97%;
+    margin: 0 auto 20px auto;
     .carousel-kids__photo{
       height: 250px;
     }
@@ -67,10 +69,3 @@
   }
 }
 
-//@media screen and (max-width: #{$xsWidth + 2px}) {
-//  .kids-draw {
-//    .sign-up-button {
-//      width: 32%;
-//    }
-//  }
-//}

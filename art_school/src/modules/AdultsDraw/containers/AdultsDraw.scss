@@ -52,6 +52,8 @@
 
 @media screen and (max-width: $smWidth) {
   .adults-draw{
+    width: 97%;
+    margin: 0 auto 20px auto;
     .carousel-adults__photo{
       height: 250px;
     }
@@ -67,10 +69,3 @@
   }
 }
 
-//@media screen and (max-width: #{$xsWidth + 2px}) {
-//  .adults-draw{
-//    .sign-up-button {
-//      width: 32%;
-//    }
-//  }
-//}
