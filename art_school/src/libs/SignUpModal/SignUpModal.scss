@@ -1,120 +1,147 @@
 @import '~/assets/scss/vars.scss';
 
-.sign-up-modal {
-  width: 400px;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  margin-left: -200px;
-  text-align: center;
-  background: white;
-  transition: 1.2s ease-out;
-  box-shadow: 0 6px 41px 0 rgba(0,0,0,0.15);
-  filter: blur(0);
-  transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-  h2{
-    margin: 5px 0 0 0;
-  }
-  &-close{
-    text-align: right;
-    &-button {
-      width: 50px;
-      margin: 10px 0 0 330px;
-      cursor: pointer;
-      img{
-        width: 60%;
-        height: 60%;
-      }
-    }
-  }
-  &-content{
-    padding: 1rem;
-    > p{
-      margin: 6px 0;
-      img{
-        width: 5%;
-        margin-left: 7px;
-        margin-bottom: -1px;
-      }
-      .metro{
-        color: #954f32;
-      }
-    }
-    form input{
-      width: 98%;
-      height: 40px;
-      background-color: white;
-      border-width: 2px;
-      border-color: #d3d0d1;
-      border-style: solid;
+.sign-up-modal-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-      &[placeholder]{
-        font-size: 15px;
-        color: #d3d0d1;
-        text-align: center;
+  .sign-up-modal {
+    width: 400px;
+    position: relative;
+    margin: 7% auto 20px auto;
+    text-align: center;
+    background: white;
+    box-shadow: 0 6px 41px 0 rgba(0, 0, 0, 0.15);
+    transition: 1.2s ease-out;
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+
+    h2 {
+      margin: 5px 0 0 0;
+    }
+
+    &-close {
+      text-align: right;
+
+      &-button {
+        width: 50px;
+        cursor: pointer;
+        left: 83%;
+        position: relative;
+
+        img {
+          width: 60%;
+          height: 60%;
+          margin-top: 10px;
+        }
       }
     }
-    form .sign-up-button{
-      cursor: pointer;
-      font-size: $mdMainFontSize;
-      border-radius: 30px;
-      border-style: none;
-      color: $buttonsOnHoverColor;
-      background-color: $secondaryElementsColor;
-      height: 40px;
-      width: 125px;
+
+    &-content {
+      padding: 1rem;
+
+      > p {
+        margin: 6px 0;
+
+        img {
+          width: 5%;
+          margin-left: 7px;
+          margin-bottom: -1px;
+        }
+
+        .metro {
+          color: #954f32;
+        }
+      }
+
+      form input {
+        width: 98%;
+        height: 40px;
+        background-color: white;
+        border-width: 2px;
+        border-color: #d3d0d1;
+        border-style: solid;
+
+        &[placeholder] {
+          font-size: 15px;
+          color: #d3d0d1;
+          text-align: center;
+        }
+      }
+
+      form .sign-up-button {
+        cursor: pointer;
+        font-size: $mdMainFontSize;
+        border-radius: 30px;
+        border-style: none;
+        color: $buttonsOnHoverColor;
+        background-color: $secondaryElementsColor;
+        height: 40px;
+        width: 125px;
+      }
     }
-  }
-  .policy-agreement{
-    a{
-      color: $linksOnHoverColor;
+
+    .policy-agreement {
+      a {
+        color: $linksOnHoverColor;
+      }
     }
   }
 }
 
 /*MOBILE*/
-@media screen and (max-width: $smWidth){
-  .sign-up-modal {
-    width: 340px;
-    margin-left: -170px;
-    &-close{
-      padding: 5px 0 5px 225px;
-    }
-    &-content{
-      form .sign-up-button{
-        border-radius: 23px;
-        height: 38px;
+@media screen and (max-width: $smWidth) {
+  .sign-up-modal-wrapper {
+    .sign-up-modal {
+      width: 340px;
+
+      &-close {
+        //padding: 5px 0 5px 225px;
+      }
+
+      &-content {
+        form .sign-up-button {
+          border-radius: 23px;
+          height: 38px;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: $sWidth){
-  .sign-up-modal {
-    top: 37%;
-    &-close{
-      padding: 5px 0 5px 0;
-      &-button {
-        width: 40px;
-        margin: 10px 0 0 277px;
+@media screen and (max-width: $sWidth) {
+  .sign-up-modal-wrapper {
+    .sign-up-modal {
+      margin: 17% auto 20px auto;
+
+      &-close {
+        // padding: 5px 0 5px 0;
+        &-button {
+          width: 40px;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: $xsWidth){
-  .sign-up-modal {
-    top: 62%;
-    width: 308px;
-    margin-left: -154px;
-    &-close-button{
-      margin: 10px 0 0 246px;
-    }
-    &-content {
-      form input[placeholder] {
-        font-size: $smMainFontSize;
+@media screen and (max-width: $xsWidth) {
+  .sign-up-modal-wrapper {
+    .sign-up-modal {
+      width: 308px;
+
+      &-close-button {
+        //margin: 10px 0 0 246px;
+      }
+
+      &-content {
+        form input[placeholder] {
+          font-size: $smMainFontSize;
+        }
       }
     }
   }

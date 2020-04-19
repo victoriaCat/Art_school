@@ -5,6 +5,7 @@
   margin: 0 auto;
   height: 360px;
   background-color: $secondaryBackgroundColor;
+  text-align: center !important;
 
   &-container {
     height: inherit;
@@ -13,34 +14,38 @@
     align-items: center;
     justify-content: space-evenly;
     font-family: $mainFontBold;
-  }
 
-  &-main-info {
-    p{
-      font-size: 22px;
-      margin: 0;
-      padding-bottom: 7px;
-      &:first-child{
-        font-size: 24px;
-        font-weight: bold;
-        padding-top: 11px;
-      }
-      &:nth-child(3){
-        font-size: 24px;
-        word-spacing: 8px
-      }
-      &:last-child{
-        font-size: 16px;
-        color: $secondaryFontColor;
+    .footer-info {
+      width: 100%;
+
+      .footer-main-info {
+        p {
+          font-size: 22px;
+          margin: 0;
+          padding-bottom: 7px;
+
+          &:first-child {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 11px;
+          }
+
+          &:nth-child(3) {
+            font-size: 24px;
+            word-spacing: 8px
+          }
+
+          &:last-child {
+            font-size: 16px;
+            color: $secondaryFontColor;
+          }
+        }
       }
     }
   }
 
-  &-main-info, &-icons {
-    text-align: center;
-  }
-  &-link-to-main{
-    h2{
+  &-link-to-main {
+    h2 {
       margin: 0;
       font-size: 24px;
       padding-top: 35px;
@@ -49,111 +54,128 @@
 
   &-icons {
     padding-left: 3px;
+
     img {
       width: 25%;
-      &:last-child{
+
+      &:last-child {
         padding-left: 4px;
       }
     }
   }
 
-  &-link-to-policy{
+  &-link-to-policy {
     font-size: 14px;
-    a{
+    width: 100%;
+
+    a {
       color: $secondaryFontColor;
     }
   }
 }
 
 /*MOBILE*/
-@media screen and (max-width: $smWidth){
+@media screen and (max-width: $smWidth) {
   .footer {
-    width: 100%;
     height: fit-content;
+
     &-container {
       flex-direction: column;
       align-items: center;
       justify-content: normal;
-    }
-    &-main-info{
-      text-align: center;
-      p{
-        font-size: #{$lgMainFontSize - 2px};
-        &:first-child{
-          font-size: $lgMainFontSize;
-        }
-        &:nth-child(3) {
-          font-size: 20px;
-          word-spacing: 6px;
-        }
-        &:last-child{
-          font-size: 15px;
+
+      .footer-info {
+        .footer-main-info {
+          p {
+            font-size: #{$lgMainFontSize - 2px};
+
+            &:first-child {
+              font-size: $lgMainFontSize;
+            }
+
+            &:nth-child(3) {
+              font-size: 20px;
+              word-spacing: 6px;
+            }
+
+            &:last-child {
+              font-size: 15px;
+            }
+          }
         }
       }
     }
-    &-link-to-main{
-      h2{
+
+    &-link-to-main {
+      h2 {
         padding: 0;
         font-size: 19px;
       }
     }
 
     &-icons {
-      text-align: center;
       padding-left: 4px;
       margin: 7px 0;
+
       img {
         width: 19%;
-        &:last-child{
+
+        &:last-child {
           padding-left: 4px;
         }
       }
     }
-    .copyright{
+
+    .copyright {
       align-items: center;
       font-size: 13px;
     }
   }
 }
 
-@media screen and (max-width: $sWidth){
+@media screen and (max-width: $sWidth) {
   .footer {
-    &-main-info{
-      p{
-        font-size: $mdMainFontSize;
-        &:first-child{
-          font-size: #{$lgMainFontSize - 2px};
-        }
-        &:nth-child(3) {
-          font-size: #{$lgMainFontSize - 2px};
-          word-spacing: 5px;
-        }
-        &:last-child{
-          font-size: $xsMainFontSize;
+    .footer-info {
+      .footer-main-info {
+        p {
+          font-size: $mdMainFontSize;
+
+          &:first-child {
+            font-size: #{$lgMainFontSize - 2px};
+          }
+
+          &:nth-child(3) {
+            font-size: #{$lgMainFontSize - 2px};
+            word-spacing: 5px;
+          }
+
+          &:last-child {
+            font-size: $xsMainFontSize;
+          }
         }
       }
     }
 
-    &-link-to-main{
-      h2{
+    &-link-to-main {
+      h2 {
         font-size: 15px;
       }
     }
 
-    &-link-to-policy{
+    &-link-to-policy {
       font-size: $xsMainFontSize;
     }
 
-    .copyright{
+    .copyright {
       font-size: $xsMainFontSize;
     }
   }
 }
 
-@media screen and (max-width: $xsWidth){
+@media screen and (max-width: $xsWidth) {
   .footer {
-    &-link-to-main{
-      h2{
+    &-link-to-main {
+      h2 {
         font-size: $smMainFontSize;
       }
     }

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
-import {FS_IMG_URL} from '~/libs/api';
 import {WORKSHOPS_KIDS} from "~/assets/productVars";
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES} from './actionTypes';

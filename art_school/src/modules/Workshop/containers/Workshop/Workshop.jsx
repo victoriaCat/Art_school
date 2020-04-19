@@ -42,7 +42,9 @@ class Workshop extends Component {
 
     showSignUpButton(workshop) {
         if (!workshop.bygone) {
-            return <div className="workshop-sign-up-button" onClick={e => {this.showSignUpModal();}}>
+            return <div className="workshop-sign-up-button" onClick={e => {
+                this.showSignUpModal();
+            }}>
                 ЗАПИСАТЬСЯ
             </div>
         } else return null;
@@ -51,43 +53,50 @@ class Workshop extends Component {
     render() {
         let workshop = findWorkshop(checkIfBygone(WORKSHOPS), determineID(this.props.location.pathname));
         return (
-            <div className="workshop-container">
-                <h2 className="header-color">МАСТЕР-КЛАСС <br/> <span className={workshop.link}>{workshop.header}</span></h2>
-                <div className="workshop-description">
-                    <div className="workshop-images">
-                        {this.showWorkshopImages(this.props.workshopPageImages)}
-                    </div>
-                    <div className="workshop-details">
-                        <p>{formatDate(workshop.date)} | {workshop.time}</p>
-                        {showIfBygone(workshop)}
-                        <p><span className="nevermind">Уровень подготовки не важен!</span></p>
-                        <p>{workshop.description}</p>
-                        <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную упаковку. </p>
+            <>
+                <div className="workshop-container">
+                    <h2 className="header-color">МАСТЕР-КЛАСС <br/> <span
+                        className={workshop.link}>{workshop.header}</span></h2>
+                    <div className="workshop-description">
+                        <div className="workshop-images">
+                            {this.showWorkshopImages(this.props.workshopPageImages)}
+                        </div>
+                        <div className="workshop-details">
+                            <p>{formatDate(workshop.date)} | {workshop.time}</p>
+                            {showIfBygone(workshop)}
+                            <p><span className="nevermind">Уровень подготовки не важен!</span></p>
+                            <p>{workshop.description}</p>
+                            <p><span className="price">Стоимость: {PRICE} руб.</span>, включая все материалы и удобную
+                                упаковку. </p>
 
-                        <h3><span className="awaits">ЧТО ЖДЁТ НА МАСТЕР-КЛАССЕ:</span></h3>
-                        <ul>
-                            <li>Авторский метод обучения и собственноручно написанная картина всего за 1 занятие</li>
-                            <li>Творчество в комфортной обстановке светлой мастерской</li>
-                            <li>Заботливо подготовленное рабочее место и все материалы – качественный холст 50x40, кисти
-                                и масляные краски, фартук, упаковка для картины
-                            </li>
-                            <li>Общение с художником и свежезаваренный чай</li>
-                        </ul>
-                        <p className="workshop-footnote">
-                            <span className="footnote"><i>{workshop.footnote}</i></span>
-                        </p>
+                            <h3><span className="awaits">ЧТО ЖДЁТ НА МАСТЕР-КЛАССЕ:</span></h3>
+                            <ul>
+                                <li>Авторский метод обучения и собственноручно написанная картина всего за 1 занятие
+                                </li>
+                                <li>Творчество в комфортной обстановке светлой мастерской</li>
+                                <li>Заботливо подготовленное рабочее место и все материалы – качественный холст 50x40,
+                                    кисти
+                                    и масляные краски, фартук, упаковка для картины
+                                </li>
+                                <li>Общение с художником и свежезаваренный чай</li>
+                            </ul>
+                            <p className="workshop-footnote">
+                                <span className="footnote"><i>{workshop.footnote}</i></span>
+                            </p>
+                        </div>
                     </div>
+                    {this.showSignUpButton(workshop)}
                 </div>
-                {this.showSignUpButton(workshop)}
                 <SignUpModal onClose={this.showSignUpModal} showModal={this.state.showModal}
                              workshop={workshop}/>
-            </div>
+            </>
+
         );
     }
 
     componentDidMount() {
         if (this.props.workshopPageImages.isLoading)
-        this.props.fetchImages(determineAlbum(this.props.location.pathname), FETCH_WORKSHOP_PAGE_IMAGES);
+            this.props.fetchImages(determineAlbum(this.props.location.pathname), FETCH_WORKSHOP_PAGE_IMAGES);
     }
 
 }

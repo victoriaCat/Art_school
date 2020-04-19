@@ -49,6 +49,7 @@
   &-carousel-wrapper {
     width: 100%;
     margin: 0 auto;
+    overflow: no-content;
 
     h3 {
       text-align: center;
@@ -59,26 +60,6 @@
     }
   }
 }
-
-//@media screen and (max-width: $xxlWidth){
-//  .welcome-block {
-//    &-container {
-//      .flex-container-welcome {
-//        .under-slider-text{
-//          width: 99%;
-//          font-size: 20px;
-//        }
-//
-//        .main-sign-up-button {
-//          font-size: 26px;
-//          width: 30%;
-//          height: 56px;
-//          margin-top: 26px;
-//        }
-//      }
-//    }
-//  }
-//}
 
 @media screen and (min-width: $xxxlWidth) {
   .welcome-block {

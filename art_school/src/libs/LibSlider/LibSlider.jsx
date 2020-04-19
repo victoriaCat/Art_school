@@ -13,6 +13,7 @@ class LibSlider extends Component {
             fade: true,
             cssEase: 'linear',
             slidesToScroll: 1,
+            arrows: false,
             pauseOnHover: false
         };
 
