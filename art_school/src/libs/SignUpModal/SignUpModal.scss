@@ -69,7 +69,6 @@
 
         &[placeholder] {
           font-size: 15px;
-          color: #d3d0d1;
           text-align: center;
         }
       }
@@ -83,6 +82,12 @@
         background-color: $secondaryElementsColor !important;
         height: 40px;
         width: 125px;
+        padding: 0;
+        -webkit-appearance: none;
+        &[value]{
+          text-align: center;
+          text-align: -webkit-center;
+        }
       }
     }
 

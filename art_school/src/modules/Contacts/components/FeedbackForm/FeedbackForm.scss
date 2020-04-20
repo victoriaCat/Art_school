@@ -40,15 +40,19 @@
 
       .input-submit-button {
         cursor: pointer;
-        width: 39%;
-        background-color: $secondaryElementsColor !important;
+        font-size: $mdMainFontSize;
         border-radius: 30px;
         border-style: none !important;
-      }
-
-      .input-submit-button[value] {
         color: $buttonsOnHoverColor;
-        font-size: $lgMainFontSize;
+        background-color: $secondaryElementsColor !important;
+        height: 40px;
+        width: 39%;
+        padding: 0;
+        -webkit-appearance: none;
+        &[value]{
+          text-align: center;
+          text-align: -webkit-center;
+        }
       }
     }
   }
@@ -127,15 +131,8 @@
   .contacts-form-wrap {
     .feedback-form {
       .input-submit-button {
+        font-size: 15px;
         width: 49%;
-      }
-    }
-  }
-
-  .contacts-form-wrap {
-    .feedback-form {
-      .input-submit-button[value] {
-        font-size: 16px;
       }
     }
   }

@@ -134,17 +134,16 @@ $slick-opacity-not-active: 0.25 !default;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
-  //background: rgba(0, 0, 0, 0.08);
-  background: transparent;
+  background: #ebebeb;
   color: black;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
-  border-color: $mainElementsColor;
+  border: none;
   outline: none;
-  &:hover, &:focus {
+  &:hover {
     outline: none;
     background: transparent;
     color: transparent;
@@ -158,8 +157,8 @@ $slick-opacity-not-active: 0.25 !default;
   &:before {
     font-family: $slick-font-family;
     font-size: 20px;
-    line-height: 1;
-    color: #000000;
+    line-height: 10px;
+    color: black;
     opacity: $slick-opacity-default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

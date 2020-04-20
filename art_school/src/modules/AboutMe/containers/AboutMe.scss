@@ -17,9 +17,11 @@
   }
 
   &-signature {
+    margin-top: 20px;
+
     img {
       display: block;
-      margin-top: -40px;
+      margin-top: -30px;
       margin-left: auto;
       width: 23%;
     }
@@ -44,7 +46,7 @@
     font-weight: 600;
   }
 
-  .my-works-images{
+  .my-works-images {
     width: 100%;
     margin: 0 auto;
   }
@@ -67,8 +69,8 @@
       width: 96%;
       font-size: 15px;
 
-      .about-me-signature img{
-        margin-top: -34px;
+      .about-me-signature img {
+        margin-top: -25px;
       }
 
       .about-me-ask {

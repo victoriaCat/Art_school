@@ -1,6 +1,7 @@
 @import '~/assets/scss/resources.scss';
 
 .free-studio {
+  margin: 0 auto 20px auto;
   .footer {
     display: none;
   }
@@ -20,67 +21,14 @@
       }
     }
   }
-
-  .sign-up-button {
-    cursor: pointer;
-    text-align: center;
-    display: block;
-    background-color: $secondaryElementsColor;
-    font-size: 31px;
-    width: 24%;
-    height: 66px;
-    line-height: 66px;
-    border-radius: 32px;
-    margin: 32px auto;
-
-    a {
-      color: $buttonsOnHoverColor;
-    }
-  }
-}
-
-@media screen and (max-width: $xxlWidth) {
-  .free-studio {
-    .sign-up-button {
-      font-size: 26px;
-      height: 56px;
-      line-height: 54px;
-      margin: 26px auto;
-    }
-  }
-}
-
-@media screen and (max-width: $lgWidth) {
-  .free-studio {
-    .sign-up-button {
-      font-size: 24px;
-      width: 27%;
-    }
-  }
 }
 
 /*MOBILE*/
 @media screen and (max-width: $smWidth) {
   .free-studio {
     width: 97%;
-    margin: 0 auto 20px auto;
-    .sign-up-button {
-      font-size: 15px;
-      width: 24%;
-      height: 33px;
-      line-height: 33px;
-      margin: 18px auto;
-    }
     .footer {
       display: block;
-    }
-  }
-}
-
-@media screen and (max-width: $sWidth) {
-  .free-studio {
-    .sign-up-button {
-      width: 117px;
     }
   }
 }
