@@ -65,10 +65,22 @@
     width: 97%;
     margin: 0 auto 20px auto;
     .sign-up-button {
-      display: none;
+      font-size: 15px;
+      width: 24%;
+      height: 33px;
+      line-height: 33px;
+      margin: 18px auto;
     }
     .footer {
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width: $sWidth) {
+  .free-studio {
+    .sign-up-button {
+      width: 117px;
     }
   }
 }

@@ -38,16 +38,19 @@
       width: 40%;
       margin-bottom: 30px;
       line-height: 24px;
-      h3{
+
+      h3 {
         font-family: "Lato", sans-serif;
         font-weight: 500;
         font-size: 22px;
       }
+
       p {
         margin: 2px 0 0 0;
       }
+
       img {
-        box-shadow: -1px 25px 24px 4px rgba(0,0,0,0.09);
+        box-shadow: -1px 25px 24px 4px rgba(0, 0, 0, 0.09);
         width: 100%;
         margin-bottom: 15px;
       }
@@ -61,7 +64,7 @@
       font-size: #{$lgMainFontSize - 2px};
     }
 
-    h3{
+    h3 {
       font-size: #{$lgMainFontSize - 3px};
     }
   }
@@ -89,22 +92,27 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+
       .workshops-unit {
         font-size: $smMainFontSize;
         width: 90%;
-        //height: 305px;
         line-height: 20px;
       }
     }
   }
 }
 
-@media screen and (max-width: #{$xsWidth + 2px}) {
+@media screen and (max-width: $xsWidth) {
   .workshops-wrapper {
     .workshops-catalog {
       .workshops-unit {
         width: 90%;
         height: 285px;
+
+        :nth-child(5) {
+          font-size: $xsMainFontSize;
+          margin-bottom: 10px;
+        }
 
         img {
           height: 180px;

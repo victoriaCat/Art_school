@@ -41,9 +41,9 @@
       .input-submit-button {
         cursor: pointer;
         width: 39%;
-        background-color: $secondaryElementsColor;
+        background-color: $secondaryElementsColor !important;
         border-radius: 30px;
-        border-style: none;
+        border-style: none !important;
       }
 
       .input-submit-button[value] {
@@ -102,6 +102,9 @@
 
 @media screen and (max-width: $smWidth) {
   .contacts-form-wrap {
+    .if-questions{
+      text-align: center;
+    }
     .feedback-form {
       .input-submit-button {
         width: 25%;

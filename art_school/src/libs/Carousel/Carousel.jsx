@@ -12,8 +12,16 @@ class Carousel extends Component {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
-            variableWidth: true
+            arrows: true,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1198,
+                    settings:{
+                        arrows: false
+                    }
+                }
+            ]
         };
 
         if (this.props.propsSettings) {

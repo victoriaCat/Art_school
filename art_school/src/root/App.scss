@@ -5,6 +5,8 @@
 html, body{
   height: 100%;
   font-family: $mainFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   a{
     color: $mainFontColor;
