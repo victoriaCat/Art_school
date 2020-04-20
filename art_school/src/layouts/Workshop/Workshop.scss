@@ -6,6 +6,7 @@
   .workshop-images {
     img {
       margin: 0 auto;
+      max-height: 500px;
     }
   }
 }
@@ -13,7 +14,7 @@
 @media screen and (max-width: $xxlWidth) {
   .workshop-images {
     img {
-      height: 550px;
+      height: 500px;
     }
   }
 }
@@ -80,7 +81,7 @@
 @media screen and (min-width: $xxlWidth) {
   .workshop-images {
     img {
-      height: 640px;
+      height: 500px;
     }
   }
 }

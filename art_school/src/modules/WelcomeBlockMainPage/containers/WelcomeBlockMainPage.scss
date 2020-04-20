@@ -23,10 +23,11 @@
 
       .main-sign-up-button {
         background-color: $mainElementsColor;
-        font-size: 30px;
-        line-height: 65px;
+        font-size: $xlMainFontSize;
+        line-height: 47px;
         width: 25%;
-        height: 65px;
+        max-width: 175px;
+        height: 47px;
         border-radius: 32px;
         margin-top: 32px;
       }
@@ -61,18 +62,6 @@
   }
 }
 
-@media screen and (min-width: $xxxlWidth) {
-  .welcome-block {
-    &-container {
-      .flex-container-welcome {
-        .main-sign-up-button {
-          width: 270px;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: $xxlWidth) {
   .welcome-block {
     &-container {
@@ -82,9 +71,6 @@
         }
 
         .main-sign-up-button {
-          font-size: 27px;
-          height: 57px;
-          line-height: 57px;
           width: 26%;
         }
       }
@@ -101,9 +87,6 @@
         }
 
         .main-sign-up-button {
-          font-size: 24px;
-          line-height: 48px;
-          height: 48px;
           width: 27%;
         }
       }

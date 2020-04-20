@@ -68,10 +68,11 @@
     display: block;
     margin: 0 auto 20px;
     background-color: $secondaryElementsColor;
-    font-size: 31px;
+    font-size: $xlMainFontSize;
     width: 25%;
-    height: 66px;
-    line-height: 66px;
+    max-width: 175px;
+    height: 47px;
+    line-height: 47px;
     border-radius: 32px;
     border-style: none;
   }
@@ -91,21 +92,10 @@
   }
 }
 
-@media screen and (min-width: $xxlWidth) {
-  .workshop-container {
-    .workshop-sign-up-button {
-      width: 255px;
-    }
-  }
-}
-
 @media screen and (max-width: $xxlWidth) {
   .workshop-container {
     .workshop-sign-up-button {
-      font-size: 24px;
       width: 24%;
-      height: 56px;
-      line-height: 56px;
     }
   }
 }

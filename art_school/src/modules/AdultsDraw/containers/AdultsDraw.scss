@@ -18,10 +18,11 @@
     text-align: center;
     display: block;
     background-color: $mainElementsColor;
-    font-size: 31px;
+    font-size: $xlMainFontSize;
     width: 24%;
-    height: 66px;
-    line-height: 66px;
+    max-width: 170px;
+    height: 43px;
+    line-height: 43px;
     border-radius: 32px;
     margin: 32px auto;
   }
