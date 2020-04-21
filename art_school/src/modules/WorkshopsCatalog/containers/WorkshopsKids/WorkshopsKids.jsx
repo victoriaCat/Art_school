@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
-import {WORKSHOPS_KIDS} from "~/assets/productVars";
 import {fetchImages} from '~/libs/commonActions';
 import {FETCH_WORKSHOPS_CATALOG_KIDS_IMAGES} from './actionTypes';
 import {connect} from "react-redux";
 import WorkshopItems from "~/modules/WorkshopsCatalog/components/WorkshopItems/WorkshopItems.jsx";
+import {store} from '~/store';
+const WORKSHOPS_KIDS = store.getState().workshopsData.workshopsKidsData.payload;
 
 class WorkshopsKids extends Component {
     /*

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Preloader from '~/libs/Preloader/Preloader.jsx';
-//import {WORKSHOPS_ADULTS} from "~/assets/productVars";
 import {FETCH_WORKSHOPS_CATALOG_ADULTS_IMAGES} from './actionTypes';
 import {connect} from "react-redux";
 import {fetchImages} from '~/libs/commonActions';

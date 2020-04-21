@@ -1,11 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {createLogger} from 'redux-logger';
+//import {createLogger} from 'redux-logger';
 
 import combinedReducers from './combinedReducers';
 
-const logger = createLogger({collapsed: true});
-const middleware = [thunk, logger];
+const middleware = [thunk];
 
 let state;
 if (typeof window !== 'undefined') {

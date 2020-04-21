@@ -2,7 +2,6 @@ import './SignUpModal.scss';
 import React, {Component} from 'react';
 import axios from 'axios';
 import {formatDate} from '~/modules/WorkshopsCatalog/helpers';
-import {PRICE} from '~/assets/infoVars';
 import {Link} from "react-router-dom";
 import crossImg from '~/assets/images/cross.png';
 import metroImg from '~/assets/images/metro.png';
