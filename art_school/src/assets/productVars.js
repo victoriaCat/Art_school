@@ -1,6 +1,6 @@
 export const WORKSHOPS_ADULTS = [
     {
-        id: 1,
+        id: '5e77c3d96ac2faffee0cb8c5',
         link: 'impressionisty',
         album: 'workshop_impressionisty_adults',
         header: 'ИМПРЕССИОНИСТЫ',
@@ -13,7 +13,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 2,
+        id: '5e77c3d96ac2faffee0cb8c6',
         link: 'solnechnyi_zakat',
         album: 'workshop_solnechnyi_zakat_adults',
         header: 'СОЛНЕЧНЫЙ ЗАКАТ',
@@ -26,7 +26,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 3,
+        id: '5e77c3d96ac2faffee0cb8c7',
         link: 'viva_la_vida',
         album: 'workshop_viva_la_vida_adults',
         header: 'VIVA LA VIDA',
@@ -39,7 +39,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 4,
+        id: '5e77c3d96ac2faffee0cb8c8',
         link: 'sezann_otkroisya',
         album: 'workshop_sezann_otkroisya_adults',
         header: 'СЕЗАНН, ОТКРОЙСЯ!',
@@ -52,7 +52,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 5,
+        id: '5e77c3d96ac2faffee0cb8c9',
         link: 'cvety_s_natury',
         album: 'workshop_cvety_s_natury_adults',
         header: 'ЦВЕТЫ С НАТУРЫ',
@@ -65,7 +65,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 6,
+        id: '5e77c3d96ac2faffee0cb8ca',
         link: 'koty',
         album: 'workshop_koty_adults',
         header: 'КОТИКИ',
@@ -78,7 +78,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 7,
+        id: '5e77c3d96ac2faffee0cb8cb',
         link: 'polnyi_jazz',
         album: 'workshop_polnyi_jazz_adults',
         header: 'ПОЛНЫЙ Jazz!',
@@ -91,7 +91,7 @@ export const WORKSHOPS_ADULTS = [
         bygone: false
     },
     {
-        id: 8,
+        id: '5e77c3d96ac2faffee0cb8cc',
         link: 'bugry',
         album: 'workshop_bugry_adults',
         header: 'БУГРЫ',
@@ -107,7 +107,7 @@ export const WORKSHOPS_ADULTS = [
 
 export const WORKSHOPS_KIDS = [
     {
-        id: 9,
+        id: '5e77c3d96ac2faffee0cb8cd',
         link: 'murlyka',
         album: 'workshop_murlyka_kids',
         header: 'МУРЛЫКА',
@@ -120,7 +120,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 10,
+        id: '5e77c3d96ac2faffee0cb8ce',
         link: 'podsolnuhi',
         album: 'workshop_podsolnuhi_kids',
         header: 'ПОДСОЛНУХИ',
@@ -133,7 +133,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 11,
+        id: '5e77c3d96ac2faffee0cb8cf',
         link: 'rozhdestvo',
         album: 'workshop_rozhdestvo_kids',
         header: 'РОЖДЕСТВО',
@@ -146,7 +146,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 12,
+        id: '5e77c3d96ac2faffee0cb8d0',
         link: 'portret_zimy',
         album: 'workshop_portret_zimy_kids',
         header: 'ПОРТРЕТ ЗИМЫ',
@@ -159,7 +159,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 13,
+        id: '5e77c3d96ac2faffee0cb8d1',
         link: 'ananas',
         album: 'workshop_ananas_kids',
         header: 'АНАНАС',
@@ -172,7 +172,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 14,
+        id: '5e77c3d96ac2faffee0cb8d2',
         link: 'voshod',
         album: 'workshop_voshod_kids',
         header: 'ВОСХОД',
@@ -185,7 +185,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 15,
+        id: '5e77c3d96ac2faffee0cb8d3',
         link: 'yabloki_sezanna',
         album: 'workshop_yabloki_sezanna_kids',
         header: 'ЯБЛОКИ СЕЗАННА',
@@ -198,7 +198,7 @@ export const WORKSHOPS_KIDS = [
         bygone: false
     },
     {
-        id: 16,
+        id: '5e77c3d96ac2faffee0cb8d4',
         link: 'sovushka',
         album: 'workshop_sovushka_kids',
         header: 'СОВУШКА',
@@ -214,7 +214,7 @@ export const WORKSHOPS_KIDS = [
 
 export const WORKSHOPS = [
     {
-        id: 1,
+        id: '5e77c3d96ac2faffee0cb8c5',
         link: 'impressionisty',
         album: 'workshop_impressionisty_adults',
         header: 'ИМПРЕССИОНИСТЫ',
@@ -227,7 +227,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 2,
+        id: '5e77c3d96ac2faffee0cb8c6',
         link: 'solnechnyi_zakat',
         album: 'workshop_solnechnyi_zakat_adults',
         header: 'СОЛНЕЧНЫЙ ЗАКАТ',
@@ -240,7 +240,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 3,
+        id: '5e77c3d96ac2faffee0cb8c7',
         link: 'viva_la_vida',
         album: 'workshop_viva_la_vida_adults',
         header: 'VIVA LA VIDA',
@@ -253,7 +253,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 4,
+        id: '5e77c3d96ac2faffee0cb8c8',
         link: 'sezann_otkroisya',
         album: 'workshop_sezann_otkroisya_adults',
         header: 'СЕЗАНН, ОТКРОЙСЯ!',
@@ -266,7 +266,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 5,
+        id: '5e77c3d96ac2faffee0cb8c9',
         link: 'cvety_s_natury',
         album: 'workshop_cvety_s_natury_adults',
         header: 'ЦВЕТЫ С НАТУРЫ',
@@ -279,7 +279,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 6,
+        id: '5e77c3d96ac2faffee0cb8ca',
         link: 'koty',
         album: 'workshop_koty_adults',
         header: 'КОТИКИ',
@@ -292,7 +292,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 7,
+        id: '5e77c3d96ac2faffee0cb8cb',
         link: 'polnyi_jazz',
         album: 'workshop_polnyi_jazz_adults',
         header: 'ПОЛНЫЙ Jazz!',
@@ -305,7 +305,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 8,
+        id: '5e77c3d96ac2faffee0cb8cc',
         link: 'bugry',
         album: 'workshop_bugry_adults',
         header: 'БУГРЫ',
@@ -318,7 +318,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 9,
+        id: '5e77c3d96ac2faffee0cb8cd',
         link: 'murlyka',
         album: 'workshop_murlyka_kids',
         header: 'МУРЛЫКА',
@@ -331,7 +331,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 10,
+        id: '5e77c3d96ac2faffee0cb8ce',
         link: 'podsolnuhi',
         album: 'workshop_podsolnuhi_kids',
         header: 'ПОДСОЛНУХИ',
@@ -344,7 +344,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 11,
+        id: '5e77c3d96ac2faffee0cb8cf',
         link: 'rozhdestvo',
         album: 'workshop_rozhdestvo_kids',
         header: 'РОЖДЕСТВО',
@@ -357,7 +357,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 12,
+        id: '5e77c3d96ac2faffee0cb8d0',
         link: 'portret_zimy',
         album: 'workshop_portret_zimy_kids',
         header: 'ПОРТРЕТ ЗИМЫ',
@@ -370,7 +370,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 13,
+        id: '5e77c3d96ac2faffee0cb8d1',
         link: 'ananas',
         album: 'workshop_ananas_kids',
         header: 'АНАНАС',
@@ -383,7 +383,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 14,
+        id: '5e77c3d96ac2faffee0cb8d2',
         link: 'voshod',
         album: 'workshop_voshod_kids',
         header: 'ВОСХОД',
@@ -396,7 +396,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 15,
+        id: '5e77c3d96ac2faffee0cb8d3',
         link: 'yabloki_sezanna',
         album: 'workshop_yabloki_sezanna_kids',
         header: 'ЯБЛОКИ СЕЗАННА',
@@ -409,7 +409,7 @@ export const WORKSHOPS = [
         bygone: false
     },
     {
-        id: 16,
+        id: '5e77c3d96ac2faffee0cb8d4',
         link: 'sovushka',
         album: 'workshop_sovushka_kids',
         header: 'СОВУШКА',
