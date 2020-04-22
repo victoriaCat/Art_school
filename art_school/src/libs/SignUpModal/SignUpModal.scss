@@ -84,7 +84,8 @@
         width: 125px;
         padding: 0;
         -webkit-appearance: none;
-        &[value]{
+
+        &[value] {
           text-align: center;
           text-align: -webkit-center;
         }
@@ -104,10 +105,6 @@
   .sign-up-modal-wrapper {
     .sign-up-modal {
       width: 340px;
-
-      &-close {
-        //padding: 5px 0 5px 225px;
-      }
 
       &-content {
         form .sign-up-button {
@@ -131,7 +128,6 @@
       }
 
       &-close {
-        // padding: 5px 0 5px 0;
         &-button {
           width: 40px;
         }
@@ -144,10 +140,7 @@
   .sign-up-modal-wrapper {
     .sign-up-modal {
       width: 308px;
-
-      &-close-button {
-        //margin: 10px 0 0 246px;
-      }
+      margin: 7% auto 20px auto;
 
       &-content {
         form input[placeholder] {
