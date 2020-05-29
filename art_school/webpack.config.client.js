@@ -65,7 +65,7 @@ module.exports = merge(baseConfig, {
         }),
         new MiniCssExtractPlugin({
             filename: 'styles.[chunkhash].css'
-        })
+        }),
     ],
     devtool: 'inline-source-map'
 });

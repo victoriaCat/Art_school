@@ -81,7 +81,7 @@ class WelcomeBlockMainPage extends Component {
                             Более счастливым, более полно чувствующим жизнь.
                         </div>
                         <div className="main-sign-up-button">
-                            <Link to="/workshops">ЗАПИСАТЬСЯ</Link>
+                            <Link to="/workshops">РАСПИСАНИЕ</Link>
                         </div>
                     </div>
                     <Advantages/>
