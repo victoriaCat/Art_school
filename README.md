@@ -1,4 +1,7 @@
-# Art_school
-npm i 
+# Art School 
 
-npm run all
+## React + Redux + Server Side Rendering Project
+
+### npm i 
+
+### npm run all
