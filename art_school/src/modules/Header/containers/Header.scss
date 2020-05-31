@@ -24,7 +24,6 @@
 
   &-info {
     width: 35%;
-    font-family: $mainFontBold;
     display: inherit;
     flex-direction: column;
     align-items: flex-end;
@@ -54,7 +53,7 @@
 
   &-link-schedule {
     text-align: center;
-    line-height: 32px;
+    line-height: 34px;
     width: 21%;
     max-width: 190px;
     height: 40px;
@@ -63,7 +62,6 @@
     margin-right: 6px;
 
     a {
-      font-family: $mainFontBold;
       font-size: 15px;
       color: $mainFontColor;
     }

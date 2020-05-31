@@ -36,8 +36,7 @@
       h3 {
         text-align: center;
         color: rgb(29, 29, 27);
-        font-size: 25px;
-        font-family: $mainFontBold;
+        font-size: 24px;
         font-weight: 500;
         margin-bottom: 0;
       }
@@ -51,38 +50,6 @@
     }
   }
 }
-
-//
-//@media screen and (max-width: $xxlWidth) {
-//  .main-advantages {
-//
-//    .flex-container-numbers {
-//      .advantages-number {
-//        font-size: 135px;
-//        line-height: 96px;
-//      }
-//    }
-//
-//    .flex-container-text {
-//      margin-top: -142px;
-//
-//      .main-advantages__item {
-//        width: 30%;
-//        margin-left: 30px;
-//
-//        h3 {
-//        //  text-align: left;
-//          font-size: #{$lgMainFontSize - 1px};
-//        }
-//
-//        .advantages-text {
-//         // text-align: left;
-//          margin-top: -15px;
-//        }
-//      }
-//    }
-//  }
-//}
 
 @media screen and (max-width: $xlWidth) {
   .main-advantages {

@@ -6,14 +6,13 @@
 
   h4 {
     color: rgb(10, 18, 11);
-    font-family: $mainFont;
     font-weight: 500;
     font-size: $xlMainFontSize;
   }
 
   &-image {
     img {
-      width: 80%;
+      width: 76%;
       border-radius: 280px;
       box-shadow: 0px 41px 71px -54px rgba(0, 0, 0, 0.77);
     }

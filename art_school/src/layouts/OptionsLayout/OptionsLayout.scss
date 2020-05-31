@@ -15,24 +15,6 @@
   }
 }
 
-//@media screen and (min-width: #{$xlWidth + 1px}) and (max-width: $xxlWidth){
-//  .options-layout{
-//    width: 65%;
-//  }
-//}
-//
-//@media screen and (min-width: #{$lgWidth + 1px}) and (max-width: $xlWidth){
-//  .options-layout{
-//    width: 78%;
-//  }
-//}
-//
-//@media screen and (min-width: #{$mdWidth + 1px}) and (max-width: $lgWidth){
-//  .options-layout{
-//    width: 85%;
-//  }
-//}
-
 @media screen and (max-width: $mdWidth){
   .options-layout{
     width: 100%;

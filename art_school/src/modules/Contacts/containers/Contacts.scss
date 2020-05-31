@@ -33,6 +33,7 @@
         .contacts-school {
           h4{
             margin: 0;
+            font-size: 18px;
           }
 
           p{
@@ -122,6 +123,11 @@
         }
         .contacts-main{
           height: 350px;
+          .contacts-school {
+            h4{
+              font-size: 16px;
+            }
+          }
         }
       }
     }

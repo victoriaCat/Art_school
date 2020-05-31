@@ -32,7 +32,7 @@ class Header extends Component {
                         <div className="header-mobile-nav">
                             <ul>
                                 <li><Link to="/about">ОБО МНЕ</Link></li>
-                                <li className="mobile-nav-workshops"><a>МАСТЕР-КЛАССЫ <img className="mobile-arrow" src={arrowImg} alt=""/></a>
+                                <li className="mobile-nav-workshops"><a>МАСТЕР-КЛАССЫ</a>
                                     <div className="mobile-nav-workshops-links">
                                         <ul>
                                             <li><Link to="/adults_draw">рисуют взрослые</Link></li>

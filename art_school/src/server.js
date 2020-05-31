@@ -58,7 +58,7 @@ const renderer = (req, store, context) => {
                       });
                     </script> 
                     <!-- /Yandex.Metrika counter -->
-                    <!--<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">-->
+                    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">-->
                   </head>
                   <body>
                      <div id="root">${content}</div>

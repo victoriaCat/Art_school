@@ -5,9 +5,7 @@
     width: 100%;
     margin: 0 auto;
     text-align: justify;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-size: 21px;
+    font-size: $lgMainFontSize;
 
     .my-portrait {
       img {
@@ -35,16 +33,13 @@
       color: #b84c40;
     }
 
-    h4 {
-      font-family: "Lato bold", sans-serif;
-      font-weight: 600;
+    h4{
+      font-size: $lgMainFontSize;
     }
   }
 
   > h3 {
     text-align: center;
-    font-family: "Lato bold", sans-serif;
-    font-weight: 600;
   }
 
   .my-works-images {
@@ -77,6 +72,9 @@
       .about-me-ask {
         &__header {
           margin-top: 60px;
+        }
+        h4{
+          font-size: 15px;
         }
       }
     }

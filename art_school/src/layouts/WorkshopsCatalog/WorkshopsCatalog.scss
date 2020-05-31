@@ -7,7 +7,7 @@
 
   h2 {
     color: #b94d40;
-    font-size: 23px;
+    font-size: 22px;
 
     .rainbow {
       &-d {
@@ -40,13 +40,16 @@
       line-height: 24px;
 
       h3 {
-        font-family: "Lato", sans-serif;
-        font-weight: 500;
-        font-size: 22px;
+        font-size: 20px;
+        font-weight: 400;
       }
 
       p {
         margin: 2px 0 0 0;
+      }
+
+      p.bygone-note{
+        color: #b94d40;
       }
 
       img {

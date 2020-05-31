@@ -15,7 +15,7 @@
         width: 82%;
         margin: 0 auto;
         text-align: center;
-        font-size: 23px;
+        font-size: $xlMainFontSize;
         padding-top: 13px;
         line-height: 30px;
         font-weight: lighter;
@@ -55,9 +55,8 @@
     h3 {
       text-align: center;
       color: rgb(19, 18, 18);
-      font-size: 25px;
-      font-family: $mainFontBold;
-      font-weight: normal;
+      font-size: 23px;
+      font-weight: 500;
     }
   }
 }

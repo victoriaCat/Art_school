@@ -23,7 +23,7 @@ class WorkshopItems extends Component {
                                 alt={workshop.header}/>
                         </Link>
                         <p>{formatDate(workshop.date)} | {workshop.time}</p>
-                        <p>{workshop.place}</p>
+                        <p><Link to="/contacts">{workshop.place}</Link></p>
                         {showIfBygone(workshop)}
                     </div>))}
             </div>
