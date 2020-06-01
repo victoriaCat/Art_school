@@ -89,6 +89,7 @@
   .workshops-wrapper {
     h2 {
       font-size: $mdMainFontSize;
+      margin-bottom: 4px;
     }
 
     .workshops-catalog {
@@ -100,6 +101,7 @@
         font-size: $smMainFontSize;
         width: 90%;
         line-height: 20px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -111,6 +113,7 @@
       .workshops-unit {
         width: 90%;
         height: 285px;
+        margin-bottom: 27px;
 
         :nth-child(5) {
           font-size: $xsMainFontSize;

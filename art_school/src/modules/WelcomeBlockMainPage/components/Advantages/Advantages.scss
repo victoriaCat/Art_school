@@ -6,7 +6,7 @@
 
 .main-advantages {
   height: fit-content;
-  margin-top: 66px;
+  margin-top: 49px;
   background-color: $secondaryBackgroundColor;
 
   .flex-container-numbers {
@@ -102,6 +102,7 @@
     width: 100%;
 
     &__item {
+      margin-top: 16px;
       .mobile-advantages-number {
         z-index: 5;
         font-size: 85px;
@@ -144,9 +145,14 @@
     }
 
     &__item:nth-child(2) {
+      margin-top: 12px;
       .mobile-advantages-number, h3 {
         text-align: right;
       }
+    }
+
+    &__item:nth-child(3) {
+      margin-top: 12px;
     }
   }
 

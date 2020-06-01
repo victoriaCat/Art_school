@@ -18,6 +18,13 @@
 @media screen and (max-width: $mdWidth){
   .options-layout{
     width: 100%;
+    font-size: $mdMainFontSize;
+  }
+}
+
+@media screen and (max-width: $smWidth){
+  .options-layout{
+    width: 100%;
     font-size: $smMainFontSize;
   }
 }
