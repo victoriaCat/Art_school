@@ -31,7 +31,6 @@ class Gallery extends Component {
         };
         return (
             <div className="gallery">
-                <Header/>
                 <h2>Галерея работ учеников</h2>
                 <GallerySection{...gallerySections.sectionAdults}/>
                 <GallerySection{...gallerySections.sectionKids}/>

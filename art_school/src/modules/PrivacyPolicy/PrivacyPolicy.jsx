@@ -5,7 +5,6 @@ import Header from "~/modules/Header/containers/Header.jsx";
 const PrivacyPolicy = () => {
     return (
         <>
-            <Header/>
             <div className="privacy-policy">
                 <h2><strong>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</strong></h2>
 

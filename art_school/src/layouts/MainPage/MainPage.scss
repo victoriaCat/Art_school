@@ -4,6 +4,9 @@
   width: 67%;
   margin: 0 auto;
   max-width: 1117px;
+  h2{
+    text-align: center;
+  }
 }
 
 @media screen and(min-width: $xxxxlWidth){
@@ -15,5 +18,12 @@
 @media screen and (max-width: $mdWidth){
   .main-page-layout{
     width: 100%;
+    font-size: $mdMainFontSize;
+  }
+}
+
+@media screen and (max-width: $smWidth){
+  .main-page-layout{
+    font-size: $smMainFontSize;
   }
 }

@@ -1,7 +1,5 @@
 import App from "./root/App.jsx";
 import MainPage from "./layouts/MainPage/MainPage.jsx";
-import OptionsLayout from "./layouts/OptionsLayout/OptionsLayout.jsx";
-import WorkshopPage from "./layouts/Workshop/Workshop.jsx";
 import WorkshopsCatalog from "./layouts/WorkshopsCatalog/WorkshopsCatalog.jsx";
 import PageNotFound from "./modules/PageNotFound/PageNotFound.jsx";
 import WelcomeBlockMainPage from "./modules/WelcomeBlockMainPage/containers/WelcomeBlockMainPage.jsx";
@@ -23,7 +21,9 @@ export default [
         routes: [
             {
                 ...MainPage,
-                path: ['/', '/about', '/contacts', '/workshops', '/workshops/adults', '/workshops/kids'],
+                path: ['/', '/about', '/contacts', '/workshops', '/workshops/adults', '/workshops/kids', '/adults_draw',
+                    '/kids_draw', '/free_studio', '/gallery', '/policy', '/workshops/adults/:workshopId/:workshopLink',
+                    '/workshops/kids/:workshopId/:workshopLink'],
                 exact: true,
                 routes: [
                     {
@@ -61,15 +61,7 @@ export default [
                             }
 
                         ]
-                    }
-                ]
-            },
-            {
-                ...OptionsLayout,
-                path: ['/adults_draw', '/kids_draw', '/free_studio', '/gallery', '/policy',
-                    '/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink'],
-                exact: true,
-                routes: [
+                    },
                     {
                         ...AdultsDraw,
                         path: '/adults_draw'
@@ -87,15 +79,9 @@ export default [
                         path: '/gallery'
                     },
                     {
-                        ...WorkshopPage,
-                        path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink'],
-                        exact: true,
-                        routes: [
-                            {
-                                ...Workshop,
-                                path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink']
-                            }
-                        ]
+                        ...Workshop,
+                        path: ['/workshops/adults/:workshopId/:workshopLink', '/workshops/kids/:workshopId/:workshopLink']
+
                     },
                     {
                         ...PrivacyPolicy,

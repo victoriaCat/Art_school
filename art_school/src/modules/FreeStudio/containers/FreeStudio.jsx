@@ -23,7 +23,6 @@ class FreeStudio extends Component {
     render() {
         return (
             <div className="free-studio">
-                <Header/>
                 <div className="free-studio-container">
                     <h2>Свободная мастерская</h2>
                     <div className="free-studio-picture">
@@ -55,7 +54,6 @@ class FreeStudio extends Component {
                         <p>Минимальный возраст — 12 лет.</p>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }

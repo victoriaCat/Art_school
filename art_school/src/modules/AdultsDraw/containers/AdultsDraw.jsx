@@ -26,7 +26,6 @@ class AdultsDraw extends Component {
     render() {
         return (
             <div className="adults-draw">
-                <Header/>
                 <h2>Рисуют взрослые</h2>
                 <Link to="/gallery"> {this.showAdultsDrawCarousel(this.props.adultsDrawImages)} </Link>
                 <div className="adults-draw-description">

@@ -1,64 +1,86 @@
 @import '~/assets/scss/resources.scss';
 
 .workshop-container {
-  .workshop-description{
-    margin-bottom: 30px;
-  }
+  width: 100%;
+  margin: 0 auto;
+
   .header-color {
     color: $mainFontColor;
 
-    .impressionisty{
+    .impressionisty {
       color: #577ca5;
     }
-    .solnechnyi_zakat{
+
+    .solnechnyi_zakat {
       color: #d53825;
     }
-    .viva_la_vida{
+
+    .viva_la_vida {
       color: #ed797d;
     }
-    .sezann_otkroisya{
+
+    .sezann_otkroisya {
       color: #598657;
     }
-    .cvety_s_natury{
+
+    .cvety_s_natury {
       color: #9a86c7;
     }
-    .koty{
+
+    .koty {
       color: #694734;
     }
-    .polnyi_jazz{
+
+    .polnyi_jazz {
       color: #bb3129;
     }
-    .bugry{
+
+    .bugry {
       color: #e9702c;
     }
-    .murlyka{
+
+    .murlyka {
       color: #75b5b9;
     }
-    .podsolnuhi{
+
+    .podsolnuhi {
       color: #e9c017;
     }
-    .rozhdestvo{
+
+    .rozhdestvo {
       color: #679ae1;
     }
-    .portret_zimy{
+
+    .portret_zimy {
       color: #818490;
     }
-    .ananas{
+
+    .ananas {
       color: #c55434;
     }
-    .voshod{
+
+    .voshod {
       color: #cc4b30;
     }
-    .yabloki_sezanna{
+
+    .yabloki_sezanna {
       color: #da7b31;
     }
-    .sovushka{
+
+    .sovushka {
       color: #94a6b7;
     }
   }
 
-  .workshop-images{
-    text-align: center;
+  .workshop-images {
+    img {
+      margin: 0 auto;
+      max-height: 500px;
+    }
+  }
+
+  .workshop-description {
+    margin-bottom: 30px;
   }
 
   .workshop-sign-up-button {
@@ -94,14 +116,36 @@
 
 @media screen and (max-width: $xxlWidth) {
   .workshop-container {
+    .workshop-images {
+      img {
+        height: 500px;
+      }
+    }
+
     .workshop-sign-up-button {
       width: 24%;
     }
   }
 }
 
+@media screen and (max-width: $xlWidth) {
+  .workshop-container {
+    .workshop-images {
+      img {
+        height: 420px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $lgWidth) {
   .workshop-container {
+    .workshop-images {
+      img {
+        height: 490px;
+      }
+    }
+
     .workshop-sign-up-button {
       font-size: 18px;
       height: 45px;
@@ -110,8 +154,31 @@
   }
 }
 
+@media screen and (max-width: $mdWidth) {
+  .workshop-container {
+    .workshop-images {
+      img {
+        height: 450px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $smWidth) {
   .workshop-container {
+    width: 97%;
+    margin: 0 auto 26px auto;
+    .workshop-description{
+      .workshop-details{
+        width: 97%;
+        margin: 0 auto;
+      }
+    }
+    .workshop-images {
+      img {
+        height: 350px;
+      }
+    }
     .workshop-sign-up-button {
       font-size: 16px;
       width: 26%;
@@ -124,8 +191,23 @@
 
 @media screen and (max-width: $sWidth) {
   .workshop-container {
+    .workshop-images {
+      img {
+        height: 215px;
+      }
+    }
     .workshop-sign-up-button {
       width: 135px;
+    }
+  }
+}
+
+@media screen and (max-width: $xsWidth) {
+  .workshop-container {
+    .workshop-images {
+      img {
+        height: 180px;
+      }
     }
   }
 }

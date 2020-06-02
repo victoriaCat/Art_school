@@ -25,7 +25,6 @@ class KidsDraw extends Component {
     render() {
         return (
             <div className="kids-draw">
-                <Header/>
                 <h2>Рисуют дети</h2>
                 <Link to="/gallery"> {this.showKidsDrawCarousel(this.props.kidsDrawImages)} </Link>
                 <p>Зачастую дети видят картину красивой, но не понимают какие средства художественной выразительности
