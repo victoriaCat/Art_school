@@ -74,6 +74,7 @@
 
   .workshop-images {
     img {
+      display: block;
       margin: 0 auto;
       max-height: 500px;
     }
@@ -142,7 +143,7 @@
   .workshop-container {
     .workshop-images {
       img {
-        height: 490px;
+        height: 380px;
       }
     }
 
@@ -158,7 +159,7 @@
   .workshop-container {
     .workshop-images {
       img {
-        height: 450px;
+        height: 350px;
       }
     }
   }
@@ -176,7 +177,7 @@
     }
     .workshop-images {
       img {
-        height: 350px;
+        height: 320px;
       }
     }
     .workshop-sign-up-button {
@@ -193,7 +194,7 @@
   .workshop-container {
     .workshop-images {
       img {
-        height: 215px;
+        height: 200px;
       }
     }
     .workshop-sign-up-button {

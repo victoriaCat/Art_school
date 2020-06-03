@@ -9,7 +9,7 @@ import {FETCH_CAROUSEL_KIDS_DRAW_IMAGES} from '~/modules/KidsDraw/actionTypes';
 import {PRICE, DURATION} from '~/assets/infoVars';
 import WorkshopsKids from '~/modules/WorkshopsCatalog/containers/WorkshopsKids/WorkshopsKids.jsx';
 import {Link} from "react-router-dom";
-import Header from "~/modules/Header/containers/Header.jsx";
+
 class KidsDraw extends Component {
     /*
     * returns {Preloader || CarouselKids}

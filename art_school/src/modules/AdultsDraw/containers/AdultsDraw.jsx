@@ -9,7 +9,6 @@ import {connect} from "react-redux";
 import {PRICE, DURATION} from '~/assets/infoVars';
 import {Link} from "react-router-dom";
 import WorkshopsAdults from "~/modules/WorkshopsCatalog/containers/WorkshopsAdults/WorkshopsAdults.jsx";
-import Header from "~/modules/Header/containers/Header.jsx";
 
 class AdultsDraw extends Component {
     /*

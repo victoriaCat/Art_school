@@ -6,9 +6,7 @@ import {FETCH_FREE_STUDIO_IMAGE} from '~/modules/FreeStudio/actionTypes';
 import {FS_IMG_URL} from '~/libs/api';
 import {connect} from "react-redux";
 import Preloader from '~/libs/Preloader/Preloader.jsx';
-import Footer from '~/modules/Footer/Footer.jsx';
 import {PRICE, DURATION} from '~/assets/infoVars';
-import Header from "~/modules/Header/containers/Header.jsx";
 
 class FreeStudio extends Component {
     /*

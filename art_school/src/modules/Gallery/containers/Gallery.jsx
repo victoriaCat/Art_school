@@ -2,7 +2,6 @@ import './Gallery.scss';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import Header from "~/modules/Header/containers/Header.jsx";
 import GallerySection from '~/modules/Gallery/components/GallerySection/GallerySection.jsx';
 import {fetchImages} from '~/libs/commonActions';
 import {
