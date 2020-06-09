@@ -45,8 +45,8 @@
     text-align: center;
 
     img {
-      width: 30%;
-      height: 30%;
+      width: 25%;
+      height: 25%;
       margin-right: 4px;
     }
   }
@@ -194,7 +194,7 @@
         height: fit-content;
         width: 72%;
         background-color: $mainBackgroundColor;
-        box-shadow: 33px 34px 90px -20px rgba(0, 0, 0, 0.7);
+        box-shadow: 33px 34px 90px -20px rgba(0, 0, 0, 0.2);
         z-index: 500;
 
         .mobile-arrow {
@@ -225,13 +225,13 @@
         }
 
         &-icons {
-          width: 35%;
+          width: 40%;
           padding-left: 6px;
           margin-bottom: 10px;
 
           img {
-            width: 39%;
-            padding-left: 3px;
+            width: 32%;
+            padding-left: 4px;
           }
         }
       }

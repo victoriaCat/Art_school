@@ -1,16 +1,28 @@
 @import '~/assets/scss/resources.scss';
 
 .kids-draw {
-  &-mobile-workshops{
+  &-mobile-workshops {
     display: none;
   }
 
-  h3, .price, .group, .schedule {
-    color: $linksOnHoverColor;
-  }
+  &-description {
+    h3, .price, .group, .schedule {
+      color: $linksOnHoverColor;
+    }
 
-  ul {
-    padding: 0 18px;
+    h3 {
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 16px;
+
+      li {
+        padding-bottom: 5px;
+      }
+    }
   }
 
   .sign-up-button {
@@ -45,24 +57,44 @@
   }
 }
 
-
 /*MOBILE*/
+
 @media screen and (max-width: $smWidth) {
   .kids-draw {
     width: 97%;
     margin: 0 auto 20px auto;
-    .carousel-kids__photo{
-      height: 250px;
+
+    h2 {
+      display: none;
     }
-    &-mobile-workshops{
+
+    &-description {
+      width: 98%;
+      margin: 0 auto;
+
+      ul {
+        padding-left: 0;
+        list-style-position: inside;
+      }
+
+      .group, .schedule {
+        display: none;
+      }
+    }
+
+    &-mobile-workshops {
       display: block;
+      margin-top: 30px;
     }
+
     .sign-up-button {
       display: none;
     }
-    .workshops-wrapper h3{
+
+    .workshops-wrapper h3 {
       color: $mainFontColor;
     }
   }
 }
+
 

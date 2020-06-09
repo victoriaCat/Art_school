@@ -5,7 +5,8 @@ import ScrollToTop from 'react-router-scroll-top';
 import Copyright from "~/libs/Copyright/Copyright.jsx";
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
-import {PHONE_NUMBER, TEL_ATTRIBUTE, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
+import youtubeImg from '~/assets/images/youtube.png';
+import {PHONE_NUMBER, TEL_ATTRIBUTE, EMAIL, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK} from '~/assets/infoVars';
 import {decodeString} from '~/libs/commonHelpers';
 
 class Footer extends Component {
@@ -47,6 +48,9 @@ class Footer extends Component {
                         <a href={INSTAGRAM_LINK} target="_blank"><img className="footer-icons__instagram"
                                                                       src={instagramImg}
                                                                       alt="Instagram"/></a>
+                        <a href={YOUTUBE_LINK} target="_blank"><img className="header-icons__youtube"
+                                                                    src={youtubeImg}
+                                                                    alt="Youtube"/></a>
                     </div>
                     <div className="footer-link-to-policy">
                         <Link to="/policy" target="_blank">

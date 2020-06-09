@@ -27,7 +27,7 @@ class FreeStudio extends Component {
                         {this.showFreeStudioImage()}
                     </div>
                     <div className="free-studio-info">
-                        <p>В Свободной мастерской под чутким руководством художника-педагога</p>
+                        <p>В <span>Свободной мастерской</span> под чутким руководством художника-педагога</p>
                         <h3>ВЫ СМОЖЕТЕ НАУЧИТЬСЯ:</h3>
                         <div className="free-studio-list">
                             <ul>

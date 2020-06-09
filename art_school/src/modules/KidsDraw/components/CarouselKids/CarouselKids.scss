@@ -1,6 +1,27 @@
-.carousel-kids__photo{
-  img{
+@import '~/assets/scss/resources.scss';
+
+.carousel-kids__photo {
+  img {
     height: 300px;
     border: 5px solid #ffffff;
+  }
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: $smWidth) {
+  .carousel-kids__photo {
+    img {
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: $sWidth) {
+  .carousel-kids__photo {
+    img {
+      height: 220px;
+      border: 2px solid #ffffff;
+    }
   }
 }

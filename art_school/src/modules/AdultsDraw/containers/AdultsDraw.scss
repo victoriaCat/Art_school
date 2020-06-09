@@ -1,22 +1,25 @@
 @import '~/assets/scss/resources.scss';
 
 .adults-draw {
-  &-mobile-workshops{
+  &-mobile-workshops {
     display: none;
   }
-  &-description{
+
+  &-description {
     .school, h3, .price, .group, .schedule {
       color: $linksOnHoverColor;
     }
 
-    h3{
+    h3 {
       font-weight: 400;
       margin-bottom: 5px;
     }
 
     ul {
       margin-top: 0;
-      li{
+      padding-left: 16px;
+
+      li {
         padding-bottom: 5px;
       }
     }
@@ -56,39 +59,41 @@
 /*MOBILE*/
 
 @media screen and (max-width: $smWidth) {
-  .adults-draw{
+  .adults-draw {
     width: 97%;
     margin: 0 auto 20px auto;
-    h2{
-      margin-top: -5px;
+
+    h2 {
+      display: none;
     }
-    .carousel-adults__photo{
-      height: 250px;
-    }
-    &-description{
+
+    &-description {
       width: 98%;
       margin: 0 auto;
-      h3{
-        margin-top: 21px;
-      }
-      ul{
+
+      ul {
         padding-left: 0;
         list-style-position: inside;
       }
-      .group, .schedule{
+
+      .group, .schedule {
         display: none;
       }
     }
-    &-mobile-workshops{
+
+    &-mobile-workshops {
       display: block;
       margin-top: 30px;
     }
+
     .sign-up-button {
       display: none;
     }
-    .workshops-wrapper h3{
+
+    .workshops-wrapper h3 {
       color: $mainFontColor;
     }
   }
 }
+
 

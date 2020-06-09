@@ -2,16 +2,25 @@
 
 .free-studio {
   margin: 0 auto 20px auto;
+
   .footer {
     display: none;
   }
-
-  h3 {
+  span, h3{
     color: $linksOnHoverColor;
+  }
+  h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
   }
 
   ul {
-    padding: 0 12px;
+    margin-top: 0;
+    padding-left: 16px;
+
+    li {
+      padding-bottom: 5px;
+    }
   }
 
   &-container {
@@ -27,6 +36,15 @@
 @media screen and (max-width: $smWidth) {
   .free-studio {
     width: 97%;
+
+    h2 {
+      display: none;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style-position: inside;
+    }
 
     .footer {
       display: block;

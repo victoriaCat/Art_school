@@ -4,73 +4,74 @@
   width: 100%;
   margin: 0 auto;
 
-  .header-color {
+  h1, h2 {
     color: $mainFontColor;
-
-    .impressionisty {
-      color: #577ca5;
-    }
-
-    .solnechnyi_zakat {
-      color: #d53825;
-    }
-
-    .viva_la_vida {
-      color: #ed797d;
-    }
-
-    .sezann_otkroisya {
-      color: #598657;
-    }
-
-    .cvety_s_natury {
-      color: #9a86c7;
-    }
-
-    .koty {
-      color: #694734;
-    }
-
-    .polnyi_jazz {
-      color: #bb3129;
-    }
-
-    .bugry {
-      color: #e9702c;
-    }
-
-    .murlyka {
-      color: #75b5b9;
-    }
-
-    .podsolnuhi {
-      color: #e9c017;
-    }
-
-    .rozhdestvo {
-      color: #679ae1;
-    }
-
-    .portret_zimy {
-      color: #818490;
-    }
-
-    .ananas {
-      color: #c55434;
-    }
-
-    .voshod {
-      color: #cc4b30;
-    }
-
-    .yabloki_sezanna {
-      color: #da7b31;
-    }
-
-    .sovushka {
-      color: #94a6b7;
-    }
   }
+
+  .impressionisty {
+    color: #577ca5;
+  }
+
+  .solnechnyi_zakat {
+    color: #d53825;
+  }
+
+  .viva_la_vida {
+    color: #ed797d;
+  }
+
+  .sezann_otkroisya {
+    color: #598657;
+  }
+
+  .cvety_s_natury {
+    color: #9a86c7;
+  }
+
+  .koty {
+    color: #694734;
+  }
+
+  .polnyi_jazz {
+    color: #bb3129;
+  }
+
+  .bugry {
+    color: #e9702c;
+  }
+
+  .murlyka {
+    color: #75b5b9;
+  }
+
+  .podsolnuhi {
+    color: #e9c017;
+  }
+
+  .rozhdestvo {
+    color: #679ae1;
+  }
+
+  .portret_zimy {
+    color: #818490;
+  }
+
+  .ananas {
+    color: #c55434;
+  }
+
+  .voshod {
+    color: #cc4b30;
+  }
+
+  .yabloki_sezanna {
+    color: #da7b31;
+  }
+
+  .sovushka {
+    color: #94a6b7;
+  }
+
 
   .workshop-images {
     img {
@@ -107,6 +108,10 @@
 
     .nevermind, .price, .awaits {
       color: $linksOnHoverColor;
+    }
+
+    .awaits {
+      font-weight: 400;
     }
 
     .footnote {
@@ -169,17 +174,20 @@
   .workshop-container {
     width: 97%;
     margin: 0 auto 26px auto;
-    .workshop-description{
-      .workshop-details{
+
+    .workshop-description {
+      .workshop-details {
         width: 97%;
         margin: 0 auto;
       }
     }
+
     .workshop-images {
       img {
         height: 320px;
       }
     }
+
     .workshop-sign-up-button {
       font-size: 16px;
       width: 26%;
@@ -197,6 +205,7 @@
         height: 200px;
       }
     }
+
     .workshop-sign-up-button {
       width: 135px;
     }

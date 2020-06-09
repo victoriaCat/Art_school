@@ -5,10 +5,11 @@ import Navigation from '~/modules/Header/components/Navigation/Navigation.jsx';
 import logoImg from '~/assets/images/logo.svg';
 import facebookImg from '~/assets/images/facebook-logo.png';
 import instagramImg from '~/assets/images/instagram-logo.png';
+import youtubeImg from '~/assets/images/youtube.png';
 import phoneImg from '~/assets/images/phone.png';
 import navImg from '~/assets/images/mob-nav.png';
 import stickImg from '~/assets/images/stick.png';
-import {PHONE_NUMBER, TEL_ATTRIBUTE, INSTAGRAM_LINK, FACEBOOK_LINK} from '~/assets/infoVars';
+import {PHONE_NUMBER, TEL_ATTRIBUTE, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK} from '~/assets/infoVars';
 import {decodeString} from '~/libs/commonHelpers';
 
 class Header extends Component {
@@ -51,6 +52,9 @@ class Header extends Component {
                                 <a href={INSTAGRAM_LINK} target="_blank"><img className="header-icons__instagram"
                                                                               src={instagramImg}
                                                                               alt="Instagram"/></a>
+                                <a href={YOUTUBE_LINK} target="_blank"><img className="header-icons__youtube"
+                                                                              src={youtubeImg}
+                                                                              alt="Youtube"/></a>
                             </div>
                         </div>
                     </div>
@@ -70,6 +74,9 @@ class Header extends Component {
                         <a href={INSTAGRAM_LINK} target="_blank"><img className="header-icons__instagram"
                                                                       src={instagramImg}
                                                                       alt="Instagram"/></a>
+                        <a href={YOUTUBE_LINK} target="_blank"><img className="header-icons__youtube"
+                                                                    src={youtubeImg}
+                                                                    alt="Youtube"/></a>
                     </div>
                     <div className="header-link-schedule">
                         <Link to="/workshops">Расписание занятий</Link>

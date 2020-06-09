@@ -15,7 +15,7 @@
   }
 
   &-signature {
-    margin-top: 20px;
+    margin-top: 25px;
 
     img {
       display: block;
@@ -27,7 +27,7 @@
   }
 
   &-ask {
-    margin-top: -45px;
+    margin-top: 25px;
 
     &__header {
       color: #b84c40;
@@ -70,9 +70,7 @@
       }
 
       .about-me-ask {
-        &__header {
-          margin-top: 60px;
-        }
+        margin-top: 20px;
         h4{
           font-size: 15px;
         }
